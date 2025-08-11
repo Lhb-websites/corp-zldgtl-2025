@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZELDIGITAL · Pricing & Fee Calculator</title>
+  <meta name="description" content="ZELDIGITAL pricing for U.S. SMBs and mid-market brands. Simple: $1,500 or 10% of ad spend, whichever is higher. No time tracking. $5k+ ad spend required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';}
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(255,255,255,0.08); }
+    .shadow-soft { box-shadow: 0 10px 40px rgba(0,0,0,.12); }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 14px 48px rgba(0,0,0,.18); }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 selection:bg-indigo-500/30 selection:text-white">
+  <!-- Gradient Background -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-32 -left-32 h-[36rem] w-[36rem] rounded-full bg-gradient-to-tr from-indigo-500/20 via-fuchsia-500/10 to-cyan-400/20 blur-3xl"></div>
+    <div class="absolute -bottom-20 -right-20 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-cyan-500/10 via-emerald-500/10 to-indigo-500/10 blur-3xl"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <div class="flex items-center justify-between rounded-2xl glass px-4 py-3 shadow-soft">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="inline-flex items-center text-sm text-neutral-300 hover:text-white" aria-label="Back to Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          <span class="ml-1">Home</span>
+        </a>
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" class="h-9 w-9 rounded-xl object-contain ring-1 ring-white/10" width="36" height="36" />
+          <div class="font-extrabold tracking-tight text-lg">ZELDIGITAL</div>
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#calculator" class="hover:text-white">Calculator</a>
+        <a href="#inclusions" class="hover:text-white">What’s Included</a>
+        <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" class="hover:text-white">Book Call</a>
+      </nav>
+      <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" class="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm">Book Strategy Call →</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-3 py-1 text-xs font-semibold">U.S. SMBs & Mid‑Market • Google Ads Growth</div>
+        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight">Simple, ROI‑First Pricing.<br class="hidden sm:block" /> No Time Tracking. Ever.</h1>
+        <p class="mt-4 text-neutral-300 text-lg leading-relaxed">Management fee is <span class="font-semibold text-white">$1,500 or 10% of ad spend</span> — <em>whichever is higher</em>. Minimum ad spend: <span class="font-semibold text-white">$5,000/month</span>. You keep full ownership of accounts, data, and creative.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#calculator" class="inline-flex items-center justify-center rounded-xl bg-indigo-500 hover:bg-indigo-600 transition-colors px-5 py-3 font-semibold">Open Fee Calculator</a>
+          <a href="#inclusions" class="inline-flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-5 py-3 font-semibold">See What’s Included</a>
+        </div>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-2 text-sm text-neutral-300">
+          <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>No time trackers — performance only</li>
+          <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>GA4 + GTM + server‑side ready</li>
+          <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Weekly insights, not vanity metrics</li>
+          <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>U.S. market expertise</li>
+        </ul>
+      </div>
+      <div class="lg:pl-10">
+        <div class="rounded-3xl glass shadow-soft card-hover p-6 border border-white/10">
+          <div class="text-sm text-neutral-300">Minimum Requirements</div>
+          <div class="mt-2 text-2xl font-extrabold">$5,000+ ad spend • Done‑for‑you management</div>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400">Fee Rule</div>
+              <div class="font-semibold">$1,500 or 10%</div>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400">Ownership</div>
+              <div class="font-semibold">You keep all data</div>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400">Reporting</div>
+              <div class="font-semibold">Weekly insights</div>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400">Support</div>
+              <div class="font-semibold">Direct strategist</div>
+            </div>
+          </div>
+          <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-5 py-3 font-semibold">Book Strategy Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing (single, simple) -->
+  <section id="pricing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="rounded-3xl border border-white/10 glass p-6 md:p-8 shadow-soft">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Simple Pricing</h2>
+          <p class="mt-1 text-neutral-300">One rule for clarity and speed: <span class="font-semibold text-white">$1,500/month or 10% of ad spend — whichever is higher.</span></p>
+        </div>
+        <a href="#calculator" class="inline-flex items-center gap-2 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition-colors px-5 py-3 font-semibold">Calculate Your Fee →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+      <!-- Input Card -->
+      <div class="rounded-3xl border border-white/10 glass p-6 md:p-8 shadow-soft card-hover">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl md:text-2xl font-extrabold">Fee Calculator</h3>
+          <span class="text-xs text-neutral-300">Min ad spend: $5,000</span>
+        </div>
+
+        <div class="mt-6 space-y-6">
+          <div>
+            <label for="adSpend" class="block text-sm text-neutral-300 mb-2">Monthly Ad Spend (USD)</label>
+            <div class="flex items-center gap-3">
+              <div class="relative flex-1">
+                <input id="adSpend" type="number" inputmode="decimal" min="0" step="100" value="15000" class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:ring-4 focus:ring-indigo-500/30" aria-describedby="adSpendHelp" />
+                <div id="adSpendHelp" class="sr-only">Enter monthly ad spend in U.S. dollars. Minimum 5000.</div>
+              </div>
+              <button id="btnQuickMin" type="button" class="rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm">$5k</button>
+              <button id="btnQuickMid" type="button" class="rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm">$15k</button>
+              <button id="btnQuickHigh" type="button" class="rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-3 py-2 text-sm">$50k</button>
+            </div>
+          </div>
+
+          <div>
+            <input id="rangeSpend" type="range" min="5000" max="300000" step="500" value="15000" class="w-full accent-indigo-500" aria-label="Ad spend slider" />
+            <div class="mt-2 flex justify-between text-xs text-neutral-400">
+              <span>$5k</span>
+              <span>$300k</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-amber-400/10 text-amber-200 border border-amber-400/20 px-4 py-3 hidden" id="minWarning" role="alert">
+            Ad spend must be <span class="font-semibold">$5,000+</span> to work with us. Increase the amount to calculate your fee.
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-4" aria-live="polite" aria-atomic="true">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400 text-sm">Your Management Fee</div>
+              <div id="feeOut" class="mt-1 text-2xl font-extrabold">$1,500</div>
+              <div id="feeNote" class="text-xs text-neutral-400 mt-1">10% is higher than $1,500</div>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400 text-sm">Effective % of Spend</div>
+              <div id="effPct" class="mt-1 text-2xl font-extrabold">10%</div>
+              <div class="text-xs text-neutral-400 mt-1">Capped by the rule</div>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+              <div class="text-neutral-400 text-sm">Total Monthly Outlay</div>
+              <div id="totalOut" class="mt-1 text-2xl font-extrabold">$16,500</div>
+              <div class="text-xs text-neutral-400 mt-1">Ad spend + fee</div>
+            </div>
+          </div>
+
+          <details class="rounded-2xl bg-white/5 border border-white/10 p-4">
+            <summary class="cursor-pointer font-semibold">Examples</summary>
+            <div class="mt-3 grid sm:grid-cols-3 gap-3 text-sm">
+              <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                <div class="text-neutral-400">$5,000 Spend</div>
+                <div class="font-semibold">Fee: $1,500</div>
+              </div>
+              <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                <div class="text-neutral-400">$30,000 Spend</div>
+                <div class="font-semibold">Fee: $3,000</div>
+              </div>
+              <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                <div class="text-neutral-400">$80,000 Spend</div>
+                <div class="font-semibold">Fee: $8,000</div>
+              </div>
+            </div>
+          </details>
+
+          <div class="pt-2">
+            <button id="copyQuote" type="button" class="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 text-sm">Copy Quote Summary</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Value Card -->
+      <div class="rounded-3xl border border-white/10 glass p-6 md:p-8 shadow-soft card-hover flex flex-col">
+        <div class="text-sm text-neutral-300">What’s Included</div>
+        <h3 class="mt-1 text-xl md:text-2xl font-extrabold">White‑Glove, Done‑for‑You Management</h3>
+        <ul id="inclusions" class="mt-5 space-y-3 text-neutral-300">
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span><div><span class="font-semibold text-white">Advanced campaign build & optimization</span> — custom architecture, bidding, budgets, and creative testing.</div></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span><div><span class="font-semibold text-white">Audience & competitor intelligence</span> — intent signals, conversion patterns, and market tracking.</div></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span><div><span class="font-semibold text-white">Conversion tracking</span> — GA4, GTM, server‑side events, call tracking.</div></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span><div><span class="font-semibold text-white">Reporting that drives action</span> — weekly insight reviews; no vanity metrics.</div></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400"></span><div><span class="font-semibold text-white">Direct strategist access</span> — no layers, faster decisions.</div></li>
+        </ul>
+        <div class="mt-6 p-4 rounded-2xl border border-indigo-400/20 bg-indigo-400/10 text-indigo-200">
+          <p class="text-sm">We work with brands spending <span class="font-semibold text-white">$5,000+/month</span> on Google Ads. No time tracking — we measure outcomes, not hours.</p>
+        </div>
+        <div id="cta" class="mt-auto pt-6">
+          <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" class="inline-flex w-full items-center justify-center rounded-xl bg-indigo-500 hover:bg-indigo-600 transition-colors px-5 py-3 font-semibold">Book a Strategy Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer (copied from homepage, adapted) -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-white/60">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" class="h-7 w-7 rounded-xl object-contain ring-1 ring-white/20" width="28" height="28" />
+            <span class="font-semibold text-white">ZELDIGITAL</span>
+          </div>
+          <p class="mt-2 max-w-md">One‑person LLC delivering Google Ads strategy and business consulting across PH & USA.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
+            <div class="text-white/80 font-semibold">Company</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="index.html#services" class="hover:text-white/90">Services</a></li>
+              <li><a href="index.html#ads" class="hover:text-white/90">Approach</a></li>
+              <li><a href="simplepricing.html" class="hover:text-white/90">Simple Pricing + Calculator</a></li>
+              <li><a href="index.html#contact" class="hover:text-white/90">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Coming Soon</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="index.html#health" class="hover:text-white/90">Health Initiatives</a></li>
+              <li><a href="index.html#courses" class="hover:text-white/90">Ads Course – Owners</a></li>
+              <li><a href="index.html#courses" class="hover:text-white/90">Ads Courses – Corp</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Country</div>
+            <ul class="mt-2 space-y-1">
+              <li>
+                <a href="https://ph.zeldigital.com" class="flex items-center gap-2 hover:text-white/90">
+                  <img src="https://flagcdn.com/w20/ph.png" srcset="https://flagcdn.com/w40/ph.png 2x" width="20" height="15" alt="Philippines flag" class="rounded-sm" />
+                  <span>Philippines</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://usa.zeldigital.com" class="flex items-center gap-2 hover:text-white/90">
+                  <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" height="15" alt="United States flag" class="rounded-sm" />
+                  <span>United States</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Legal</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="privacy.html" class="hover:text-white/90">Privacy Policy</a></li>
+              <li><a href="terms.html" class="hover:text-white/90">Terms of Service</a></li>
+              <li><a href="privacy.html#do-not-sell" class="hover:text-white/90">Do Not Sell/Share</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-white/40">© <span id="year"></span> ZELDIGITAL®. All rights reserved.</div>
+    </div>
+  </footer>
+  <script>
+    // Update year for footer copy
+    (function(){
+      const el = document.getElementById('year');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <script>
+    const $ = (s, p=document) => p.querySelector(s);
+    const adSpendInput = $('#adSpend');
+    const rangeSpend = $('#rangeSpend');
+    const feeOut = $('#feeOut');
+    const feeNote = $('#feeNote');
+    const effPct = $('#effPct');
+    const totalOut = $('#totalOut');
+    const minWarning = $('#minWarning');
+
+    const btnQuickMin = $('#btnQuickMin');
+    const btnQuickMid = $('#btnQuickMid');
+    const btnQuickHigh = $('#btnQuickHigh');
+    const copyBtn = $('#copyQuote');
+
+    const MIN_SPEND = 5000;
+    const FLOOR_FEE = 1500;
+    const PCT = 0.10;
+
+    function fmt(n){
+      return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    }
+
+    function clampSpend(v){
+      if (!Number.isFinite(v)) return MIN_SPEND;
+      return Math.max(0, Math.round(v));
+    }
+
+    function calc(){
+      let spend = clampSpend(parseFloat(adSpendInput.value));
+      rangeSpend.value = Math.min(Math.max(spend, parseInt(rangeSpend.min)), parseInt(rangeSpend.max));
+
+      // Enforce min spend requirement for eligibility, but still show a computed fee for transparency
+      const eligible = spend >= MIN_SPEND;
+      minWarning.classList.toggle('hidden', eligible);
+
+      const pctFeeRaw = spend * PCT;
+      const pctFee = Math.round(pctFeeRaw);
+      const fee = Math.max(FLOOR_FEE, pctFee);
+      const eff = spend > 0 ? (fee / spend) : 0;
+      const total = spend + fee;
+
+      feeOut.textContent = fmt(fee);
+      effPct.textContent = Math.round(eff * 100) + '%';
+
+      if (fee === FLOOR_FEE && pctFee < FLOOR_FEE){
+        feeNote.textContent = '$1,500 floor applies';
+      } else if (pctFee >= FLOOR_FEE){
+        feeNote.textContent = '10% is higher than $1,500';
+      } else {
+        feeNote.textContent = '';
+      }
+
+      totalOut.textContent = fmt(total);
+    }
+
+    function setSpend(v){
+      adSpendInput.value = clampSpend(v);
+      rangeSpend.value = clampSpend(v);
+      calc();
+    }
+
+    adSpendInput.addEventListener('input', calc);
+    rangeSpend.addEventListener('input', (e)=> setSpend(parseInt(e.target.value)) );
+
+    btnQuickMin.addEventListener('click', ()=> setSpend(5000));
+    btnQuickMid.addEventListener('click', ()=> setSpend(15000));
+    btnQuickHigh.addEventListener('click', ()=> setSpend(50000));
+
+    copyBtn.addEventListener('click', async ()=>{
+      const spend = clampSpend(parseFloat(adSpendInput.value));
+      const fee = Math.max(FLOOR_FEE, Math.round(spend * PCT));
+      const eff = spend ? Math.round((fee/spend)*100) : 0;
+      const summary = `ZELDIGITAL Quote\n————————————\nAd Spend: ${fmt(spend)}\nManagement Fee: ${fmt(fee)}\nEffective %: ${eff}%\nTotal Monthly Outlay: ${fmt(spend + fee)}\n\nPricing rule: $1,500 or 10% of ad spend (whichever is higher). Minimum ad spend: $5,000.`;
+      try {
+        await navigator.clipboard.writeText(summary);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(()=> copyBtn.textContent = 'Copy Quote Summary', 1400);
+      } catch (e) {
+        alert('Copied summary:\n\n' + summary);
+      }
+    });
+
+    // Initialize
+    calc();
+  </script>
+</body>
+</html>
