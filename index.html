@@ -540,38 +540,39 @@
           </div>
         </div>
 
-        <form class="rounded-3xl border border-white/10 bg-white/5 p-6 grid gap-4" action="https://formsubmit.co/f4f41cf84678378bbb885b85457a004f" method="POST" onsubmit="alert('Thanks! I\'ll get back within 24 hours.');">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-white/70">Name</label>
-              <input type="text" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
-            </div>
-            <div>
-              <label class="text-sm text-white/70">Work Email</label>
-              <input type="email" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-white/70">Company</label>
-              <input type="text" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
-            </div>
-            <div>
-              <label class="text-sm text-white/70">Monthly Ad Spend</label>
-              <select class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
-                <option>Under ₱250k / $5k</option>
-                <option>₱250k–₱600k / $5k–$12k</option>
-                <option>₱600k–₱1.5M / $12k–$30k</option>
-                <option>₱1.5M+ / $30k+</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="text-sm text-white/70">What do you want to achieve in the next 90 days?</label>
-            <textarea rows="4" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500"></textarea>
-          </div>
-          <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-white text-black px-5 py-3 font-semibold shadow-xl-soft hover:bg-brand-100">Send</button>
-        </form>
+       <form class="rounded-3xl border border-white/10 bg-white/5 p-6 grid gap-4"
+  action="https://formsubmit.co/f4f41cf84678378bbb885b85457a004f"
+  method="POST">
+  <div class="grid md:grid-cols-2 gap-4">
+    <div>
+      <label class="text-sm text-white/70">Name</label>
+      <input type="text" name="name" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+    </div>
+    <div>
+      <label class="text-sm text-white/70">Work Email</label>
+      <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div>
+      <label class="text-sm text-white/70">Company</label>
+      <input type="text" name="company" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+    </div>
+    <div>
+      <label class="text-sm text-white/70">Monthly Ad Spend</label>
+      <select name="monthly_ad_spend" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
+        <option>Under ₱250k / $5k</option>
+        <option>₱250k–₱600k / $5k–$12k</option>
+        <option>₱600k–₱1.5M / $12k–$30k</option>
+        <option>₱1.5M+ / $30k+</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <label class="text-sm text-white/70">What do you want to achieve in the next 90 days?</label>
+    <textarea name="goals" rows="4" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+  </div>
+  <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-white text-black px-5 py-3 font-semibol
       </div>
     </div>
   </section>
