@@ -247,9 +247,9 @@
             </button>
             <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute right-0 mt-3 w-80 rounded-2xl border border-white/10 bg-[#0F172A] shadow-xl-soft">
               <a href="#ads" class="block px-4 py-3 hover:bg-white/5">Overview</a>
-              <a href="simplepricing.html" class="block px-4 py-3 hover:bg-white/5">Done‑for‑You Management — Simple Pricing</a>
             </div>
           </div>
+          <a href="pricing.html" class="hover:text-brand-200 text-white/80">Pricing</a>
           <div class="relative group">
             <button class="inline-flex items-center gap-2 text-white/80 hover:text-brand-200">
               Coming Soon
@@ -284,7 +284,7 @@
       <nav class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-3 text-sm">
         <a href="#services" class="text-white/90">Services</a>
         <a href="#ads" class="text-white/90">Google Ads Focus</a>
-        <a href="simplepricing.html" class="text-white/90">Simple Pricing</a>
+        <a href="pricing.html" class="text-white/90">Pricing</a>
         <details class="group">
           <summary class="cursor-pointer text-white/90">Coming Soon</summary>
           <div class="ml-3 mt-2 flex flex-col">
@@ -545,31 +545,31 @@
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-white/70">Name</label>
-              <input type="text" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+              <input type="text" name="name" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
             </div>
             <div>
               <label class="text-sm text-white/70">Work Email</label>
-              <input type="email" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+              <input type="email" name="email" required class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
             </div>
           </div>
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-white/70">Company</label>
-              <input type="text" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
+              <input type="text" name="company" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500" />
             </div>
             <div>
               <label class="text-sm text-white/70">Monthly Ad Spend</label>
-              <select class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
-                <option>Under ₱250k / $5k</option>
-                <option>₱250k–₱600k / $5k–$12k</option>
-                <option>₱600k–₱1.5M / $12k–$30k</option>
-                <option>₱1.5M+ / $30k+</option>
+              <select name="ad_spend" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="under_250k">Under ₱250k / $5k</option>
+                <option value="250k_600k">₱250k–₱600k / $5k–$12k</option>
+                <option value="600k_1_5m">₱600k–₱1.5M / $12k–$30k</option>
+                <option value="over_1_5m">₱1.5M+ / $30k+</option>
               </select>
             </div>
           </div>
           <div>
             <label class="text-sm text-white/70">What do you want to achieve in the next 90 days?</label>
-            <textarea rows="4" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+            <textarea name="goals" rows="4" class="mt-1 w-full rounded-xl border border-white/10 bg-[#0B1220] px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500"></textarea>
           </div>
           <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-xl bg-white text-black px-5 py-3 font-semibold shadow-xl-soft hover:bg-brand-100">Send</button>
         </form>
@@ -590,14 +590,23 @@
           <p class="mt-2 max-w-md">Data‑driven digital marketing expert helping businesses maximize ROI and drive sustainable growth through strategic PPC, SEO, and analytics.</p>
           <p class="mt-1 text-xs text-white/50">Address: Cebu City, Philippines 6000</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
           <div>
             <div class="text-white/80 font-semibold">Company</div>
             <ul class="mt-2 space-y-1">
               <li><a href="#services" class="hover:text-white/90">Services</a></li>
               <li><a href="#ads" class="hover:text-white/90">Approach</a></li>
+              <li><a href="pricing.html" class="hover:text-white/90">Pricing</a></li>
               <li><a href="simplepricing.html" class="hover:text-white/90">Simple Pricing + Calculator</a></li>
               <li><a href="#contact" class="hover:text-white/90">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Case Studies</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="case-studies/" class="hover:text-white/90">All Case Studies</a></li>
+              <li><a href="music-case-study/" class="hover:text-white/90">Music Streaming Growth</a></li>
+              <li><a href="case-studies/ecommerce-brand-growth-performance/" class="hover:text-white/90">eCommerce Performance</a></li>
             </ul>
           </div>
           <div>
