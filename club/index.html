@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZELDIGITAL Club — Google Ads Mastery & Community | ZELDIGITAL</title>
+  <meta name="description" content="Join ZELDIGITAL Club for Google Ads mastery, monthly Q&A sessions, and exclusive community access. Learn from proven strategies and connect with like-minded marketers." />
+  <meta name="theme-color" content="#0B1220" />
+  <link rel="icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" type="image/jpeg" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg">
+  <link rel="apple-touch-icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#ECF3FF', 100: '#D8E7FF', 200: '#B0CFFF', 300: '#89B7FF',
+              400: '#619FFF', 500: '#3A87FF', 600: '#0F6BFF', 700: '#0C54C6',
+              800: '#083C8D', 900: '#052654'
+            }
+          },
+          boxShadow: {
+            'xl-soft': '0 25px 50px -12px rgba(0,0,0,0.35)'
+          },
+          backgroundImage: {
+            'grid-dark': 'radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)',
+            'glow': 'conic-gradient(from 180deg at 50% 50%, rgba(58,135,255,0.25), rgba(15,107,255,0.35), rgba(8,60,141,0.25))'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { scroll-behavior:smooth; }
+    .bg-grid { background-size: 18px 18px; }
+  </style>
+</head>
+<body class="bg-[#0B1220] text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-backdrop-blur:bg-white/5 bg-black/30 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-3">
+          <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" class="h-8 w-8 rounded-xl object-contain ring-1 ring-white/20 shadow-xl-soft" width="32" height="32" />
+          <span class="text-lg font-bold tracking-tight">ZELDIGITAL</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#benefits" class="hover:text-brand-200 text-white/80">Benefits</a>
+          <a href="#pricing" class="hover:text-brand-200 text-white/80">Pricing</a>
+          <a href="#faq" class="hover:text-brand-200 text-white/80">FAQ</a>
+          <a href="#join" class="hover:text-brand-200 text-white/80">Join</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-3">
+          <a href="#join" class="hidden md:inline-flex items-center gap-2 rounded-xl bg-white text-black px-3 py-2 text-sm font-semibold shadow-xl-soft hover:bg-brand-100">Join Club</a>
+          <button class="md:hidden" id="menuBtn" aria-label="Open Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-[#0F172A]">
+      <nav class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-3 text-sm">
+        <a href="#benefits" class="text-white/90">Benefits</a>
+        <a href="#pricing" class="text-white/90">Pricing</a>
+        <a href="#faq" class="text-white/90">FAQ</a>
+        <a href="#join" class="text-white/90">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid bg-grid-dark opacity-30"></div>
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full blur-3xl bg-glow opacity-40"></div>
+    <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+          <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+          Exclusive Community Access
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Google Ads Made Simple. <span class="text-brand-300">Results Made Scalable.</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+          Join ZELDIGITAL Club and get a clear system for running profitable ads — without 100+ hours of video overload. Learn from proven strategies and connect with like-minded marketers.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3 justify-center">
+          <a href="#join" class="inline-flex items-center justify-center rounded-xl bg-white text-black px-5 py-3 font-semibold shadow-xl-soft hover:bg-brand-100">
+            Join ZELDIGITAL Club
+          </a>
+          <a href="#benefits" class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 font-semibold text-white hover:bg-white/10">
+            See What's Included
+          </a>
+        </div>
+        <div class="mt-6 text-sm text-white/60">
+          Trusted by 200+ marketers across PH & USA
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What You Get in ZELDIGITAL Club</h2>
+        <p class="text-xl text-white/70 max-w-2xl mx-auto">Everything you need to master Google Ads and scale your business</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Course -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <div class="text-4xl mb-4">🎓</div>
+          <h3 class="text-xl font-semibold mb-3">Google Ads Mastery Course</h3>
+          <p class="text-white/70 text-sm">One clear training, recorded once. No fluff, just what works. Updated only if needed.</p>
+        </div>
+
+        <!-- eBook -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <div class="text-4xl mb-4">📕</div>
+          <h3 class="text-xl font-semibold mb-3">Yearly Updated eBook</h3>
+          <p class="text-white/70 text-sm">Stay current with strategies, platform updates, and case studies — in one easy handbook.</p>
+        </div>
+
+        <!-- Q&A -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-semibold mb-3">Monthly Live Q&A</h3>
+          <p class="text-white/70 text-sm">Bring your questions to Hans once a month. Can't attend? Catch the replay in the vault.</p>
+        </div>
+
+        <!-- Community -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-xl font-semibold mb-3">Private Community</h3>
+          <p class="text-white/70 text-sm">Connect with other business owners and marketers inside a members-only group.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="relative bg-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Choose Your Membership</h2>
+        <p class="text-xl text-white/70">Flexible pricing for every budget and commitment level</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Monthly Plan -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-2xl font-bold mb-2">Monthly Access</h3>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$199</span>
+            <span class="text-white/60">/month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Full course access</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Yearly updated eBook</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Monthly live Q&A</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Private community access</span>
+            </li>
+          </ul>
+          <a href="#join" class="block w-full text-center rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-colors">
+            Start Monthly
+          </a>
+        </div>
+
+        <!-- Yearly Plan -->
+        <div class="rounded-2xl border-2 border-brand-400 bg-brand-400/10 p-8 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="bg-brand-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Best Value</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Yearly Access</h3>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$1,499</span>
+            <span class="text-white/60">/year</span>
+            <div class="text-sm text-emerald-300 mt-1">Save $891 vs monthly</div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Everything in Monthly</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>One year full access</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Priority support</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                <svg class="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span>Exclusive bonus content</span>
+            </li>
+          </ul>
+          <a href="#join" class="block w-full text-center rounded-xl bg-white text-black px-6 py-3 font-semibold shadow-xl-soft hover:bg-brand-100 transition-colors">
+            Join Yearly
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-white/70">Everything you need to know about ZELDIGITAL Club</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="w-full text-left p-6 flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFAQ('faq1')">
+            <h3 class="text-lg font-semibold">What's included in the course?</h3>
+            <svg id="faq1-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="faq1" class="hidden px-6 pb-6">
+            <p class="text-white/70">The course covers everything from account setup to advanced optimization strategies, including Search, Shopping, Performance Max, and YouTube campaigns. All content is practical and based on real client results.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="w-full text-left p-6 flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFAQ('faq2')">
+            <h3 class="text-lg font-semibold">How often is the content updated?</h3>
+            <svg id="faq2-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="faq2" class="hidden px-6 pb-6">
+            <p class="text-white/70">The course is updated annually to reflect platform changes. The eBook is updated yearly with new strategies and case studies. Live Q&A sessions happen monthly to address current challenges.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="w-full text-left p-6 flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFAQ('faq3')">
+            <h3 class="text-lg font-semibold">Can I cancel anytime?</h3>
+            <svg id="faq3-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="faq3" class="hidden px-6 pb-6">
+            <p class="text-white/70">Yes, you can cancel your monthly subscription anytime. Yearly memberships are non-refundable but provide the best value with significant savings.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="w-full text-left p-6 flex items-center justify-between hover:bg-white/5 transition-colors" onclick="toggleFAQ('faq4')">
+            <h3 class="text-lg font-semibold">Is this suitable for beginners?</h3>
+            <svg id="faq4-icon" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="faq4" class="hidden px-6 pb-6">
+            <p class="text-white/70">Absolutely! The course is designed for all skill levels, from complete beginners to experienced marketers looking to refine their strategies. The community is supportive and welcoming to everyone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="join" class="relative bg-gradient-to-r from-brand-600 to-brand-700">
+    <div class="max-w-4xl mx-auto px-4 py-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Master Google Ads?</h2>
+      <p class="text-xl text-white/90 mb-8">
+        Join 200+ marketers who are already scaling their businesses with proven Google Ads strategies.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://tidycal.com/zeldigital/discovery-call" class="inline-flex items-center gap-2 rounded-xl bg-white text-black px-6 py-3 text-lg font-semibold shadow-xl-soft hover:bg-brand-100 transition-colors">
+          Join ZELDIGITAL Club
+        </a>
+        <a href="../index.html#contact" class="inline-flex items-center gap-2 rounded-xl border border-white/20 text-white px-6 py-3 text-lg font-semibold hover:bg-white/10 transition-colors">
+          Have Questions?
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-white/60">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" class="h-7 w-7 rounded-xl object-contain ring-1 ring-white/20" width="28" height="28" />
+            <span class="font-semibold text-white">ZELDIGITAL</span>
+          </div>
+          <p class="mt-2 max-w-md">One‑person LLC delivering Google Ads strategy and business consulting across PH & USA.</p>
+          <p class="mt-2 max-w-md">Data‑driven digital marketing expert helping businesses maximize ROI and drive sustainable growth through strategic PPC, SEO, and analytics.</p>
+          <p class="mt-1 text-xs text-white/50">Address: Cebu City, Philippines 6000</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div>
+            <div class="text-white/80 font-semibold">Company</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="../index.html#services" class="hover:text-white/90">Services</a></li>
+              <li><a href="../index.html#ads" class="hover:text-white/90">Approach</a></li>
+              <li><a href="../consulting/" class="hover:text-white/90">Consulting</a></li>
+              <li><a href="../pricing/" class="hover:text-white/90">Pricing</a></li>
+              <li><a href="../simplepricing.html" class="hover:text-white/90">Simple Pricing + Calculator</a></li>
+              <li><a href="../google-ads-cost-calculator/" class="hover:text-white/90">Google Ads Cost Calculator</a></li>
+              <li><a href="../index.html#contact" class="hover:text-white/90">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Case Studies</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="../case-studies/" class="hover:text-white/90">All Case Studies</a></li>
+              <li><a href="../music-case-study/" class="hover:text-white/90">Music Streaming Growth</a></li>
+              <li><a href="../case-studies/ecommerce-brand-growth-performance/" class="hover:text-white/90">eCommerce Performance</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Coming Soon</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="../index.html#health" class="hover:text-white/90">Health Initiatives</a></li>
+              <li><a href="../index.html#courses" class="hover:text-white/90">Ads Course – Owners</a></li>
+              <li><a href="../index.html#courses" class="hover:text-white/90">Ads Courses – Corp</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Country</div>
+            <ul class="mt-2 space-y-1">
+              <li>
+                <a href="https://ph.zeldigital.com" class="flex items-center gap-2 hover:text-white/90">
+                  <img src="https://flagcdn.com/w20/ph.png" srcset="https://flagcdn.com/w40/ph.png 2x" width="20" height="15" alt="Philippines flag" class="rounded-sm" />
+                  <span>Philippines</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://usa.zeldigital.com" class="flex items-center gap-2 hover:text-white/90">
+                  <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" height="15" alt="United States flag" class="rounded-sm" />
+                  <span>United States</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-white/80 font-semibold">Legal</div>
+            <ul class="mt-2 space-y-1">
+              <li><a href="../privacy.html" class="hover:text-white/90">Privacy Policy</a></li>
+              <li><a href="../terms.html" class="hover:text-white/90">Terms of Service</a></li>
+              <li><a href="../privacy.html#do-not-sell" class="hover:text-white/90">Do Not Sell/Share</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-white/40">© <span id="year"></span> ZELDIGITAL®. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = '2025';
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // FAQ toggle functionality
+    function toggleFAQ(faqId) {
+      const faqContent = document.getElementById(faqId);
+      const faqIcon = document.getElementById(faqId + '-icon');
+      
+      if (faqContent.classList.contains('hidden')) {
+        // Show the answer
+        faqContent.classList.remove('hidden');
+        faqIcon.style.transform = 'rotate(180deg)';
+      } else {
+        // Hide the answer
+        faqContent.classList.add('hidden');
+        faqIcon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>
