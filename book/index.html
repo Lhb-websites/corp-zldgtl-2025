@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free 15-Min ROAS Audit — Zeldigital</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['DM Serif Display', 'serif'],
+          mono: ['DM Mono', 'monospace'],
+          sans: ['DM Sans', 'sans-serif'],
+        },
+        colors: {
+          ink: '#0e0e0d',
+          paper: '#f5f3ee',
+          'paper-dark': '#ede9e1',
+          ash: '#8c8b87',
+          dim: '#c4c2bc',
+          accent: '#c8502a',
+          'accent-light': '#f0e6e0',
+        },
+        animation: {
+          'fade-up': 'fadeUp 0.6s ease forwards',
+          'fade-in': 'fadeIn 0.5s ease forwards',
+          'line-grow': 'lineGrow 0.8s ease forwards',
+        },
+        keyframes: {
+          fadeUp: {
+            '0%': { opacity: 0, transform: 'translateY(16px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' },
+          },
+          fadeIn: {
+            '0%': { opacity: 0 },
+            '100%': { opacity: 1 },
+          },
+          lineGrow: {
+            '0%': { width: '0%' },
+            '100%': { width: '100%' },
+          },
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #f5f3ee; color: #0e0e0d; }
+
+  .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+  .animate-delay-2 { animation-delay: 0.25s; opacity: 0; }
+  .animate-delay-3 { animation-delay: 0.4s; opacity: 0; }
+  .animate-delay-4 { animation-delay: 0.55s; opacity: 0; }
+  .animate-delay-5 { animation-delay: 0.7s; opacity: 0; }
+
+  .grain::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
+
+  .rule-line {
+    height: 1px;
+    background: #0e0e0d;
+    transform-origin: left;
+  }
+
+  .btn-book {
+    background: #c8502a;
+    color: #f5f3ee;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  .btn-book:hover {
+    background: #a8401e;
+    transform: translateY(-1px);
+  }
+  .btn-book:active {
+    transform: translateY(0);
+  }
+
+  .check-item::before {
+    content: '→';
+    color: #c8502a;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid #c4c2bc;
+    color: #8c8b87;
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  .number-stat {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    line-height: 1;
+    color: #0e0e0d;
+  }
+
+  .pain-card {
+    border: 1px solid #c4c2bc;
+    background: transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .pain-card:hover {
+    border-color: #8c8b87;
+    background: #ede9e1;
+  }
+
+  blockquote {
+    border-left: 2px solid #c8502a;
+  }
+
+  @media (max-width: 640px) {
+    .number-stat { font-size: 38px; }
+  }
+</style>
+</head>
+<body class="grain font-sans antialiased">
+
+<!-- NAV -->
+<nav class="max-w-3xl mx-auto px-6 py-6 flex items-center justify-between animate-fade-in animate-delay-1">
+  <span class="font-mono text-sm font-medium tracking-widest uppercase text-ink">Zeldigital</span>
+  <a href="#book" class="font-mono text-xs uppercase tracking-wider text-ash hover:text-ink transition-colors">Book audit →</a>
+</nav>
+
+<!-- HERO -->
+<section class="max-w-3xl mx-auto px-6 pt-10 pb-16">
+
+  <div class="animate-fade-up animate-delay-1">
+    <span class="tag">Google Ads management pricing</span>
+  </div>
+
+  <h1 class="font-serif text-5xl sm:text-6xl leading-[1.1] mt-6 mb-6 animate-fade-up animate-delay-2">
+    Find out exactly<br>
+    <span class="italic">where your ROAS<br>is leaking</span>
+  </h1>
+
+  <p class="text-base text-ash leading-relaxed max-w-xl animate-fade-up animate-delay-3">
+    A free 15-minute Google Ads ROAS audit — no agency pitch, no generic deck. You get a real read on what's burning budget and what to do about it.
+  </p>
+
+  <div class="mt-8 animate-fade-up animate-delay-4">
+    <a href="#book" class="btn-book inline-block font-mono text-sm uppercase tracking-wider px-8 py-4 rounded-sm">
+      Book free 15-min audit →
+    </a>
+    <p class="mt-3 font-mono text-xs text-ash">No contract. No pitch. Written findings after.</p>
+  </div>
+
+  <div class="rule-line mt-16 animate-line-grow animate-delay-5"></div>
+</section>
+
+<!-- CREDIBILITY STRIP -->
+<section class="max-w-3xl mx-auto px-6 py-10">
+  <div class="grid grid-cols-3 gap-6 sm:gap-10 animate-fade-up animate-delay-2">
+    <div>
+      <div class="number-stat">10+</div>
+      <p class="font-mono text-xs text-ash uppercase tracking-wider mt-2">Years running<br>Google Ads</p>
+    </div>
+    <div>
+      <div class="number-stat">GP</div>
+      <p class="font-mono text-xs text-ash uppercase tracking-wider mt-2">Google Partner<br>certified</p>
+    </div>
+    <div>
+      <div class="number-stat font-serif italic text-3xl sm:text-4xl leading-tight pt-2">One<br>specialist</div>
+      <p class="font-mono text-xs text-ash uppercase tracking-wider mt-2">Not an agency.<br>Not a team lead.</p>
+    </div>
+  </div>
+  <div class="rule-line mt-10"></div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="max-w-3xl mx-auto px-6 py-10">
+  <p class="tag mb-8">Sound familiar?</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div class="pain-card rounded-sm p-5">
+      <p class="font-sans text-sm leading-relaxed text-ink">Paying a % of ad spend — fees go up even when ROAS doesn't</p>
+    </div>
+    <div class="pain-card rounded-sm p-5">
+      <p class="font-sans text-sm leading-relaxed text-ink">Your account is managed by a junior analyst, not a senior specialist</p>
+    </div>
+    <div class="pain-card rounded-sm p-5">
+      <p class="font-sans text-sm leading-relaxed text-ink">Conversion tracking is broken and the numbers don't add up</p>
+    </div>
+    <div class="pain-card rounded-sm p-5">
+      <p class="font-sans text-sm leading-relaxed text-ink">Performance Max is spending freely but you can't tell where</p>
+    </div>
+  </div>
+  <div class="rule-line mt-10"></div>
+</section>
+
+<!-- PACKAGES -->
+<section class="max-w-3xl mx-auto px-6 py-10">
+  <p class="tag mb-8">Management packages</p>
+
+  <div class="divide-y divide-dim">
+    <div class="py-5 flex justify-between items-start gap-6">
+      <div>
+        <p class="font-sans font-medium text-sm text-ink mb-1">Audit + rebuild</p>
+        <p class="font-sans text-xs text-ash leading-relaxed max-w-sm">Full account audit, campaign restructure, tracking fix, and 30-day handoff. One-time.</p>
+      </div>
+      <div class="text-right flex-shrink-0">
+        <p class="font-mono text-sm font-medium text-ink">From $1,500</p>
+        <p class="font-mono text-xs text-ash">one-time</p>
+      </div>
+    </div>
+    <div class="py-5 flex justify-between items-start gap-6">
+      <div>
+        <p class="font-sans font-medium text-sm text-ink mb-1">Ongoing management</p>
+        <p class="font-sans text-xs text-ash leading-relaxed max-w-sm">Weekly optimizations, reporting, direct access to Hans — no team lead, no ticketing system.</p>
+      </div>
+      <div class="text-right flex-shrink-0">
+        <p class="font-mono text-sm font-medium text-ink">From $1,200</p>
+        <p class="font-mono text-xs text-ash">/ month flat</p>
+      </div>
+    </div>
+    <div class="py-5 flex justify-between items-start gap-6">
+      <div>
+        <p class="font-sans font-medium text-sm text-ink mb-1">Fractional PPC operator</p>
+        <p class="font-sans text-xs text-ash leading-relaxed max-w-sm">Embedded as your dedicated Google Ads person — strategy, execution, tracking infrastructure.</p>
+      </div>
+      <div class="text-right flex-shrink-0">
+        <p class="font-mono text-sm font-medium text-ink">Custom</p>
+        <p class="font-mono text-xs text-ash">scoped per engagement</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="font-mono text-xs text-ash mt-4">Exact pricing scoped during the free audit.</p>
+  <div class="rule-line mt-10"></div>
+</section>
+
+<!-- VERTICALS -->
+<section class="max-w-3xl mx-auto px-6 py-10">
+  <p class="tag mb-6">Verticals</p>
+  <div class="flex flex-wrap gap-2">
+    <span class="tag">eCommerce</span>
+    <span class="tag">B2B SaaS</span>
+    <span class="tag">Healthcare</span>
+    <span class="tag">Home services</span>
+    <span class="tag">Legal &amp; finance</span>
+    <span class="tag">Performance Max</span>
+    <span class="tag">Conversion tracking</span>
+    <span class="tag">First-party data</span>
+  </div>
+  <div class="rule-line mt-10"></div>
+</section>
+
+<!-- AUDIT CTA -->
+<section id="book" class="max-w-3xl mx-auto px-6 py-10">
+  <div class="bg-ink text-paper rounded-sm p-8 sm:p-12">
+
+    <p class="font-mono text-xs uppercase tracking-widest text-dim mb-6">Free 15-minute ROAS audit</p>
+
+    <h2 class="font-serif text-3xl sm:text-4xl leading-tight mb-4">
+      Book your audit.<br>
+      <span class="italic">Get real answers.</span>
+    </h2>
+
+    <p class="font-sans text-sm text-dim leading-relaxed mb-8 max-w-md">
+      A focused 15-minute call on your ROAS — where it's leaking, what's fixable, and what Google Ads management would actually cost for your account. No deck. No pitch.
+    </p>
+
+    <ul class="space-y-3 mb-10">
+      <li class="check-item flex items-start font-sans text-sm text-paper">Campaign structure and bid strategy review</li>
+      <li class="check-item flex items-start font-sans text-sm text-paper">Conversion tracking and data quality check</li>
+      <li class="check-item flex items-start font-sans text-sm text-paper">Search term waste and PMax spend analysis</li>
+      <li class="check-item flex items-start font-sans text-sm text-paper">Written findings sent after the call</li>
+    </ul>
+
+    <a href="https://zeldigital.com/book" class="inline-block bg-paper text-ink font-mono text-sm uppercase tracking-wider px-8 py-4 rounded-sm hover:bg-paper-dark transition-colors">
+      Book free 15-min audit →
+    </a>
+
+    <div class="mt-6 flex flex-wrap gap-4">
+      <span class="font-mono text-xs text-ash">15-minute call</span>
+      <span class="font-mono text-xs text-ash">No contract required</span>
+      <span class="font-mono text-xs text-ash">Written findings included</span>
+      <span class="font-mono text-xs text-ash">Limited slots</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between border-t border-dim">
+  <span class="font-mono text-xs text-ash">© 2026 Zeldigital</span>
+  <span class="font-mono text-xs text-ash">zeldigital.com/google-ads-management-pricing</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-fade-up, .animate-fade-in').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
