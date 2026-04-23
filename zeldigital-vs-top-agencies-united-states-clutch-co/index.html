@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZELDIGITAL vs Top Google Ads Agencies on Clutch (2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #fafaf8;
+    --accent: #d4ff00;
+    --accent-dim: #b8e000;
+    --mid: #1a1a1a;
+    --surface: #141414;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.15);
+    --text-muted: #888880;
+    --text-dim: #555550;
+    --zel-glow: rgba(212,255,0,0.12);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Instrument Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 .zel {
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+  }
+
+  .tag.accent {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--zel-glow);
+  }
+
+  /* ── SECTION ── */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+
+  /* ── QUICK OVERVIEW CARDS ── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .overview-card {
+    background: var(--surface);
+    padding: 24px 22px;
+    transition: background 0.2s;
+  }
+
+  .overview-card:hover { background: var(--mid); }
+
+  .overview-card.zel-card {
+    background: #111800;
+    border: none;
+    position: relative;
+  }
+
+  .overview-card.zel-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1.5px solid var(--accent);
+    border-radius: 0;
+    pointer-events: none;
+  }
+
+  .ov-name {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .ov-name.accent { color: var(--accent); }
+
+  .ov-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+  }
+
+  .star-val {
+    color: #d4a017;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .ov-desc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── BIG TABLE ── */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px;
+  }
+
+  thead tr {
+    background: var(--surface);
+  }
+
+  th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  th.zel-th {
+    background: #111800;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(212,255,0,0.25);
+  }
+
+  td {
+    padding: 14px 16px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+    color: #ccc;
+    line-height: 1.55;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  td.zel-td {
+    background: #0d1200;
+    color: #d4ffaa;
+  }
+
+  td.row-label {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    white-space: nowrap;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+  }
+
+  tr:hover td { filter: brightness(1.07); }
+
+  .check { color: var(--accent); font-size: 14px; }
+  .cross { color: #555; font-size: 14px; }
+  .highlight { color: var(--accent); font-weight: 600; }
+
+  /* ── WHEN TO CHOOSE ── */
+  .choose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 680px) {
+    .choose-grid { grid-template-columns: 1fr; }
+  }
+
+  .choose-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 26px;
+  }
+
+  .choose-card.zel {
+    background: #0d1200;
+    border-color: var(--accent);
+  }
+
+  .choose-card h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .choose-card.zel h3 { color: var(--accent); }
+
+  .choose-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .choose-card ul li {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .choose-card.zel ul li { color: #b8d888; }
+
+  .choose-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+
+  .choose-card.zel ul li::before { color: var(--accent); }
+
+  /* ── BOTTOM LINE ── */
+  .bottom-line {
+    background: #0d1200;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 36px 32px;
+    margin-bottom: 32px;
+  }
+
+  .bottom-line p {
+    font-size: 15.5px;
+    color: #b8d888;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .bottom-line p:last-child { margin-bottom: 0; }
+
+  .bottom-line strong { color: var(--accent); }
+
+  /* ── CTA ── */
+  .cta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cta-bar p {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    background: var(--accent);
+    color: var(--black);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--white);
+    color: var(--white);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: var(--text-dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  footer a { color: var(--text-muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* ── SCORE PILLS ── */
+  .score {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  .score-hi { background: rgba(212,255,0,0.12); color: var(--accent); }
+  .score-mid { background: rgba(255,200,50,0.1); color: #d4a017; }
+  .score-lo { background: rgba(255,100,80,0.1); color: #d46060; }
+
+  @media (max-width: 720px) {
+    .hero, section { padding-left: 20px; padding-right: 20px; }
+    .cta-bar, footer { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 48px; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero > * {
+    animation: fadeUp 0.5s ease both;
+  }
+  .hero > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero > *:nth-child(2) { animation-delay: 0.12s; }
+  .hero > *:nth-child(3) { animation-delay: 0.19s; }
+  .hero > *:nth-child(4) { animation-delay: 0.26s; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">2026 Comparison · Clutch-Verified Agencies</div>
+  <h1><span class="zel">ZELDIGITAL</span> vs<br>Top Google Ads Agencies</h1>
+  <p class="hero-sub">You're comparing Google Ads specialists on Clutch — agencies with 4.8–5.0 star ratings and dozens to hundreds of verified reviews. Here's how ZELDIGITAL stacks up against the established leaders.</p>
+  <div class="hero-tags">
+    <span class="tag accent">Solo Senior Expert</span>
+    <span class="tag">Direct Access · No Handoffs</span>
+    <span class="tag">$300K/mo Budget Managed</span>
+    <span class="tag">10+ US Founders</span>
+    <span class="tag">Search · PMax · Shopping</span>
+  </div>
+</div>
+
+<!-- QUICK OVERVIEW -->
+<section>
+  <div class="section-label">Quick Overview</div>
+  <h2>The contenders at a glance</h2>
+  <div class="overview-grid">
+
+    <div class="overview-card zel-card">
+      <div class="ov-name accent">ZELDIGITAL</div>
+      <div class="ov-rating"><span class="star-val">★</span> Senior expert · 10+ yrs</div>
+      <div class="ov-desc">Solo fractional Google Ads specialist (Hans "Dexter" Lacida). Manages up to $300K/mo. High-ROAS Search, PMax, Shopping & full-funnel strategy. Ideal for US founders who want personal accountability and flexibility.</div>
+    </div>
+
+    <div class="overview-card">
+      <div class="ov-name">Black Propeller</div>
+      <div class="ov-rating"><span class="star-val">★ 4.8</span> · 81 reviews</div>
+      <div class="ov-desc">Mid-size PPC agency (50–249 team) in Bel Air, MD. Strong in Google Ads + social. Praised for communication and results. ~17% of reviews note execution inconsistencies.</div>
+    </div>
+
+    <div class="overview-card">
+      <div class="ov-name">KlientBoost</div>
+      <div class="ov-rating"><span class="star-val">★ 4.9</span> · 400+ reviews</div>
+      <div class="ov-desc">Larger performance agency (Costa Mesa, CA). Data-driven PPC + CRO. Heavy emphasis on creative testing and conversion optimization. Highest review volume of any PPC shop on Clutch.</div>
+    </div>
+
+    <div class="overview-card">
+      <div class="ov-name">SmartSites</div>
+      <div class="ov-rating"><span class="star-val">★ 4.9</span> · 353 reviews</div>
+      <div class="ov-desc">Big full-service agency (250–999 team, Paramus NJ). Strong PPC + SEO. Excellent for integrated campaigns, but broader scope may dilute pure Google Ads depth.</div>
+    </div>
+
+    <div class="overview-card">
+      <div class="ov-name">GrowMyAds</div>
+      <div class="ov-rating"><span class="star-val">★ 4.9</span> · 113 reviews</div>
+      <div class="ov-desc">Specialized PPC team (10–49, Fort Wayne IN) using 90-day sprints. 100% PPC focus. Strong on structured process and ROAS improvement. No long-term contracts.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section>
+  <div class="section-label">Side-by-Side Comparison</div>
+  <h2>How they compare across what matters</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:150px">Aspect</th>
+          <th class="zel-th">ZELDIGITAL</th>
+          <th>Black Propeller</th>
+          <th>KlientBoost</th>
+          <th>SmartSites</th>
+          <th>GrowMyAds</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="row-label">Core Focus</td>
+          <td class="zel-td">Pure Google Ads — Search, PMax, Shopping + profit strategy</td>
+          <td>PPC / Google Ads + social &amp; media</td>
+          <td>PPC + CRO + creative testing</td>
+          <td>PPC + SEO + full digital services</td>
+          <td>Specialized Google Ads — 90-day sprints</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Team Structure</td>
+          <td class="zel-td"><span class="highlight">One senior expert — direct access, zero handoffs</span></td>
+          <td>Mid-size team (50–249)</td>
+          <td>Larger specialized team</td>
+          <td>Large team (250–999)</td>
+          <td>Small dedicated PPC team (10–49)</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Best For</td>
+          <td class="zel-td">US founders wanting elite personal expertise, flexibility, lower overhead</td>
+          <td>Businesses needing reliable team support + strong comms</td>
+          <td>Data-driven brands focused on CRO &amp; creative experiments</td>
+          <td>Companies wanting integrated PPC + SEO / web</td>
+          <td>eCom &amp; lead gen wanting structured, no-contract growth</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Accountability</td>
+          <td class="zel-td"><span class="highlight">Highest — one person owns everything</span></td>
+          <td>Good team collaboration</td>
+          <td>Strong internal processes</td>
+          <td>Solid project management</td>
+          <td>High — proactive communication</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Flexibility</td>
+          <td class="zel-td"><span class="highlight">Monthly retainer, easy cancel, fast adjustments</span></td>
+          <td>Standard agency terms</td>
+          <td>More structured engagement</td>
+          <td>Traditional agency model</td>
+          <td>No long contracts (90-day focus)</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Pricing</td>
+          <td class="zel-td">Competitive monthly + one-time audits/fixes</td>
+          <td>$1,000+ projects · $100–149/hr</td>
+          <td>$1,000+ · mid-to-high retainers</td>
+          <td>$1,000+ · scales with scope</td>
+          <td>$1,000+ · value-focused</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Key Strength</td>
+          <td class="zel-td">Direct expert ownership · ROAS peaks up to 70x reported</td>
+          <td>Communication, on-time delivery, Google Ads expertise</td>
+          <td>Data-driven results, conversion improvement</td>
+          <td>Customer service, measurable outcomes</td>
+          <td>ROAS growth, clear comms, strong cost value</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Potential Drawback</td>
+          <td class="zel-td">Solo capacity limits very large enterprise volume</td>
+          <td>~17% of reviews mention execution inconsistencies</td>
+          <td>Higher fees; can feel overly technical</td>
+          <td>Broader scope may dilute pure PPC depth</td>
+          <td>Team-based — no single-expert ownership</td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Social Proof</td>
+          <td class="zel-td">10+ US founders (personal references)</td>
+          <td><span class="score score-mid">★ 4.8 · 81 reviews</span></td>
+          <td><span class="score score-hi">★ 4.9 · 400+ reviews</span></td>
+          <td><span class="score score-hi">★ 4.9 · 353 reviews</span></td>
+          <td><span class="score score-hi">★ 4.9 · 113 reviews</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHEN TO CHOOSE -->
+<section>
+  <div class="section-label">Decision Guide</div>
+  <h2>When to choose which</h2>
+  <div class="choose-grid">
+
+    <div class="choose-card zel">
+      <h3>Choose ZELDIGITAL when…</h3>
+      <ul>
+        <li>You want direct access to a senior specialist who personally works on your campaigns — no junior staff or account manager layers</li>
+        <li>Flexibility and speed matter — monthly engagement, quick optimisations, no long lock-ins</li>
+        <li>Your priority is maximum profit/ROAS with advanced tracking and full-funnel strategy</li>
+        <li>You value personal accountability over large-team processes or hundreds of public reviews</li>
+      </ul>
+    </div>
+
+    <div class="choose-card">
+      <h3>Choose a Clutch agency when…</h3>
+      <ul>
+        <li>You prefer the security and bandwidth of a team with many specialists and proven playbooks</li>
+        <li>You want high review volume for extra reassurance (KlientBoost and SmartSites lead in sheer testimonials)</li>
+        <li>Your needs include CRO &amp; creative testing (KlientBoost), integrated SEO (SmartSites), or structured sprints (GrowMyAds)</li>
+        <li>Black Propeller is a solid middle-ground choice with strong communication feedback from clients</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM LINE -->
+<section>
+  <div class="section-label">The Bottom Line</div>
+  <div class="bottom-line">
+    <p>Most high-rated Clutch agencies — <strong>Black Propeller, KlientBoost, SmartSites, GrowMyAds</strong> — deliver solid Google Ads results with team support and plenty of social proof.</p>
+    <p><strong>ZELDIGITAL stands out</strong> when you want one highly experienced expert owning your account end-to-end, with greater flexibility and typically lower overhead than a full agency.</p>
+    <p>Many US founders start with a solo/fractional expert like ZELDIGITAL to get campaigns profitable quickly, then scale to a larger agency if they need broader services or heavier volume.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <p>Ready to compare in action?</p>
+  <a href="https://zeldigital.com" class="btn-primary">Book a call → zeldigital.com</a>
+  <a href="https://clutch.co" class="btn-ghost">Browse Clutch profiles</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 ZELDIGITAL · Hans "Dexter" Lacida · Google Ads Specialist</span>
+  <span>Data sourced from Clutch.co · Updated 2026</span>
+</footer>
+
+</body>
+</html>
