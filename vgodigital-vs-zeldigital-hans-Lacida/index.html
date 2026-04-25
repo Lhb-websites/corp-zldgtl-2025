@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VGODIGITAL vs ZELDIGITAL — Hans Lacida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #111114;
+      --surface2: #17171c;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e6e0;
+      --muted: #6b6870;
+      --faint: #2c2a32;
+
+      --vg: #4f8ef7;
+      --vg-dim: rgba(79,142,247,0.12);
+      --vg-glow: rgba(79,142,247,0.25);
+
+      --zel: #00e5a0;
+      --zel-dim: rgba(0,229,160,0.1);
+      --zel-glow: rgba(0,229,160,0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: var(--zel);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.15s ease;
+      mix-blend-mode: difference;
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--vg);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.4s ease, width 0.3s, height 0.3s;
+      mix-blend-mode: difference;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9997;
+      opacity: 0.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.4rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      background: rgba(10,10,11,0.85);
+    }
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--zel); }
+    .nav-links { display: flex; gap: 2.5rem; }
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 100%, black, transparent);
+    }
+    .hero-orb-vg {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--vg-glow), transparent 70%);
+      top: 10%; left: -10%;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+    .hero-orb-zel {
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--zel-glow), transparent 70%);
+      top: 20%; right: -8%;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: drift 14s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to { transform: translate(30px, -40px) scale(1.08); }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s ease forwards;
+    }
+    .hero-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3.5rem, 9vw, 8.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s ease forwards;
+    }
+    .hero-title .vg-word { color: var(--vg); }
+    .hero-title .vs-word {
+      font-style: italic;
+      color: var(--faint);
+      font-size: 0.55em;
+      vertical-align: middle;
+    }
+    .hero-title .zel-word { color: var(--zel); }
+
+    .hero-sub {
+      max-width: 520px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s ease forwards;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.65s ease forwards;
+    }
+    .tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      border: 1px solid;
+      text-transform: uppercase;
+    }
+    .tag-vg { border-color: var(--vg); color: var(--vg); background: var(--vg-dim); }
+    .tag-zel { border-color: var(--zel); color: var(--zel); background: var(--zel-dim); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 3rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-scroll::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--muted);
+      animation: scrollLine 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes scrollLine {
+      from { width: 20px; }
+      to { width: 50px; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SPLIT COLS ── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .split-col {
+      padding: 4rem 3rem;
+      border-right: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .split-col:last-child { border-right: none; }
+    .split-col::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .split-col.vg-col::before { background: linear-gradient(90deg, var(--vg), transparent); }
+    .split-col.zel-col::before { background: linear-gradient(90deg, var(--zel), transparent); }
+
+    .col-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    .col-label.vg { color: var(--vg); }
+    .col-label.zel { color: var(--zel); }
+
+    .col-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .col-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .strength-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+    .strength-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #ccc8c0;
+    }
+    .str-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    .str-icon.vg { background: var(--vg-dim); color: var(--vg); }
+    .str-icon.zel { background: var(--zel-dim); color: var(--zel); }
+
+    .stat-pill {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      font-weight: 700;
+    }
+    .stat-pill.zel { background: var(--zel-dim); color: var(--zel); border: 1px solid var(--zel); }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .best-for-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .best-for-text {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #9d9aa0;
+    }
+
+    /* ── TABLE SECTION ── */
+    .table-section {
+      padding: 6rem 3rem;
+      background: var(--surface);
+    }
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.05;
+      margin-bottom: 3rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead tr {
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      text-align: left;
+      padding: 1rem 1.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-family: 'Space Mono', monospace;
+      font-weight: 400;
+    }
+    th:nth-child(1) { color: var(--muted); }
+    th:nth-child(2) { color: var(--vg); }
+    th:nth-child(3) { color: var(--zel); }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    tbody tr:hover { background: var(--surface2); }
+    td {
+      padding: 1.2rem 1.5rem;
+      font-size: 0.88rem;
+      color: #a0a0b0;
+      line-height: 1.5;
+    }
+    td:first-child {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+    .td-win {
+      color: var(--zel) !important;
+      font-weight: 600;
+    }
+
+    /* ── VERDICT ── */
+    .verdict-section {
+      padding: 7rem 3rem;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .verdict-section::after {
+      content: 'VERDICT';
+      position: absolute;
+      bottom: -2rem;
+      right: -1rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 12rem;
+      color: var(--faint);
+      opacity: 0.3;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .verdict-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    .verdict-card {
+      padding: 2.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s;
+    }
+    .verdict-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .verdict-card:hover { transform: translateY(-4px); }
+    .verdict-card.vg-card { border-color: rgba(79,142,247,0.2); }
+    .verdict-card.vg-card::before { background: var(--vg-dim); }
+    .verdict-card.vg-card:hover::before { opacity: 1; }
+    .verdict-card.vg-card:hover { border-color: var(--vg); }
+    .verdict-card.zel-card { border-color: rgba(0,229,160,0.2); }
+    .verdict-card.zel-card::before { background: var(--zel-dim); }
+    .verdict-card.zel-card:hover::before { opacity: 1; }
+    .verdict-card.zel-card:hover { border-color: var(--zel); }
+
+    .verdict-card-inner { position: relative; z-index: 1; }
+    .verdict-if {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .verdict-if.vg { color: var(--vg); }
+    .verdict-if.zel { color: var(--zel); }
+    .verdict-choose {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .verdict-body {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .footer-note {
+      font-size: 0.72rem;
+      color: var(--faint);
+      max-width: 400px;
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    /* ── ROAS COUNTER ── */
+    .roas-strip {
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .roas-item { text-align: center; }
+    .roas-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--zel);
+    }
+    .roas-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+    .roas-item.vg-stat .roas-num { color: var(--vg); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .hero { padding: 0 1.5rem 4rem; }
+      .hero-title { font-size: 3.2rem; }
+      .split { grid-template-columns: 1fr; }
+      .split-col { padding: 3rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .table-section { padding: 4rem 1.5rem; overflow-x: auto; }
+      table { min-width: 640px; }
+      .verdict-section { padding: 5rem 1.5rem; }
+      .verdict-grid { grid-template-columns: 1fr; }
+      .roas-strip { grid-template-columns: 1fr 1fr; padding: 2rem 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; }
+      .footer-note { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Landing Page <span>Showdown</span></div>
+  <div class="nav-links">
+    <a href="#comparison">Compare</a>
+    <a href="#breakdown">Breakdown</a>
+    <a href="#verdict">Verdict</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb-vg"></div>
+  <div class="hero-orb-zel"></div>
+
+  <div style="position:relative;z-index:2;">
+    <div class="hero-eyebrow">Landing Page Analysis · 2026 Edition</div>
+    <h1 class="hero-title">
+      <span class="vg-word">VGO</span><br>
+      <span class="vs-word">vs</span>
+      <span class="zel-word">ZEL</span>
+    </h1>
+    <p class="hero-sub">
+      Full-service Manhattan agency vs. the solo operator who engineers extreme returns. 
+      Two philosophies. One decision.
+    </p>
+    <div class="hero-tags">
+      <span class="tag tag-vg"><i class="fas fa-building" style="margin-right:6px"></i>VGODIGITAL</span>
+      <span class="tag tag-zel"><i class="fas fa-bolt" style="margin-right:6px"></i>Hans Lacida / ZELDIGITAL</span>
+    </div>
+  </div>
+
+  <div class="hero-scroll">Scroll to compare</div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="roas-strip">
+  <div class="roas-item vg-stat">
+    <div class="roas-num">500+</div>
+    <div class="roas-label">Businesses Served</div>
+  </div>
+  <div class="roas-item vg-stat">
+    <div class="roas-num">300%</div>
+    <div class="roas-label">Avg ROI (VGODIGITAL)</div>
+  </div>
+  <div class="roas-item">
+    <div class="roas-num">70×</div>
+    <div class="roas-label">Peak ROAS — AU/NZ</div>
+  </div>
+  <div class="roas-item">
+    <div class="roas-num">20×</div>
+    <div class="roas-label">Peak ROAS — US / NYC</div>
+  </div>
+</div>
+
+<!-- SPLIT COMPARISON -->
+<section id="comparison" class="split">
+  <div class="split-col vg-col">
+    <div class="col-label vg">// Agency 01</div>
+    <h2 class="col-name">VGODIGITAL</h2>
+    <p class="col-sub">Full-Service Digital Marketing · Manhattan & Bangalore</p>
+
+    <ul class="strength-list">
+      <li>
+        <span class="str-icon vg"><i class="fas fa-check"></i></span>
+        Website design & development
+      </li>
+      <li>
+        <span class="str-icon vg"><i class="fas fa-check"></i></span>
+        Full SEO, Google My Business & local marketing
+      </li>
+      <li>
+        <span class="str-icon vg"><i class="fas fa-check"></i></span>
+        Social media, content & lead generation
+      </li>
+      <li>
+        <span class="str-icon vg"><i class="fas fa-check"></i></span>
+        End-to-end solution for Manhattan & global businesses
+      </li>
+      <li>
+        <span class="str-icon vg"><i class="fas fa-check"></i></span>
+        Team support & full creative execution
+      </li>
+    </ul>
+
+    <hr class="section-divider">
+    <div class="best-for-label">Best For</div>
+    <p class="best-for-text">Manhattan & NYC businesses needing a complete digital presence — website, SEO, ads, and local visibility under one roof.</p>
+  </div>
+
+  <div class="split-col zel-col">
+    <div class="col-label zel">// Operator 02</div>
+    <h2 class="col-name">ZELDIGITAL</h2>
+    <p class="col-sub">Hans Lacida · Google Ads Specialist · High-ROAS Systems</p>
+
+    <ul class="strength-list">
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        Google Ads & Performance Max architecture
+      </li>
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        Server-side tracking & leak-proof conversion setups
+      </li>
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        <span class="stat-pill zel">70× ROAS</span>&nbsp; Peak — AU/NZ market
+      </li>
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        <span class="stat-pill zel">20× ROAS</span>&nbsp; Peak — US / NYC market
+      </li>
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        Direct accountability — zero agency layers
+      </li>
+      <li>
+        <span class="str-icon zel"><i class="fas fa-check"></i></span>
+        One-time fix-ups or ongoing high-ROAS retainers
+      </li>
+    </ul>
+
+    <hr class="section-divider">
+    <div class="best-for-label">Best For</div>
+    <p class="best-for-text">US founders, eCommerce, medspa & SaaS businesses demanding extreme paid acquisition returns in competitive markets like Manhattan.</p>
+  </div>
+</section>
+
+<!-- TABLE BREAKDOWN -->
+<section id="breakdown" class="table-section">
+  <div class="section-label">// Side-by-Side</div>
+  <h2 class="section-title">Head-to-Head<br><em>Breakdown</em></h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Criteria</th>
+          <th>VGODIGITAL</th>
+          <th>ZELDIGITAL / Hans Lacida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Business Model</td>
+          <td>Full-service agency with team support</td>
+          <td class="td-win">Solo operator — you deal directly with the expert</td>
+        </tr>
+        <tr>
+          <td>Core Focus</td>
+          <td>Website, SEO, Social, Local, Full digital</td>
+          <td class="td-win">Google Ads, Paid Acquisition, Tracking, ROAS</td>
+        </tr>
+        <tr>
+          <td>Standout Results</td>
+          <td>300%+ ROI · 500+ businesses served globally</td>
+          <td class="td-win">70× Peak ROAS (AU/NZ) · 20× Peak ROAS (US/NYC)</td>
+        </tr>
+        <tr>
+          <td>Manhattan / NYC Fit</td>
+          <td>Strong local SEO & full-service presence</td>
+          <td class="td-win">Proven high-ROAS in expensive competitive US markets</td>
+        </tr>
+        <tr>
+          <td>Landing Page Style</td>
+          <td>Service catalog, team-oriented, broad appeal</td>
+          <td class="td-win">Metrics-driven, minimal, conversion-focused</td>
+        </tr>
+        <tr>
+          <td>Accountability</td>
+          <td>Account manager layer</td>
+          <td class="td-win">Direct line to the operator — no middlemen</td>
+        </tr>
+        <tr>
+          <td>Ideal Client</td>
+          <td>Businesses wanting full online presence managed</td>
+          <td class="td-win">Founders scaling paid ads profitably and fast</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- VERDICT -->
+<section id="verdict" class="verdict-section">
+  <div style="position:relative;z-index:1;">
+    <div class="section-label">// Final Read</div>
+    <h2 class="section-title">The Verdict</h2>
+
+    <div class="verdict-grid">
+      <div class="verdict-card vg-card">
+        <div class="verdict-card-inner">
+          <div class="verdict-if vg">// Choose if</div>
+          <h3 class="verdict-choose">You need everything.</h3>
+          <p class="verdict-body">
+            <strong style="color:var(--vg)">VGODIGITAL</strong> is the right call when you need a complete digital presence built from scratch — new website, SEO strategy, social management, and Manhattan-specific local visibility. Ideal for established businesses that want one reliable agency handling the full picture.
+          </p>
+        </div>
+      </div>
+
+      <div class="verdict-card zel-card">
+        <div class="verdict-card-inner">
+          <div class="verdict-if zel">// Choose if</div>
+          <h3 class="verdict-choose">You need returns.</h3>
+          <p class="verdict-body">
+            <strong style="color:var(--zel)">Hans Lacida / ZELDIGITAL</strong> is the move when you want maximum return from Google Ads with proven extreme ROAS — 20× in the US market. Built for operators who value direct expertise, transparent systems, and zero agency overhead diluting results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">VGO <span style="color:var(--faint)">vs</span> ZEL · 2026</div>
+  <p class="footer-note">Comparison based on public information as of 2026. Built for educational & demonstration purposes. Not affiliated with either brand.</p>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx - 5 + 'px';
+    cursor.style.top = my - 5 + 'px';
+  });
+
+  (function animRing() {
+    rx += (mx - rx) * 0.1;
+    ry += (my - ry) * 0.1;
+    ring.style.left = rx - 18 + 'px';
+    ring.style.top = ry - 18 + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  // Intersection observer fade-in
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.roas-item, .verdict-card, tbody tr').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    io.observe(el);
+  });
+
+  // Stagger table rows
+  document.querySelectorAll('tbody tr').forEach((row, i) => {
+    row.style.transitionDelay = i * 0.06 + 's';
+  });
+
+  // ROAS counter animation
+  const counters = document.querySelectorAll('.roas-num');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const text = el.textContent;
+        const num = parseFloat(text);
+        const suffix = text.replace(/[\d.]/g, '');
+        let start = 0;
+        const duration = 1200;
+        const step = ts => {
+          if (!start) start = ts;
+          const prog = Math.min((ts - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - prog, 3);
+          el.textContent = (num < 10 ? (num * ease).toFixed(0) : Math.round(num * ease)) + suffix;
+          if (prog < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObs.observe(c));
+</script>
+</body>
+</html>
