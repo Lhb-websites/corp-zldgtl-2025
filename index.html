@@ -58,63 +58,100 @@
   <style>
     <!-- ── Trusted Banner (Hero) ── -->
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
-  .founder-banner {
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
-    padding: 12px 20px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 14px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
-  }
-  .founder-avatars { display: flex; align-items: center; }
-  .founder-avatar {
-    width: 34px; height: 34px;
-    border-radius: 50%;
-    border: 2px solid #050A14;
-    margin-left: -10px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: rgba(255,255,255,0.08);
-  }
-  .founder-avatar:first-child { margin-left: 0; }
-  .founder-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .founder-divider {
-    width: 1px; height: 26px;
-    background: rgba(255,255,255,0.12);
-    flex-shrink: 0;
-  }
-  .founder-text {
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(240,244,255,0.55);
-    white-space: nowrap;
-  }
-  .founder-text span { color: #F0F4FF; }
-  .founder-flag {
-    display: flex; align-items: center; gap: 5px;
-    font-family: 'Syne', sans-serif;
-    font-size: 11px; font-weight: 700;
-    color: rgba(240,244,255,0.35);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .founder-clutch { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
-  .founder-clutch-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 13px; font-weight: 700;
-    color: #FF3D2E; letter-spacing: -0.02em;
-  }
-  .founder-stars { display: flex; align-items: center; gap: 2px; }
-  .founder-star { width: 13px; height: 13px; }
-  .founder-rating {
-    font-family: 'Syne', sans-serif;
-    font-size: 13px; font-weight: 700;
-    color: #F0F4FF;
-  }
+  /* ── Founder Trust Banner ── */
+.founder-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  margin-bottom: 28px;
+  flex-wrap: nowrap;
+}
+.founder-avatars {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.founder-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  margin-left: -8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.08);
+}
+.founder-avatar:first-child { margin-left: 0; }
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.founder-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+.founder-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(240,244,255,0.55);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.founder-text span { color: #F0F4FF; }
+.founder-flag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(240,244,255,0.35);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.founder-clutch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.founder-clutch-logo {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FF3D2E;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.founder-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.founder-star {
+  width: 13px;
+  height: 13px;
+  display: block;
+  flex-shrink: 0;
+}
+.founder-rating {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #F0F4FF;
+  white-space: nowrap;
+}
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -1144,57 +1181,46 @@
         Accepting PH &amp; USA Clients
       </div>
    <div style="padding: 2rem 0; display: flex; justify-content: center;">
-  <div class="trust-bar">
-
-    <div class="avatars">
-      <!-- FOUNDER PHOTO 1: replace YOUR_IMG_URL_1 -->
-      <div class="avatar"><img src="https://i.ibb.co/DfSmYBd3/OSPUS100px.png"  alt="US Founder 1"/></div>
-      <!-- FOUNDER PHOTO 2: replace YOUR_IMG_URL_2 -->
-      <div class="avatar"><img src="https://i.ibb.co/39Ff91j2/FJ-UK100px.png" alt="US Founder 2"/></div>
-      <!-- FOUNDER PHOTO 3: replace YOUR_IMG_URL_3 -->
-      <div class="avatar"><img src="https://i.ibb.co/HTKk9qyg/BPD-US100px.png" alt="US Founder 3"/></div>
-      <!-- FOUNDER PHOTO 4: replace YOUR_IMG_URL_4 -->
-      <div class="avatar"><img src="https://i.ibb.co/Xmx6PsF/MSO-AU100px.png" alt="US Founder 4"/></div>
-      <!-- FOUNDER PHOTO 5: replace YOUR_IMG_URL_5 -->
-      <div class="avatar"><img src="https://i.ibb.co/S4nzDF2v/APS-US100px.png" alt="US Founder 5"/></div>
-    </div>
-
-    <div class="divider"></div>
-
-    <p class="trust-text">Trusted by <span>10+ US Founders</span></p>
-
-    <div class="flag-us">
-      <svg width="18" height="13" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
-        <rect width="18" height="13" fill="#B22234"/>
-        <rect y="1" width="18" height="1" fill="white"/><rect y="3" width="18" height="1" fill="white"/><rect y="5" width="18" height="1" fill="white"/><rect y="7" width="18" height="1" fill="white"/><rect y="9" width="18" height="1" fill="white"/><rect y="11" width="18" height="1" fill="white"/>
-        <rect width="7" height="7" fill="#3C3B6E"/>
-        <circle cx="1.2" cy="1" r="0.5" fill="white"/><circle cx="2.4" cy="1" r="0.5" fill="white"/><circle cx="3.6" cy="1" r="0.5" fill="white"/><circle cx="4.8" cy="1" r="0.5" fill="white"/><circle cx="6" cy="1" r="0.5" fill="white"/>
-        <circle cx="1.8" cy="2" r="0.5" fill="white"/><circle cx="3" cy="2" r="0.5" fill="white"/><circle cx="4.2" cy="2" r="0.5" fill="white"/><circle cx="5.4" cy="2" r="0.5" fill="white"/>
-        <circle cx="1.2" cy="3" r="0.5" fill="white"/><circle cx="2.4" cy="3" r="0.5" fill="white"/><circle cx="3.6" cy="3" r="0.5" fill="white"/><circle cx="4.8" cy="3" r="0.5" fill="white"/><circle cx="6" cy="3" r="0.5" fill="white"/>
-        <circle cx="1.8" cy="4" r="0.5" fill="white"/><circle cx="3" cy="4" r="0.5" fill="white"/><circle cx="4.2" cy="4" r="0.5" fill="white"/><circle cx="5.4" cy="4" r="0.5" fill="white"/>
-        <circle cx="1.2" cy="5" r="0.5" fill="white"/><circle cx="2.4" cy="5" r="0.5" fill="white"/><circle cx="3.6" cy="5" r="0.5" fill="white"/><circle cx="4.8" cy="5" r="0.5" fill="white"/><circle cx="6" cy="5" r="0.5" fill="white"/>
-        <circle cx="1.8" cy="6" r="0.5" fill="white"/><circle cx="3" cy="6" r="0.5" fill="white"/><circle cx="4.2" cy="6" r="0.5" fill="white"/><circle cx="5.4" cy="6" r="0.5" fill="white"/>
+ <div class="founder-banner fade-in">
+  <div class="founder-avatars">
+    <div class="founder-avatar"><img src="https://i.ibb.co/DfSmYBd3/OSPUS100px.png" alt="Founder 1"/></div>
+    <div class="founder-avatar"><img src="https://i.ibb.co/39Ff91j2/FJ-UK100px.png" alt="Founder 2"/></div>
+    <div class="founder-avatar"><img src="https://i.ibb.co/HTKk9qyg/BPD-US100px.png" alt="Founder 3"/></div>
+    <div class="founder-avatar"><img src="https://i.ibb.co/Xmx6PsF/MSO-AU100px.png" alt="Founder 4"/></div>
+    <div class="founder-avatar"><img src="https://i.ibb.co/S4nzDF2v/APS-US100px.png" alt="Founder 5"/></div>
+  </div>
+  <div class="founder-divider"></div>
+  <p class="founder-text">Trusted by <span>10+ US Founders</span></p>
+  <div class="founder-flag">
+    <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
+      <rect width="18" height="13" fill="#B22234"/>
+      <rect y="1" width="18" height="1" fill="white"/><rect y="3" width="18" height="1" fill="white"/>
+      <rect y="5" width="18" height="1" fill="white"/><rect y="7" width="18" height="1" fill="white"/>
+      <rect y="9" width="18" height="1" fill="white"/><rect y="11" width="18" height="1" fill="white"/>
+      <rect width="7" height="7" fill="#3C3B6E"/>
+      <circle cx="1.2" cy="1" r="0.5" fill="white"/><circle cx="2.4" cy="1" r="0.5" fill="white"/><circle cx="3.6" cy="1" r="0.5" fill="white"/><circle cx="4.8" cy="1" r="0.5" fill="white"/><circle cx="6" cy="1" r="0.5" fill="white"/>
+      <circle cx="1.8" cy="2" r="0.5" fill="white"/><circle cx="3" cy="2" r="0.5" fill="white"/><circle cx="4.2" cy="2" r="0.5" fill="white"/><circle cx="5.4" cy="2" r="0.5" fill="white"/>
+      <circle cx="1.2" cy="3" r="0.5" fill="white"/><circle cx="2.4" cy="3" r="0.5" fill="white"/><circle cx="3.6" cy="3" r="0.5" fill="white"/><circle cx="4.8" cy="3" r="0.5" fill="white"/><circle cx="6" cy="3" r="0.5" fill="white"/>
+      <circle cx="1.8" cy="4" r="0.5" fill="white"/><circle cx="3" cy="4" r="0.5" fill="white"/><circle cx="4.2" cy="4" r="0.5" fill="white"/><circle cx="5.4" cy="4" r="0.5" fill="white"/>
+      <circle cx="1.2" cy="5" r="0.5" fill="white"/><circle cx="2.4" cy="5" r="0.5" fill="white"/><circle cx="3.6" cy="5" r="0.5" fill="white"/><circle cx="4.8" cy="5" r="0.5" fill="white"/><circle cx="6" cy="5" r="0.5" fill="white"/>
+      <circle cx="1.8" cy="6" r="0.5" fill="white"/><circle cx="3" cy="6" r="0.5" fill="white"/><circle cx="4.2" cy="6" r="0.5" fill="white"/><circle cx="5.4" cy="6" r="0.5" fill="white"/>
+    </svg>
+    US
+  </div>
+  <div class="founder-divider"></div>
+  <div class="founder-clutch">
+    <span class="founder-clutch-logo">clutch</span>
+    <div class="founder-stars">
+      <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+      <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+      <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+      <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+      <svg class="founder-star" viewBox="0 0 14 14">
+        <defs><linearGradient id="halfZ" x1="0" x2="1" y1="0" y2="0"><stop offset="50%" stop-color="#FF3D2E"/><stop offset="50%" stop-color="rgba(255,255,255,0.15)"/></linearGradient></defs>
+        <polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="url(#halfZ)"/>
       </svg>
-      US
     </div>
-
-    <div class="divider"></div>
-
-    <div class="clutch-block">
-      <span class="clutch-logo">clutch</span>
-      <div class="stars">
-        <svg class="star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-        <svg class="star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-        <svg class="star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-        <svg class="star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-        <svg class="star" viewBox="0 0 14 14">
-          <defs><linearGradient id="half"><stop offset="50%" stop-color="#FF3D2E"/><stop offset="50%" stop-color="#e5e7eb"/></linearGradient></defs>
-          <polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="url(#half)"/>
-        </svg>
-      </div>
-      <span class="clutch-rating">4.5</span>
-    </div>
-
+    <span class="founder-rating">4.5</span>
   </div>
 </div>
 
