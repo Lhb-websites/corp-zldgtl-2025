@@ -117,13 +117,12 @@
   }
   .founder-avatar {
   width: 34px; height: 34px;
-  border-radius: 50%;
-  border: 2px solid #050A14;
-  margin-left: -10px;
+  border-radius: 8px; /* ← square with rounded corners instead of 50% */
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-left: -8px;
   overflow: hidden;
   flex-shrink: 0;
   background: rgba(255,255,255,0.08);
-  /* ADD THESE: */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,11 +131,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* focuses on face/top of image */
+  object-position: center top;
   display: block;
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
 }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
