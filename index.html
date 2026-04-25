@@ -56,98 +56,87 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250" crossorigin="anonymous"></script>
 
   <style>
-/* ── Stars and 10+ US Founders  Trusted Banner ── */
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
-.trust-bar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 14px 24px;
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  width: fit-content;
-}
-.trust-text {
-  font-family: 'Syne', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-text-secondary);
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-}
-.trust-text span {
-  color: var(--color-text-primary);
-}
-.avatars {
-  display: flex;
-  align-items: center;
-}
-.avatar {
-  width: 36px;
-  height: 36px;
+  <!-- ── Trusted Banner (Hero) ── -->
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
+  .founder-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .founder-avatars { display: flex; align-items: center; }
+  .founder-avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 2px solid #050A14;
+    margin-left: -10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.08);
+  }
+  .founder-avatar:first-child { margin-left: 0; }
+  .founder-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .founder-divider {
+    width: 1px; height: 26px;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+  .founder-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(240,244,255,0.55);
+    white-space: nowrap;
+  }
+  .founder-text span { color: #F0F4FF; }
+  .founder-flag {
+    display: flex; align-items: center; gap: 5px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700;
+    color: rgba(240,244,255,0.35);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .founder-clutch { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
+  .founder-clutch-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: #FF3D2E; letter-spacing: -0.02em;
+  }
+  .founder-stars { display: flex; align-items: center; gap: 2px; }
+  .founder-star { width: 13px; height: 13px; }
+  .founder-rating {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: #F0F4FF;
+  }
+  .founder-avatar {
+  width: 34px; height: 34px;
   border-radius: 50%;
-  border: 2px solid var(--color-background-primary);
+  border: 2px solid #050A14;
   margin-left: -10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.08);
+  /* ADD THESE: */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  overflow: hidden;
+}
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* focuses on face/top of image */
+  display: block;
   flex-shrink: 0;
-}
-.avatar:first-child { margin-left: 0; }
-.a1 { background: #EEEDFE; color: #3C3489; }
-.a2 { background: #E1F5EE; color: #085041; }
-.a3 { background: #FAECE7; color: #712B13; }
-.a4 { background: #FBEAF0; color: #72243E; }
-.a5 { background: #E6F1FB; color: #0C447C; }
-.divider {
-  width: 0.5px;
-  height: 28px;
-  background: var(--color-border-tertiary);
-  flex-shrink: 0;
-}
-.flag-us {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'Syne', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-text-tertiary);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.clutch-block {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.clutch-logo {
-  font-family: 'Syne', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #FF3D2E;
-  letter-spacing: -0.02em;
-}
-.stars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.star {
-  width: 14px;
-  height: 14px;
-}
-.clutch-rating {
-  font-family: 'Syne', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--color-text-primary);
+  min-width: 100%;
+  min-height: 100%;
 }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1183,15 +1172,15 @@
 
     <div class="avatars">
       <!-- FOUNDER PHOTO 1: replace YOUR_IMG_URL_1 -->
-      <div class="avatar"><img src="https://i.ibb.co/HLsqqcSy/OK-SEO-P-USA.png" alt="US Founder 1"/></div>
+      <div class="avatar"><img src="https://i.ibb.co/HLsqqcSy/OK-SEO-P-USA.png"  alt="US Founder 1" style="object-position: center 20%;" /></div>
       <!-- FOUNDER PHOTO 2: replace YOUR_IMG_URL_2 -->
-      <div class="avatar"><img src="https://i.ibb.co/LDYMsC0y/FJ-UK-business.png" alt="US Founder 2"/></div>
+      <div class="avatar"><img src="https://i.ibb.co/LDYMsC0y/FJ-UK-business.png" alt="US Founder 2" style="object-position: center 20%;" /></div>
       <!-- FOUNDER PHOTO 3: replace YOUR_IMG_URL_3 -->
-      <div class="avatar"><img src="https://i.ibb.co/zjB1f6n/BPD-USA-business.png" alt="US Founder 3"/></div>
+      <div class="avatar"><img src="https://i.ibb.co/zjB1f6n/BPD-USA-business.png" alt="US Founder 3" style="object-position: center 20%;" /></div>
       <!-- FOUNDER PHOTO 4: replace YOUR_IMG_URL_4 -->
-      <div class="avatar"><img src="https://i.ibb.co/qXD9nH9/MSO-AU-business.png" alt="US Founder 4"/></div>
+      <div class="avatar"><img src="https://i.ibb.co/qXD9nH9/MSO-AU-business.png" alt="US Founder 4" style="object-position: center 20%;" /></div>
       <!-- FOUNDER PHOTO 5: replace YOUR_IMG_URL_5 -->
-      <div class="avatar"><img src="https://i.ibb.co/p6wKFgK3/APS-USA.png" alt="US Founder 5"/></div>
+      <div class="avatar"><img src="https://i.ibb.co/p6wKFgK3/APS-USA.png" alt="US Founder 5"style="object-position: center 20%;" /></div>
     </div>
 
     <div class="divider"></div>
