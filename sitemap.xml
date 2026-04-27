@@ -1,50 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ===================== CORE PAGES ===================== -->
   <url>
     <loc>https://zeldigital.com/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zeldigital.com/simplepricing.html</loc>
+    <loc>https://zeldigital.com/about/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/who-we-help/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===================== SERVICES ===================== -->
+  <url>
+    <loc>https://zeldigital.com/consulting/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zeldigital.com/privacy.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://zeldigital.com/ppc-services/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zeldigital.com/terms.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://zeldigital.com/fractional-ads-services/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zeldigital.com/google-ads-cost-calculator/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://zeldigital.com/fractional-ppc-google-ads/</loc>
+    <lastmod>2025-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://zeldigital.com/ai/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===================== PRICING ===================== -->
+  <url>
     <loc>https://zeldigital.com/pricing/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/google-ads-management-pricing/</loc>
+    <lastmod>2025-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- ===================== LEAD MAGNETS / TOOLS ===================== -->
+  <url>
+    <loc>https://zeldigital.com/google-ads-cost-calculator/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/google-ads-guide-pdf/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/book/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/club/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ===================== SOCIAL PROOF ===================== -->
   <url>
     <loc>https://zeldigital.com/case-studies/</loc>
-    <lastmod>2025-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://zeldigital.com/consulting/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,11 +113,57 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zeldigital.com/thank-you.html</loc>
-    <lastmod>2025-08-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://zeldigital.com/results/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://zeldigital.com/testimonials/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/testimonials-reviews/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===================== COMPARISON / SEO LANDING PAGES ===================== -->
+  <url>
+    <loc>https://zeldigital.com/adswerve-vs-zeldigital-hans-lacida/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/marketerhire-zeldigital-hans-lacida/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/qliqqliq-vs-zeldigital/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/understory-vs-zeldigital/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/zeldigital-vs-top-agencies-united-states-clutch-co/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===================== TRUST / CREDENTIALS ===================== -->
   <url>
     <loc>https://zeldigital.com/certificate/</loc>
     <lastmod>2025-01-27</lastmod>
@@ -78,6 +176,25 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- ===================== UTILITY ===================== -->
+  <url>
+    <loc>https://zeldigital.com/thank-you/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/privacy.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zeldigital.com/terms.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
-
-
