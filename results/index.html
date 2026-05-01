@@ -1,210 +1,534 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Studies - ZELDIGITAL® x Hans Lacida | Google Ads Performance Results</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-     <!-- ── Trusted Banner (Hero) ── -->
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
-  /* ── Founder Trust Banner ── */
-.founder-banner {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  padding: 10px 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  margin-bottom: 28px;
-  flex-wrap: nowrap;
-}
-.founder-avatars {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.founder-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  border: 1.5px solid rgba(255,255,255,0.15);
-  margin-left: -8px;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: rgba(255,255,255,0.08);
-}
-.founder-avatar:first-child { margin-left: 0; }
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-.founder-divider {
-  width: 1px;
-  height: 24px;
-  background: rgba(255,255,255,0.12);
-  flex-shrink: 0;
-}
-.founder-text {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(240,244,255,0.55);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.founder-text span { color: #F0F4FF; }
-.founder-flag {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  color: rgba(240,244,255,0.35);
-  letter-spacing: 0.06em;
-  flex-shrink: 0;
-}
-.founder-clutch {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-shrink: 0;
-}
-.founder-clutch-logo {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #FF3D2E;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-.founder-stars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  flex-shrink: 0;
-}
-.founder-star {
-  width: 13px;
-  height: 13px;
-  display: block;
-  flex-shrink: 0;
-}
-.founder-rating {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #F0F4FF;
-  white-space: nowrap;
-}
-    /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    padding: 120px 40px 80px;
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 80px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
+    /* ── THEME TOKENS ── */
+    :root {
+      --accent: #C8A96E;
+      --accent-dim: rgba(200,169,110,0.15);
+      --accent-border: rgba(200,169,110,0.35);
+      --red: #D94F3D;
+      --red-gradient: linear-gradient(135deg, #b83c2c 0%, #d94f3d 100%);
+      --mono: 'DM Mono', monospace;
+      --sans: 'DM Sans', sans-serif;
+      --display: 'Syne', sans-serif;
+      --radius: 10px;
+      --transition: 0.25s ease;
+    }
+    [data-theme="dark"] {
+      --bg: #0C0C0C;
+      --bg-surface: #141414;
+      --bg-card: #181818;
+      --bg-card-hover: #1e1e1e;
+      --border: rgba(255,255,255,0.08);
+      --border-strong: rgba(255,255,255,0.14);
+      --text-primary: #F0F4FF;
+      --text-secondary: rgba(240,244,255,0.65);
+      --text-muted: rgba(240,244,255,0.35);
+      --header-bg: #0a0a0a;
+      --summary-bg: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+      --cta-bg: #111;
+      --disclaimer-bg: #141414;
+      --footer-bg: #080808;
+      --impact-text: rgba(240,244,255,0.55);
+      --before-bg: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+      --after-bg: linear-gradient(135deg, #C8A96E 0%, #e8c87e 100%);
+      --after-text: #0C0C0C;
+    }
+    [data-theme="light"] {
+      --bg: #F7F6F3;
+      --bg-surface: #EFEDE8;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #fafaf8;
+      --border: rgba(0,0,0,0.07);
+      --border-strong: rgba(0,0,0,0.13);
+      --text-primary: #0f0f0f;
+      --text-secondary: rgba(15,15,15,0.65);
+      --text-muted: rgba(15,15,15,0.4);
+      --header-bg: #111;
+      --summary-bg: linear-gradient(135deg, #111 0%, #1e1e1e 100%);
+      --cta-bg: #fff;
+      --disclaimer-bg: #fff;
+      --footer-bg: #111;
+      --impact-text: rgba(15,15,15,0.6);
+      --before-bg: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      --after-bg: linear-gradient(135deg, #C8A96E 0%, #e8c87e 100%);
+      --after-text: #0C0C0C;
+    }
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(ellipse, rgba(200, 169, 110, 0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--sans);
+      line-height: 1.65;
+      transition: background var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
+    /* ── HEADER ── */
+    header {
+      background: var(--header-bg);
+      border-bottom: 1px solid rgba(200,169,110,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo-block {}
+    .logo-wordmark {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+    .logo-sub {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-  .hero-eyebrow-line {
-    width: 32px;
-    height: 1px;
-    background: var(--accent);
-  }
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      padding: 6px 14px;
+      border-radius: 40px;
+      border: 1px solid var(--border-strong);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      transition: all var(--transition);
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .toggle-track {
+      width: 32px;
+      height: 18px;
+      border-radius: 9px;
+      background: rgba(200,169,110,0.2);
+      border: 1px solid var(--accent-border);
+      position: relative;
+      transition: background var(--transition);
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .toggle-track { background: rgba(200,169,110,0.3); }
+    [data-theme="light"] .toggle-track { background: rgba(200,169,110,0.15); }
+    .toggle-thumb {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      top: 2px;
+      transition: transform var(--transition);
+    }
+    [data-theme="dark"] .toggle-thumb { transform: translateX(2px); }
+    [data-theme="light"] .toggle-thumb { transform: translateX(16px); }
 
-  .hero-eyebrow span {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
+    .btn-print {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #0C0C0C;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .btn-print:hover { opacity: 0.88; transform: translateY(-1px); }
 
-  .hero-headline {
-    font-family: var(--serif);
-    font-size: clamp(42px, 5.5vw, 72px);
-    line-height: 1.08;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    letter-spacing: -0.01em;
-  }
+    /* ── MAIN CONTAINER ── */
+    main { max-width: 1200px; margin: 0 auto; padding: 40px 32px 80px; }
 
-  .hero-headline em {
-    font-style: italic;
-    color: var(--accent);
-  }
+    /* ── FOUNDER BANNER ── */
+    .banner-wrap { display: flex; justify-content: center; padding: 32px 0 8px; }
+    .founder-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      flex-wrap: wrap;
+    }
+    [data-theme="light"] .founder-banner {
+      background: rgba(0,0,0,0.03);
+    }
+    .founder-avatars { display: flex; align-items: center; flex-shrink: 0; }
+    .founder-avatar {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-strong);
+      margin-left: -8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--bg-surface);
+    }
+    .founder-avatar:first-child { margin-left: 0; }
+    .founder-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .founder-divider { width: 1px; height: 22px; background: var(--border-strong); flex-shrink: 0; }
+    .founder-text {
+      font-family: var(--sans);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .founder-text span { color: var(--text-primary); }
+    .founder-flag {
+      display: flex; align-items: center; gap: 5px;
+      font-family: var(--mono); font-size: 10px; font-weight: 700;
+      color: var(--text-muted); letter-spacing: 0.08em; flex-shrink: 0;
+    }
+    .founder-clutch { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .founder-clutch-logo { font-family: var(--display); font-size: 13px; font-weight: 700; color: #FF3D2E; letter-spacing: -0.02em; white-space: nowrap; }
+    .founder-stars { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+    .founder-star { width: 12px; height: 12px; display: block; flex-shrink: 0; }
+    .founder-rating { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--text-primary); white-space: nowrap; }
 
-  .hero-subhead {
-    font-family: var(--mono);
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    margin-bottom: 32px;
-    text-transform: uppercase;
-  }
+    /* ── INTRO ── */
+    .intro {
+      text-align: center;
+      margin: 24px 0 48px;
+    }
+    .intro p {
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-  .hero-subhead span {
-    color: var(--text-secondary);
-  }
+    /* ── CASE STUDIES GRID ── */
+    .cases-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
 
-  .hero-body {
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.75;
-    color: var(--text-secondary);
-    max-width: 560px;
-    margin-bottom: 20px;
-  }
+    /* ── CASE STUDY CARD ── */
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .case-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+    .card-header {
+      background: var(--red-gradient);
+      padding: 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-header::after {
+      content: '';
+      position: absolute;
+      top: -20px; right: -20px;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .card-header h3 {
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      letter-spacing: 0.01em;
+    }
+    .card-header p {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em;
+    }
+    .card-body { padding: 18px 20px; }
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .before-panel, .after-panel {
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .before-panel {
+      background: var(--before-bg);
+    }
+    .after-panel {
+      background: var(--after-bg);
+    }
+    .panel-label {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .before-panel .panel-label { color: rgba(240,244,255,0.45); }
+    .after-panel .panel-label { color: rgba(0,0,0,0.5); }
+    .panel-list {
+      list-style: none;
+      font-family: var(--sans);
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+    .before-panel .panel-list { color: rgba(240,244,255,0.7); }
+    .after-panel .panel-list {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    .panel-list li { margin-bottom: 4px; }
+    .card-impact {
+      font-family: var(--sans);
+      font-size: 11.5px;
+      color: var(--impact-text);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    .card-impact strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
 
-  .hero-body strong {
-    color: var(--text-primary);
-    font-weight: 600;
-  }
+    /* ── SUMMARY ── */
+    .summary-section {
+      margin-top: 64px;
+      background: var(--summary-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      padding: 48px 40px;
+    }
+    .summary-section h2 {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.01em;
+    }
+    .summary-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .stat-num {
+      font-family: var(--display);
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(240,244,255,0.45);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .roas-panel {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(200,169,110,0.25);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .roas-panel h3 {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .roas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .roas-item {
+      font-family: var(--sans);
+      font-size: 12.5px;
+      color: rgba(240,244,255,0.6);
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .roas-item span { color: #fff; font-weight: 600; }
+    .roas-note {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(240,244,255,0.3);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
 
-  .hero-pillars {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 44px;
-  }
+    /* ── CTA ── */
+    .cta-section {
+      margin-top: 40px;
+      background: var(--cta-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 56px 40px;
+      text-align: center;
+      transition: background var(--transition);
+    }
+    .cta-section h2 {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .cta-section p {
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.75;
+    }
+    .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .btn-primary {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: var(--accent);
+      color: #0C0C0C;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-secondary {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: transparent;
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .btn-secondary:hover { border-color: var(--accent); transform: translateY(-1px); }
 
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      margin-top: 32px;
+      background: var(--disclaimer-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px;
+      transition: background var(--transition);
+    }
+    .disclaimer h3 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .disclaimer ul { list-style: none; }
+    .disclaimer li {
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+      padding-left: 14px;
+      position: relative;
+    }
+    .disclaimer li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--footer-bg);
+      border-top: 2px solid var(--accent);
+      margin-top: 64px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px;
+      text-align: center;
+    }
+    .footer-inner p {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    /* ── PRINT ── */
     @media print {
       .no-print { display: none !important; }
       body::before {
         content: "Hanzel Lacida Google Ads Strategist";
         position: fixed;
-        top: 50%;
-        left: 50%;
+        top: 50%; left: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
         font-size: 48px;
-        color: rgba(0, 0, 0, 0.08);
+        color: rgba(0,0,0,0.06);
         font-weight: bold;
         z-index: -1;
         white-space: nowrap;
@@ -212,521 +536,513 @@
         letter-spacing: 2px;
       }
     }
-    .before-bg { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
-    .after-bg { background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .header-inner { padding: 14px 18px; }
+      main { padding: 28px 18px 60px; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .summary-stats { grid-template-columns: 1fr; gap: 16px; }
+      .roas-grid { grid-template-columns: 1fr; }
+      .before-after { grid-template-columns: 1fr; }
+      .summary-section { padding: 32px 20px; }
+      .cta-section { padding: 40px 20px; }
+      .founder-banner { gap: 10px; padding: 10px 14px; }
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
-  <header class="bg-black text-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-8">
-      <div class="flex items-center justify-between">
-      <div>
-          <h1 class="text-3xl font-bold mb-2">ZELDIGITAL®</h1>
-          <p class="text-yellow-400 text-sm">Google Ads Case Studies | Before & After Results</p>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-wordmark">ZELDIGITAL®</div>
+        <div class="logo-sub">Google Ads Case Studies</div>
       </div>
-      <div class="no-print">
-          <button id="printBtn" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md font-semibold transition">Print / Save PDF</button>
-        </div>
+      <div class="header-actions no-print">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeLabel">LIGHT</span>
+          <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        </button>
+        <button class="btn-print" id="printBtn">Print / PDF</button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 py-10">
-    
-    <!-- Introduction -->
-       <div style="padding: 2rem 0; display: flex; justify-content: center;">
-     <div class="founder-banner fade-in">
-      <div class="founder-avatars">
-        <div class="founder-avatar"><img src="https://i.ibb.co/DfSmYBd3/OSPUS100px.png" alt="Founder 1"/></div>
-        <div class="founder-avatar"><img src="https://i.ibb.co/39Ff91j2/FJ-UK100px.png" alt="Founder 2"/></div>
-        <div class="founder-avatar"><img src="https://i.ibb.co/HTKk9qyg/BPD-US100px.png" alt="Founder 3"/></div>
-        <div class="founder-avatar"><img src="https://i.ibb.co/Xmx6PsF/MSO-AU100px.png" alt="Founder 4"/></div>
-        <div class="founder-avatar"><img src="https://i.ibb.co/S4nzDF2v/APS-US100px.png" alt="Founder 5"/></div>
-      </div><div class="founder-divider"></div>
-      <p class="founder-text">Trusted by <span>10+ US Founders</span></p>
-      <div class="founder-flag">
-        <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
-          <rect width="18" height="13" fill="#B22234"/>
-          <rect y="1" width="18" height="1" fill="white"/><rect y="3" width="18" height="1" fill="white"/>
-          <rect y="5" width="18" height="1" fill="white"/><rect y="7" width="18" height="1" fill="white"/>
-          <rect y="9" width="18" height="1" fill="white"/><rect y="11" width="18" height="1" fill="white"/>
-          <rect width="7" height="7" fill="#3C3B6E"/>
-          <circle cx="1.2" cy="1" r="0.5" fill="white"/><circle cx="2.4" cy="1" r="0.5" fill="white"/><circle cx="3.6" cy="1" r="0.5" fill="white"/><circle cx="4.8" cy="1" r="0.5" fill="white"/><circle cx="6" cy="1" r="0.5" fill="white"/>
-          <circle cx="1.8" cy="2" r="0.5" fill="white"/><circle cx="3" cy="2" r="0.5" fill="white"/><circle cx="4.2" cy="2" r="0.5" fill="white"/><circle cx="5.4" cy="2" r="0.5" fill="white"/>
-          <circle cx="1.2" cy="3" r="0.5" fill="white"/><circle cx="2.4" cy="3" r="0.5" fill="white"/><circle cx="3.6" cy="3" r="0.5" fill="white"/><circle cx="4.8" cy="3" r="0.5" fill="white"/><circle cx="6" cy="3" r="0.5" fill="white"/>
-          <circle cx="1.8" cy="4" r="0.5" fill="white"/><circle cx="3" cy="4" r="0.5" fill="white"/><circle cx="4.2" cy="4" r="0.5" fill="white"/><circle cx="5.4" cy="4" r="0.5" fill="white"/>
-          <circle cx="1.2" cy="5" r="0.5" fill="white"/><circle cx="2.4" cy="5" r="0.5" fill="white"/><circle cx="3.6" cy="5" r="0.5" fill="white"/><circle cx="4.8" cy="5" r="0.5" fill="white"/><circle cx="6" cy="5" r="0.5" fill="white"/>
-          <circle cx="1.8" cy="6" r="0.5" fill="white"/><circle cx="3" cy="6" r="0.5" fill="white"/><circle cx="4.2" cy="6" r="0.5" fill="white"/><circle cx="5.4" cy="6" r="0.5" fill="white"/>
-        </svg>
-        US
-      </div>
-      <div class="founder-divider"></div>
-      <div class="founder-clutch">
-        <span class="founder-clutch-logo">clutch</span>
-        <div class="founder-stars">
-          <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-          <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-          <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-          <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
-          <svg class="founder-star" viewBox="0 0 14 14">
-            <defs><linearGradient id="halfZ" x1="0" x2="1" y1="0" y2="0"><stop offset="50%" stop-color="#FF3D2E"/><stop offset="50%" stop-color="rgba(255,255,255,0.15)"/></linearGradient></defs>
-            <polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="url(#halfZ)"/>
-          </svg>
+  <!-- MAIN -->
+  <main>
+    <!-- Founder Banner -->
+    <div class="banner-wrap">
+      <div class="founder-banner">
+        <div class="founder-avatars">
+          <div class="founder-avatar"><img src="https://i.ibb.co/DfSmYBd3/OSPUS100px.png" alt="Client 1"/></div>
+          <div class="founder-avatar"><img src="https://i.ibb.co/39Ff91j2/FJ-UK100px.png" alt="Client 2"/></div>
+          <div class="founder-avatar"><img src="https://i.ibb.co/HTKk9qyg/BPD-US100px.png" alt="Client 3"/></div>
+          <div class="founder-avatar"><img src="https://i.ibb.co/Xmx6PsF/MSO-AU100px.png" alt="Client 4"/></div>
+          <div class="founder-avatar"><img src="https://i.ibb.co/S4nzDF2v/APS-US100px.png" alt="Client 5"/></div>
         </div>
-        <span class="founder-rating">4.5</span>
-      </div>
+        <div class="founder-divider"></div>
+        <p class="founder-text">Trusted by <span>10+ US Founders</span></p>
+        <div class="founder-flag">
+          <svg width="16" height="12" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
+            <rect width="18" height="13" fill="#B22234"/>
+            <rect y="1" width="18" height="1" fill="white"/><rect y="3" width="18" height="1" fill="white"/>
+            <rect y="5" width="18" height="1" fill="white"/><rect y="7" width="18" height="1" fill="white"/>
+            <rect y="9" width="18" height="1" fill="white"/><rect y="11" width="18" height="1" fill="white"/>
+            <rect width="7" height="7" fill="#3C3B6E"/>
+            <circle cx="1.2" cy="1" r="0.5" fill="white"/><circle cx="2.4" cy="1" r="0.5" fill="white"/><circle cx="3.6" cy="1" r="0.5" fill="white"/><circle cx="4.8" cy="1" r="0.5" fill="white"/><circle cx="6" cy="1" r="0.5" fill="white"/>
+            <circle cx="1.8" cy="2" r="0.5" fill="white"/><circle cx="3" cy="2" r="0.5" fill="white"/><circle cx="4.2" cy="2" r="0.5" fill="white"/><circle cx="5.4" cy="2" r="0.5" fill="white"/>
+            <circle cx="1.2" cy="3" r="0.5" fill="white"/><circle cx="2.4" cy="3" r="0.5" fill="white"/><circle cx="3.6" cy="3" r="0.5" fill="white"/><circle cx="4.8" cy="3" r="0.5" fill="white"/><circle cx="6" cy="3" r="0.5" fill="white"/>
+            <circle cx="1.8" cy="4" r="0.5" fill="white"/><circle cx="3" cy="4" r="0.5" fill="white"/><circle cx="4.2" cy="4" r="0.5" fill="white"/><circle cx="5.4" cy="4" r="0.5" fill="white"/>
+            <circle cx="1.2" cy="5" r="0.5" fill="white"/><circle cx="2.4" cy="5" r="0.5" fill="white"/><circle cx="3.6" cy="5" r="0.5" fill="white"/><circle cx="4.8" cy="5" r="0.5" fill="white"/><circle cx="6" cy="5" r="0.5" fill="white"/>
+            <circle cx="1.8" cy="6" r="0.5" fill="white"/><circle cx="3" cy="6" r="0.5" fill="white"/><circle cx="4.2" cy="6" r="0.5" fill="white"/><circle cx="5.4" cy="6" r="0.5" fill="white"/>
+          </svg>
+          US
+        </div>
+        <div class="founder-divider"></div>
+        <div class="founder-clutch">
+          <span class="founder-clutch-logo">clutch</span>
+          <div class="founder-stars">
+            <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+            <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+            <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+            <svg class="founder-star" viewBox="0 0 14 14"><polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="#FF3D2E"/></svg>
+            <svg class="founder-star" viewBox="0 0 14 14">
+              <defs><linearGradient id="halfZ" x1="0" x2="1" y1="0" y2="0"><stop offset="50%" stop-color="#FF3D2E"/><stop offset="50%" stop-color="rgba(255,255,255,0.15)"/></linearGradient></defs>
+              <polygon points="7,1 8.8,5.2 13.3,5.6 10,8.6 11,13 7,10.5 3,13 4,8.6 0.7,5.6 5.2,5.2" fill="url(#halfZ)"/>
+            </svg>
+          </div>
+          <span class="founder-rating">4.5</span>
+        </div>
       </div>
     </div>
-    <section class="mb-12 text-center">
-      <p class="text-gray-600 max-w-3xl mx-auto">Performance-driven results across healthcare, e-commerce, hospitality, and B2B sectors. All data anonymized for public showcase.</p>
-    </section>
-      
-     <!-- Case Studies Grid -->
-    <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-      <!-- 0. Ebike and Sporting Goods Retailer (Latest) -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Ebike &amp; Sporting Goods Retailer</h3>
-          <p class="text-xs opacity-90">Paid Search Manager | Australia &amp; New Zealand | 90 Days (Sep–Nov 2025)</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Fragmented Google Ads structure</li>
-                <li>• Weak geo targeting for AU and NZ</li>
-                <li>• Limited keyword control</li>
-                <li>• High waste from broad search terms</li>
-                <li>• No audience or avatar alignment</li>
-                <li>• Inconsistent daily optimisation</li>
+    <!-- Intro -->
+    <div class="intro">
+      <p>Performance-driven results across healthcare, e-commerce, hospitality, and B2B sectors. All data anonymized for public showcase.</p>
+    </div>
+
+    <!-- Case Studies Grid -->
+    <section class="cases-grid">
+
+      <!-- 0. Ebike -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Ebike &amp; Sporting Goods Retailer</h3>
+          <p>Paid Search Manager · Australia &amp; New Zealand · 90 Days (Sep–Nov 2025)</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before</div>
+              <ul class="panel-list">
+                <li>· Fragmented campaign structure</li>
+                <li>· Weak geo targeting</li>
+                <li>· Limited keyword control</li>
+                <li>· High waste from broad terms</li>
+                <li>· No audience alignment</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">After</div>
+              <ul class="panel-list">
                 <li>✓ Peak ROAS over 60x</li>
-                <li>✓ Rebuilt PMax and Search campaigns</li>
-                <li>✓ Search terms cleaned and negatives applied</li>
-                <li>✓ Geo targeting focused on high intent AU East Coast</li>
-                <li>✓ Audience targeting aligned to buyer profiles</li>
-                <li>✓ Daily monitoring improved spend efficiency</li>
-                <li>✓ Strong BFCM results with controlled scaling</li>
+                <li>✓ Rebuilt PMax & Search</li>
+                <li>✓ Negatives applied</li>
+                <li>✓ AU East Coast geo focus</li>
+                <li>✓ Strong BFCM results</li>
               </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Impact:</strong> Strong lift in high intent traffic | Improved ROAS stability | Lower wasted spend | Clear structure ready for scaling across AU &amp; NZ
-          </div>
+          <div class="card-impact"><strong>Impact:</strong> High-intent traffic lift · Lower wasted spend · AU &amp; NZ scaling ready</div>
         </div>
       </article>
 
-      <!-- 1. California Treatment Center -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">California Treatment Center</h3>
-          <p class="text-xs opacity-90">Paid Search Manager | 90 Days</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Cost per Lead: ~$115</li>
-                <li>• Budget: $0-$1,200</li>
-                <li>• No call tracking</li>
-                <li>• Fragmented attribution</li>
+      <!-- 1. California Treatment -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>California Treatment Center</h3>
+          <p>Paid Search Manager · 90 Days</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before</div>
+              <ul class="panel-list">
+                <li>· CPL: ~$115</li>
+                <li>· Budget: $0–$1,200</li>
+                <li>· No call tracking</li>
+                <li>· Fragmented attribution</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
-                <li>✓ Cost per Lead: $54</li>
+            <div class="after-panel">
+              <div class="panel-label">After</div>
+              <ul class="panel-list">
+                <li>✓ CPL: $54</li>
                 <li>✓ 47 leads (Month 1)</li>
                 <li>✓ Budget scaled to $4,000+</li>
                 <li>✓ Full call tracking</li>
               </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Impact:</strong> 53% CPA reduction | Account rebuild | CallTrackingMetrics integration
-          </div>
+          <div class="card-impact"><strong>Impact:</strong> 53% CPA reduction · Account rebuild · CallTrackingMetrics integration</div>
         </div>
       </article>
 
-      <!-- 2. Behavioral Healthcare Orange County -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Behavioral Healthcare</h3>
-          <p class="text-xs opacity-90">Orange County | 60 Days</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• High CPA baseline</li>
-                <li>• Low phone call volume</li>
-                <li>• Poor impression share</li>
+      <!-- 2. Behavioral Healthcare -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Behavioral Healthcare</h3>
+          <p>Orange County · 60 Days</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before</div>
+              <ul class="panel-list">
+                <li>· High CPA baseline</li>
+                <li>· Low phone call volume</li>
+                <li>· Poor impression share</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
-                <li>✓ CPA down 25-30%</li>
+            <div class="after-panel">
+              <div class="panel-label">After</div>
+              <ul class="panel-list">
+                <li>✓ CPA down 25–30%</li>
                 <li>✓ Phone calls +40%</li>
                 <li>✓ Improved Quality Score</li>
-            </ul>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Actions:</strong> Competitor search campaigns | TCPA bid strategy | Hyperlocal targeting
-          </div>
+          <div class="card-impact"><strong>Actions:</strong> Competitor search · TCPA bid strategy · Hyperlocal targeting</div>
         </div>
       </article>
 
       <!-- 3. Engine Manufacturing -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Engine Manufacturing</h3>
-          <p class="text-xs opacity-90">B2B Scale | Nov 2023 - Jul 2024</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• CPA: $23</li>
-                <li>• Monthly Spend: $300k</li>
-                <li>• Low conversion rates</li>
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Engine Manufacturing</h3>
+          <p>B2B Scale · Nov 2023 – Jul 2024</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before</div>
+              <ul class="panel-list">
+                <li>· CPA: $23</li>
+                <li>· Monthly Spend: $300k</li>
+                <li>· Low conversion rates</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
-                <li>✓ CPA: $14 (-39%)</li>
+            <div class="after-panel">
+              <div class="panel-label">After</div>
+              <ul class="panel-list">
+                <li>✓ CPA: $14 (–39%)</li>
                 <li>✓ Conversions +50%</li>
                 <li>✓ Spend: $150k</li>
                 <li>✓ ROAS: 11,500%</li>
-            </ul>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Results:</strong> $551.9M sales | $138M net profit | 50% conversion increase
-          </div>
+          <div class="card-impact"><strong>Results:</strong> $551.9M sales · $138M net profit · 50% conversion increase</div>
         </div>
       </article>
 
-      <!-- 4. Travel Ads Hospitality -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Travel Ads by Expedia</h3>
-          <p class="text-xs opacity-90">50+ Hotel Brands | 2022-2023</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Inconsistent reporting</li>
-                <li>• High CAC</li>
-                <li>• Manual processes</li>
+      <!-- 4. Expedia Hotels -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Travel Ads by Expedia</h3>
+          <p>50+ Hotel Brands · 2022–2023</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before</div>
+              <ul class="panel-list">
+                <li>· Inconsistent reporting</li>
+                <li>· High CAC</li>
+                <li>· Manual processes</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
-                <li>✓ ROAS: 3.2x-5x</li>
+            <div class="after-panel">
+              <div class="panel-label">After</div>
+              <ul class="panel-list">
+                <li>✓ ROAS: 3.2x–5x</li>
                 <li>✓ CAC down 28%</li>
                 <li>✓ Automated dashboards</li>
               </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Impact:</strong> 100% timely reporting | Unified Looker Studio dashboards | Team framework
-          </div>
+          <div class="card-impact"><strong>Impact:</strong> 100% timely reporting · Unified Looker Studio · Team framework</div>
         </div>
       </article>
 
-      <!-- 5. Furniture Brand E-commerce -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Furniture Brand</h3>
-          <p class="text-xs opacity-90">E-commerce | Mar-Apr 2022</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before (Mar)</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Conversions: 1.89k</li>
-                <li>• Conv. Value: $1.5M</li>
-                <li>• ROAS: Baseline</li>
+      <!-- 5. Furniture -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Furniture Brand</h3>
+          <p>E-commerce · Mar–Apr 2022</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before (Mar)</div>
+              <ul class="panel-list">
+                <li>· Conversions: 1.89k</li>
+                <li>· Conv. Value: $1.5M</li>
+                <li>· ROAS: Baseline</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After (Apr)</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">After (Apr)</div>
+              <ul class="panel-list">
                 <li>✓ Conversions: 2.10k</li>
                 <li>✓ Conv. Value: $3.9M</li>
                 <li>✓ ROAS: 2.6x (+260%)</li>
-            </ul>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Growth:</strong> 260% conversion value increase | 1.32M impressions | Optimized targeting
-          </div>
+          <div class="card-impact"><strong>Growth:</strong> 260% conv. value increase · 1.32M impressions · Optimized targeting</div>
         </div>
       </article>
 
-      <!-- 6. E-commerce Security Equipment -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Security Equipment Retailer</h3>
-          <p class="text-xs opacity-90">E-commerce | Apr 2022 - Apr 2023</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Before (Apr 2022)</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Conv. Value: $139</li>
-                <li>• ROAS: 0.17x</li>
-                <li>• Underperforming</li>
+      <!-- 6. Security Equipment -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Security Equipment Retailer</h3>
+          <p>E-commerce · Apr 2022 – Apr 2023</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Before (Apr '22)</div>
+              <ul class="panel-list">
+                <li>· Conv. Value: $139</li>
+                <li>· ROAS: 0.17x</li>
+                <li>· Underperforming</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">After (Apr 2023)</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">After (Apr '23)</div>
+              <ul class="panel-list">
                 <li>✓ Conv. Value: $14,201</li>
                 <li>✓ ROAS: 9.06x</li>
                 <li>✓ Peak: 21.55x</li>
-            </ul>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Impact:</strong> 10,117% conversion lift | 7.22x aggregate ROAS | $129.5K revenue
-          </div>
+          <div class="card-impact"><strong>Impact:</strong> 10,117% conv. lift · 7.22x aggregate ROAS · $129.5K revenue</div>
         </div>
       </article>
 
-      <!-- 7. Computer Parts E-commerce -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Computer Parts & Laptops</h3>
-          <p class="text-xs opacity-90">E-commerce | Jun 2013 - Sep 2021</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Campaign Summary</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• 112M+ impressions</li>
-                <li>• 1M+ clicks</li>
-                <li>• Avg CPC: $22.31</li>
+      <!-- 7. Computer Parts -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Computer Parts &amp; Laptops</h3>
+          <p>E-commerce · Jun 2013 – Sep 2021</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Campaign Summary</div>
+              <ul class="panel-list">
+                <li>· 112M+ impressions</li>
+                <li>· 1M+ clicks</li>
+                <li>· Avg CPC: $22.31</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Results</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">Results</div>
+              <ul class="panel-list">
                 <li>✓ 26,700 conversions</li>
-                <li>✓ $2.67M-$4M revenue</li>
-                <li>✓ Phone calls most effective</li>
+                <li>✓ $2.67M–$4M revenue</li>
+                <li>✓ Calls most effective</li>
               </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Performance:</strong> 8-year account management | Diverse ad formats | High-volume success
-          </div>
+          <div class="card-impact"><strong>Performance:</strong> 8-year account management · Diverse ad formats · High-volume</div>
         </div>
       </article>
 
-      <!-- 8. Plumbing Display Ads -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Plumbing</h3>
-          <p class="text-xs opacity-90">Google Display | Nov 2020 - Nov 2021</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Campaign Metrics</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• 10M+ impressions</li>
-                <li>• 5,933 clicks</li>
-                <li>• Avg CPC: $3.40</li>
+      <!-- 8. Plumbing -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Plumbing</h3>
+          <p>Google Display · Nov 2020 – Nov 2021</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Campaign Metrics</div>
+              <ul class="panel-list">
+                <li>· 10M+ impressions</li>
+                <li>· 5,933 clicks</li>
+                <li>· Avg CPC: $3.40</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Results</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">Results</div>
+              <ul class="panel-list">
                 <li>✓ 1.2K conversions</li>
                 <li>✓ Conv. Rate: 1.04%</li>
                 <li>✓ CPA: $34.24</li>
-                <li>✓ AOV: A$180-$250</li>
-            </ul>
+                <li>✓ AOV: A$180–$250</li>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Targeting:</strong> Perth, Australia | Top keywords: plumbing, plumbers | Peak: Jan 2021
-          </div>
+          <div class="card-impact"><strong>Targeting:</strong> Perth, Australia · Top kws: plumbing, plumbers · Peak Jan 2021</div>
         </div>
       </article>
 
-      <!-- 9. Clothesline Company -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">Clothesline Company</h3>
-          <p class="text-xs opacity-90">E-commerce | Dec 2022 - Feb 2023</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Campaign Metrics</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• 423K impressions</li>
-                <li>• 3,189 clicks</li>
-                <li>• Avg CPC: $1.20</li>
+      <!-- 9. Clothesline -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>Clothesline Company</h3>
+          <p>E-commerce · Dec 2022 – Feb 2023</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Campaign Metrics</div>
+              <ul class="panel-list">
+                <li>· 423K impressions</li>
+                <li>· 3,189 clicks</li>
+                <li>· Avg CPC: $1.20</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Results</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">Results</div>
+              <ul class="panel-list">
                 <li>✓ 4.4K conversions</li>
                 <li>✓ 41 phone calls</li>
                 <li>✓ Conv. Rate: 0.36%</li>
               </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Targeting:</strong> Sydney & Brisbane | Top keywords: washing line, clothes line | Mobile optimized
-          </div>
+          <div class="card-impact"><strong>Targeting:</strong> Sydney &amp; Brisbane · Top kws: washing line · Mobile optimized</div>
         </div>
       </article>
 
-      <!-- 10. SEO Agency in the USA Management -->
-      <article class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5">
-          <h3 class="text-lg font-bold mb-1">SEO Agency in the USA</h3>
-          <p class="text-xs opacity-90">PPC Lead | 2024 - May 2025</p>
-        </header>
-        <div class="p-5">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="before-bg text-white rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Initial State</h4>
-              <ul class="text-xs space-y-1.5">
-                <li>• Multiple client accounts</li>
-                <li>• Inconsistent tracking</li>
-                <li>• High CPA across campaigns</li>
+      <!-- 10. SEO Agency -->
+      <article class="case-card">
+        <div class="card-header">
+          <h3>SEO Agency in the USA</h3>
+          <p>PPC Lead · 2024 – May 2025</p>
+        </div>
+        <div class="card-body">
+          <div class="before-after">
+            <div class="before-panel">
+              <div class="panel-label">Initial State</div>
+              <ul class="panel-list">
+                <li>· Multiple client accounts</li>
+                <li>· Inconsistent tracking</li>
+                <li>· High CPA across campaigns</li>
               </ul>
             </div>
-            <div class="after-bg text-black rounded-lg p-4">
-              <h4 class="text-xs font-bold uppercase mb-3">Results</h4>
-              <ul class="text-xs space-y-1.5 font-semibold">
+            <div class="after-panel">
+              <div class="panel-label">Results</div>
+              <ul class="panel-list">
                 <li>✓ Improved CPA across all</li>
                 <li>✓ Increased call volume</li>
-                <li>✓ Enhanced CTR & Quality Score</li>
+                <li>✓ Enhanced CTR & QS</li>
                 <li>✓ GA4/GTM integration</li>
-            </ul>
+              </ul>
             </div>
           </div>
-          <div class="text-xs text-gray-600 border-t pt-3">
-            <strong>Clients:</strong> Addiction recovery, wellness, construction sectors | 6+ active campaigns
-          </div>
+          <div class="card-impact"><strong>Clients:</strong> Addiction recovery, wellness, construction · 6+ active campaigns</div>
         </div>
       </article>
 
     </section>
 
-    <!-- Summary Section -->
-    <section class="mt-16 bg-gradient-to-r from-black to-gray-800 text-white rounded-lg p-8 shadow-xl">
-      <h2 class="text-2xl font-bold mb-6 text-center">Performance Summary</h2>
-      <div class="grid md:grid-cols-3 gap-6 text-center">
+    <!-- Summary -->
+    <section class="summary-section">
+      <h2>Performance Summary</h2>
+      <div class="summary-stats">
         <div>
-          <div class="text-4xl font-bold text-yellow-400 mb-2">11+</div>
-          <div class="text-sm text-gray-300">Case Studies</div>
+          <div class="stat-num">11+</div>
+          <div class="stat-label">Case Studies</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-yellow-400 mb-2">$550M+</div>
-          <div class="text-sm text-gray-300">Total Revenue Generated</div>
+          <div class="stat-num">$550M+</div>
+          <div class="stat-label">Total Revenue Generated</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-yellow-400 mb-2">50%+</div>
-          <div class="text-sm text-gray-300">Average CPA Reduction</div>
+          <div class="stat-num">50%+</div>
+          <div class="stat-label">Average CPA Reduction</div>
         </div>
       </div>
-
-      <!-- ROAS Breakdown -->
-      <div class="mt-8 bg-black/40 border border-yellow-500/40 rounded-lg p-5 text-sm text-gray-100">
-        <h3 class="text-base font-semibold mb-3 text-yellow-300 text-center">ROAS by Project (Where Reported)</h3>
-        <div class="grid md:grid-cols-2 gap-3">
-          <ul class="space-y-1.5">
-            <li>• Ebike &amp; Sporting Goods Retailer: <span class="font-semibold">Peak ROAS 60x</span></li>
-            <li>• Engine Manufacturing: <span class="font-semibold">ROAS 115x</span></li>
-            <li>• Travel Ads by Expedia: <span class="font-semibold">ROAS 3.2x–5x</span></li>
-          </ul>
-          <ul class="space-y-1.5">
-            <li>• Furniture Brand: <span class="font-semibold">ROAS 2.6x</span></li>
-            <li>• Security Equipment Retailer: <span class="font-semibold">7.22x aggregate ROAS (peak 21.55x)</span></li>
-            <li>• <span class="font-semibold">Average ROAS across these projects: ≈38x</span></li>
-          </ul>
+      <div class="roas-panel">
+        <h3>ROAS by Project (Where Reported)</h3>
+        <div class="roas-grid">
+          <div class="roas-item">Ebike &amp; Sporting Goods: <span>Peak 60x</span></div>
+          <div class="roas-item">Furniture Brand: <span>ROAS 2.6x</span></div>
+          <div class="roas-item">Engine Manufacturing: <span>ROAS 115x</span></div>
+          <div class="roas-item">Security Equipment: <span>7.22x agg. (peak 21.55x)</span></div>
+          <div class="roas-item">Travel Ads by Expedia: <span>ROAS 3.2x–5x</span></div>
+          <div class="roas-item"><span>Average across projects: ≈38x</span></div>
         </div>
-        <p class="mt-3 text-xs text-gray-300 text-center">Average calculated using available ROAS figures only; actual performance varies by industry, budget, and timeframe.</p>
+        <p class="roas-note">Average calculated using available ROAS figures only. Actual performance varies by industry, budget, and timeframe.</p>
       </div>
     </section>
 
-    <!-- CTA TO RESULTS / CONVERSATION -->
-<section class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-4">From playbook to operating partnership</h2>
-    <p class="mb-8 text-gray-600">
-      If you’d rather not own every detail of execution, the same operating principles in this playbook are what I bring as
-      a paid acquisition systems operator. The goal is simple: install a system that leadership can trust when scaling spend.
-      Not ready for ongoing management? Start with a paid audit.
-    </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="https://hanslacida.com/how-i-operate/" class="inline-flex bg-theme-blue text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
-        How I Operate
-      </a>
-      <a href="https://hanslacida.com/paid-account-audit" target="_blank" rel="noopener noreferrer" class="inline-flex border border-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">
-        Start with a Paid Audit
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>From playbook to operating partnership</h2>
+      <p>If you'd rather not own every detail of execution, the same operating principles in this playbook are what I bring as a paid acquisition systems operator. The goal is simple: install a system that leadership can trust when scaling spend. Not ready for ongoing management? Start with a paid audit.</p>
+      <div class="cta-buttons">
+        <a href="https://hanslacida.com/how-i-operate/" class="btn-primary">How I Operate</a>
+        <a href="https://hanslacida.com/paid-account-audit" target="_blank" rel="noopener noreferrer" class="btn-secondary">Start with a Paid Audit</a>
+      </div>
+    </section>
 
     <!-- Disclaimer -->
-    <section class="mt-10 bg-white p-6 rounded-lg shadow border border-gray-200">
-      <h3 class="text-lg font-semibold mb-3 text-red-600">Important Notes &amp; Disclaimers</h3>
-      <ul class="text-sm text-gray-700 space-y-2">
-        <li>• All case studies use anonymized client data for public showcase.</li>
-        <li>• No proprietary, personally identifiable, or sensitive information is disclosed.</li>
-        <li>• All performance figures (ROAS, CPA, revenue, leads, etc.) are specific to the individual accounts and timeframes shown.</li>
-        <li>• Before/After results, including peak ROAS numbers, are not guarantees of future performance and may not be typical.</li>
-        <li>• Results vary by industry, budget, seasonality, offer, landing pages, and broader market conditions.</li>
-        <li>• ROAS and revenue figures are rounded for readability; currency values are approximate where ranges are shown.</li>
-        <li>• All performance data is sourced from internal Google Ads and analytics reports available at the time of management.</li>
+    <section class="disclaimer">
+      <h3>Important Notes &amp; Disclaimers</h3>
+      <ul>
+        <li>All case studies use anonymized client data for public showcase.</li>
+        <li>No proprietary, personally identifiable, or sensitive information is disclosed.</li>
+        <li>All performance figures (ROAS, CPA, revenue, leads, etc.) are specific to the individual accounts and timeframes shown.</li>
+        <li>Before/After results, including peak ROAS numbers, are not guarantees of future performance and may not be typical.</li>
+        <li>Results vary by industry, budget, seasonality, offer, landing pages, and broader market conditions.</li>
+        <li>ROAS and revenue figures are rounded for readability; currency values are approximate where ranges are shown.</li>
+        <li>All performance data is sourced from internal Google Ads and analytics reports available at the time of management.</li>
       </ul>
     </section>
-
-
   </main>
 
-  <footer class="bg-black text-white mt-16 border-t-4 border-yellow-500">
-    <div class="max-w-7xl mx-auto px-6 py-8">
-      <div class="text-center">
-        <p class="text-sm text-gray-400 mb-2">© 2025 Hans Lacida | Google Ads Strategist and Growth Partner</p>
-        <p class="text-xs text-gray-500 mb-1">ZELDIGITAL® Marketing Services OPC × KaizenStrategys Solutions LLC</p>
-        <p class="text-xs text-gray-500">All data anonymized. Safe for public showcase and portfolio use.</p>
-      </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 Hans Lacida | Google Ads Strategist and Growth Partner</p>
+      <p>ZELDIGITAL® Marketing Services OPC × KaizenStrategy </p>
+      <p>All data anonymized. Safe for public showcase and portfolio use.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('printBtn')?.addEventListener('click', function(){
-      window.print();
+    // Theme toggle
+    const html = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+
+    function setTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      label.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+      localStorage.setItem('zd-theme', theme);
+    }
+
+    // Init from storage or default dark
+    const saved = localStorage.getItem('zd-theme') || 'dark';
+    setTheme(saved);
+
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
     });
+
+    // Print
+    document.getElementById('printBtn')?.addEventListener('click', () => window.print());
   </script>
 </body>
 </html>
