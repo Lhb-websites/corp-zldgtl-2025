@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravity Digital vs. ZELDIGITAL — Performance Marketing Comparison</title>
+<meta name="description" content="Side-by-side comparison of Gravity Digital (Casey O'Quinn) and ZELDIGITAL (Hans Lacida) — two performance-driven digital marketing services for eCommerce and direct-response businesses.">
+<meta name="geo.region" content="US, PH">
+<link rel="canonical" href="https://zeldigital.com/vs/gravity-digital">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gravity Digital vs ZELDIGITAL: Performance Marketing Comparison",
+  "description": "Full-service DTC eCommerce agency vs. specialized Google Ads operator. A transparent side-by-side breakdown.",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-13",
+  "author": {
+    "@type": "Person",
+    "name": "Hans Lacida",
+    "url": "https://zeldigital.com/about",
+    "jobTitle": "Paid Acquisition Systems Operator",
+    "knowsAbout": ["Google Ads","Performance Max","eCommerce","Lead Generation","ROAS Optimization","Tracking Infrastructure"]
+  },
+  "publisher": { "@type": "Organization", "name": "ZELDIGITAL", "url": "https://zeldigital.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://zeldigital.com/vs/gravity-digital" },
+  "about": [
+    { "@type": "Organization", "name": "Gravity Digital", "url": "https://gravitydigital.com", "description": "Performance-based full-service marketing agency for DTC eCommerce brands" },
+    { "@type": "Person", "name": "Hans Lacida", "url": "https://zeldigital.com", "jobTitle": "Paid Acquisition Systems Operator" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --gd: #F97316;
+    --zel: #00C6A7;
+    --bg: #0A0A0A;
+    --surface: #111111;
+    --border: rgba(255,255,255,0.07);
+    --text: #F0EDE8;
+    --muted: #7A7774;
+    --gold: #F5C842;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; line-height: 1.6; overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.03; pointer-events: none; z-index: 9999;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; padding: 6rem 1.5rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg::before {
+    content: ''; position: absolute;
+    top: -20%; left: -10%; width: 55%; height: 80%;
+    background: radial-gradient(ellipse, rgba(249,115,22,0.16) 0%, transparent 70%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute;
+    top: -10%; right: -10%; width: 55%; height: 80%;
+    background: radial-gradient(ellipse, rgba(0,198,167,0.14) 0%, transparent 70%);
+  }
+  .hero-divider {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.12) 70%, transparent);
+    z-index: 1;
+  }
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 2rem; position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 9vw, 8.5rem);
+    line-height: 0.88; letter-spacing: 0.02em;
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-title .gd { color: var(--gd); }
+  .hero-title .vs {
+    font-size: 0.38em; color: var(--muted);
+    display: block; letter-spacing: 0.15em; padding: 0.3em 0;
+  }
+  .hero-title .zel { color: var(--zel); }
+  .hero-sub {
+    max-width: 600px; margin: 2.5rem auto 0;
+    font-size: 1.05rem; font-weight: 300; color: var(--muted);
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .hero-tags {
+    margin-top: 1.8rem; display: flex; gap: 0.75rem;
+    flex-wrap: wrap; justify-content: center;
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-tag {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    padding: 0.35em 0.9em; border-radius: 100px; border: 1px solid var(--border);
+  }
+  .hero-tag.gd { border-color: rgba(249,115,22,0.3); color: var(--gd); background: rgba(249,115,22,0.07); }
+  .hero-tag.zel { border-color: rgba(0,198,167,0.3); color: var(--zel); background: rgba(0,198,167,0.07); }
+  .scroll-cue {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; z-index: 2;
+  }
+  .scroll-line {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%,100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.15); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .section { padding: 6rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 0.95; margin-bottom: 3rem;
+  }
+  .full-divider { height: 1px; background: var(--border); margin: 0 1.5rem; }
+
+  /* ─── EEAT ─── */
+  .eeat-bar {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem;
+  }
+  .eeat-item {
+    background: var(--surface); padding: 1.5rem 1.2rem;
+    text-align: center; transition: background 0.3s;
+  }
+  .eeat-item:hover { background: #161616; }
+  .eeat-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .eeat-title {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin-bottom: 0.4rem;
+  }
+  .eeat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+  /* ─── OVERVIEW CARDS ─── */
+  .overview-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
+  }
+  .overview-card {
+    background: var(--surface); padding: 2.5rem 2rem;
+    position: relative; overflow: hidden; transition: background 0.3s;
+  }
+  .overview-card:hover { background: #161616; }
+  .overview-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  }
+  .overview-card.gd::before { background: var(--gd); }
+  .overview-card.zel::before { background: var(--zel); }
+  .card-tag {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.18em;
+    padding: 0.3em 0.8em; border-radius: 100px;
+    margin-bottom: 1.2rem; font-weight: 700; text-transform: uppercase;
+  }
+  .card-tag.gd { background: rgba(249,115,22,0.12); color: var(--gd); }
+  .card-tag.zel { background: rgba(0,198,167,0.12); color: var(--zel); }
+  .card-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1;
+  }
+  .card-name.gd { color: var(--gd); }
+  .card-name.zel { color: var(--zel); }
+  .card-founder {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    color: var(--muted); letter-spacing: 0.1em; margin-bottom: 0.4rem;
+  }
+  .card-location {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    color: var(--muted); letter-spacing: 0.1em; margin-bottom: 1rem;
+  }
+  .card-stats { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+  .card-stat-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; line-height: 1;
+  }
+  .card-stat-num.gd { color: var(--gd); }
+  .card-stat-num.zel { color: var(--zel); }
+  .card-stat-label {
+    font-family: 'Space Mono', monospace; font-size: 0.56rem;
+    letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;
+  }
+  .card-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+  .card-desc strong { color: var(--text); }
+
+  /* ─── KEY DIFFERENCE CALLOUT ─── */
+  .diff-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+    background: var(--border); border: 1.5px solid var(--border);
+    border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem;
+  }
+  .diff-col {
+    background: var(--surface); padding: 2rem 1.75rem; transition: background 0.3s;
+  }
+  .diff-col:hover { background: #161616; }
+  .diff-col::before { content: ''; display: block; height: 2px; margin-bottom: 1.25rem; border-radius: 2px; }
+  .diff-col.gd::before { background: var(--gd); }
+  .diff-col.zel::before { background: var(--zel); }
+  .diff-brand {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+    letter-spacing: 0.04em; margin-bottom: 0.75rem;
+  }
+  .diff-brand.gd { color: var(--gd); }
+  .diff-brand.zel { color: var(--zel); }
+  .diff-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .diff-list li {
+    font-size: 0.88rem; color: var(--muted);
+    padding-left: 1.2rem; position: relative; line-height: 1.5;
+  }
+  .diff-list li::before { content: '—'; position: absolute; left: 0; font-size: 0.8rem; }
+  .diff-col.gd .diff-list li::before { color: var(--gd); }
+  .diff-col.zel .diff-list li::before { color: var(--zel); }
+  .diff-list li strong { color: var(--text); }
+
+  /* ─── RISK MODEL ─── */
+  .risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+  .risk-card { border-radius: 16px; padding: 2rem 1.75rem; }
+  .risk-card.gd { background: rgba(249,115,22,0.05); border: 1.5px solid rgba(249,115,22,0.2); }
+  .risk-card.zel { background: rgba(0,198,167,0.05); border: 1.5px solid rgba(0,198,167,0.2); }
+  .risk-brand {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem;
+    margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .risk-brand.gd { color: var(--gd); }
+  .risk-brand.zel { color: var(--zel); }
+  .risk-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .risk-dot.gd { background: var(--gd); box-shadow: 0 0 8px var(--gd); }
+  .risk-dot.zel { background: var(--zel); box-shadow: 0 0 8px var(--zel); }
+  .risk-items { display: flex; flex-direction: column; gap: 0.85rem; }
+  .risk-item {
+    background: rgba(255,255,255,0.03); border-radius: 10px;
+    padding: 0.9rem 1rem; border: 1px solid var(--border);
+  }
+  .risk-label {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem;
+  }
+  .risk-val { font-size: 0.9rem; color: var(--text); font-weight: 600; }
+  .risk-note { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+  /* ─── RESULTS STRIP ─── */
+  .results-strip {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem;
+  }
+  .results-strip-item { background: var(--surface); padding: 1.8rem 1.2rem; text-align: center; }
+  .results-strip-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; line-height: 1;
+    color: var(--zel); margin-bottom: 0.3rem;
+  }
+  .results-strip-num.gd-num { color: var(--gd); }
+  .results-strip-label {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.5;
+  }
+
+  /* ─── TABLE ─── */
+  .table-wrap { overflow-x: auto; border-radius: 16px; border: 1.5px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; min-width: 700px; }
+  thead tr { background: #111; border-bottom: 1.5px solid var(--border); }
+  thead th { padding: 1.5rem 1.4rem; text-align: left; font-weight: 400; }
+  thead th:first-child {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; width: 20%;
+  }
+  .th-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.04em; }
+  .th-brand.gd { color: var(--gd); }
+  .th-brand.zel { color: var(--zel); }
+  .th-sub {
+    display: block; font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem; font-weight: 300; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.1rem;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.025); }
+  tbody td { padding: 1.3rem 1.4rem; vertical-align: top; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  tbody td:first-child {
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    color: var(--text); font-weight: 700; letter-spacing: 0.03em;
+  }
+  tbody td strong { color: var(--text); }
+  .stat-pill {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 0.65rem; padding: 0.2em 0.7em; border-radius: 100px;
+    margin-top: 0.4rem; font-weight: 700; margin-right: 0.3rem;
+    background: rgba(245,200,66,0.1); color: var(--gold);
+  }
+  .stat-pill.gd-pill { background: rgba(249,115,22,0.1); color: var(--gd); }
+  .stat-pill.zel-pill { background: rgba(0,198,167,0.1); color: var(--zel); }
+
+  /* ─── CHOOSE CARDS ─── */
+  .choose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .choose-card { border-radius: 16px; padding: 2.5rem 2rem; position: relative; overflow: hidden; }
+  .choose-card.gd { background: rgba(249,115,22,0.05); border: 1.5px solid rgba(249,115,22,0.2); }
+  .choose-card.zel { background: rgba(0,198,167,0.05); border: 1.5px solid rgba(0,198,167,0.2); }
+  .choose-brand {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+    margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;
+  }
+  .choose-brand.gd { color: var(--gd); }
+  .choose-brand.zel { color: var(--zel); }
+  .choose-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .choose-dot.gd { background: var(--gd); box-shadow: 0 0 10px var(--gd); }
+  .choose-dot.zel { background: var(--zel); box-shadow: 0 0 10px var(--zel); }
+  .choose-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+  .choose-list li {
+    font-size: 0.92rem; color: var(--muted);
+    padding-left: 1.4rem; position: relative; line-height: 1.55;
+  }
+  .choose-list li::before { content: '→'; position: absolute; left: 0; font-size: 0.8rem; }
+  .choose-card.gd .choose-list li::before { color: var(--gd); }
+  .choose-card.zel .choose-list li::before { color: var(--zel); }
+  .choose-list li strong { color: var(--text); }
+
+  /* ─── VERDICT ─── */
+  .bottom-line {
+    background: var(--surface); border: 1.5px solid var(--border);
+    border-radius: 16px; padding: 3rem 2.5rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .bottom-line::before {
+    content: 'VERDICT';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem,16vw,14rem);
+    color: rgba(255,255,255,0.02); white-space: nowrap; pointer-events: none; letter-spacing: 0.05em;
+  }
+  .verdict-grid {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    gap: 2rem; align-items: start; position: relative; z-index: 1;
+  }
+  .verdict-item { text-align: center; }
+  .verdict-need {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem;
+  }
+  .verdict-desc { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.2rem; line-height: 1.55; }
+  .verdict-arrow { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--muted); }
+  .verdict-brand { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; display: block; margin-bottom: 1rem; }
+  .verdict-brand.gd { color: var(--gd); }
+  .verdict-brand.zel { color: var(--zel); }
+  .verdict-divider { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding-top: 1rem; }
+  .verdict-divider .line { width: 1px; height: 80px; background: var(--border); }
+  .or-pill {
+    background: var(--gold); color: #0A0A0A;
+    font-family: 'Space Mono', monospace; font-size: 0.7rem; font-weight: 700;
+    padding: 0.35em 0.9em; border-radius: 100px; letter-spacing: 0.1em;
+  }
+
+  /* ─── BUTTONS ─── */
+  .cta-strip { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.85rem 2rem; border-radius: 8px;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    letter-spacing: 0.1em; font-weight: 700; text-transform: uppercase;
+    text-decoration: none; transition: all 0.25s; cursor: pointer; border: none;
+  }
+  .btn-gd { background: var(--gd); color: #fff; }
+  .btn-gd:hover { background: #fb923c; box-shadow: 0 0 30px rgba(249,115,22,0.4); transform: translateY(-2px); }
+  .btn-zel { background: var(--zel); color: #0A0A0A; }
+  .btn-zel:hover { background: #00E0BC; box-shadow: 0 0 30px rgba(0,198,167,0.4); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1.5px solid var(--border); }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--text); transform: translateY(-2px); }
+
+  /* ─── COMBO TIP ─── */
+  .combo-tip {
+    margin-top: 3rem; padding: 1.5rem 2rem; border-radius: 12px;
+    background: rgba(245,200,66,0.05); border: 1.5px solid rgba(245,200,66,0.18);
+    display: flex; gap: 1rem; align-items: flex-start; text-align: left; position: relative; z-index: 1;
+  }
+  .combo-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .combo-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .combo-text strong { color: var(--gold); }
+
+  /* ─── CASE STUDIES (ZELDIGITAL) ─── */
+  .cases-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem;
+  }
+  .case-card {
+    background: var(--surface); padding: 2rem 1.75rem; transition: background 0.3s;
+  }
+  .case-card:hover { background: #161616; }
+  .case-card.full { grid-column: 1/-1; }
+  .case-vertical {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+  }
+  .case-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
+  .case-meta { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .ba-label {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+  }
+  .ba-item { font-size: 0.82rem; color: var(--muted); padding: 0.2rem 0; line-height: 1.4; }
+  .ba-item.win { color: var(--zel); font-weight: 600; }
+  .case-impact {
+    font-size: 0.82rem; color: var(--muted);
+    padding-top: 0.8rem; border-top: 1px solid var(--border); line-height: 1.5;
+  }
+  .case-impact strong { color: var(--gold); }
+
+  /* ─── GD RESULTS ─── */
+  .gd-results-strip {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem;
+  }
+  .gd-result-item { background: var(--surface); padding: 1.6rem 1.2rem; text-align: center; transition: background 0.3s; }
+  .gd-result-item:hover { background: #161616; }
+  .gd-result-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; line-height: 1; color: var(--gd); margin-bottom: 0.3rem; }
+  .gd-result-brand { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); margin-bottom: 0.2rem; }
+  .gd-result-label { font-family: 'Space Mono', monospace; font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 3rem 1.5rem; text-align: center;
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  .reveal { opacity: 0; transform: translateY(24px); }
+
+  @media (max-width: 768px) {
+    .overview-grid,.choose-grid,.risk-grid,.diff-row,.cases-grid { grid-template-columns: 1fr; }
+    .case-card.full { grid-column: 1; }
+    .eeat-bar { grid-template-columns: 1fr 1fr; }
+    .results-strip,.gd-results-strip { grid-template-columns: 1fr 1fr; }
+    .verdict-grid { grid-template-columns: 1fr; }
+    .verdict-divider { flex-direction: row; }
+    .verdict-divider .line { width: 60px; height: 1px; }
+    tbody td { font-size: 0.82rem; padding: 1rem; }
+  }
+  @media (max-width: 480px) {
+    .section { padding: 4rem 1rem; }
+    thead th { padding: 1rem; }
+    .eeat-bar { grid-template-columns: 1fr; }
+    .results-strip,.gd-results-strip { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-divider"></div>
+  <p class="eyebrow">Performance Marketing Comparison · eCommerce · 2026</p>
+  <h1 class="hero-title">
+    <span class="gd">Gravity<br>Digital</span>
+    <span class="vs">vs</span>
+    <span class="zel">ZELDIGITAL</span>
+  </h1>
+  <p class="hero-sub">
+    Full-service DTC performance agency vs. specialized Google Ads operator.<br>
+    <strong>Both profit-obsessed. Different approaches.</strong>
+  </p>
+  <div class="hero-tags">
+    <span class="hero-tag gd">Full-Service Agency</span>
+    <span class="hero-tag gd">DTC eCommerce</span>
+    <span class="hero-tag gd">Performance-Based</span>
+    <span class="hero-tag zel">Google Ads Specialist</span>
+    <span class="hero-tag zel">ROAS Optimization</span>
+    <span class="hero-tag zel">Tracking Infrastructure</span>
+  </div>
+  <div class="scroll-cue">
+    <div class="scroll-line"></div>
+    Scroll to compare
+  </div>
+</section>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section class="section">
+  <p class="section-label reveal">Author Credentials</p>
+  <h2 class="section-title reveal">Why Trust<br>This Comparison?</h2>
+  <div class="eeat-bar reveal">
+    <div class="eeat-item">
+      <div class="eeat-icon">🎯</div>
+      <div class="eeat-title">Experience</div>
+      <div class="eeat-desc">$10M+ Google Ads spend managed. $550M+ client revenue influenced. 10+ years PPC</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">📊</div>
+      <div class="eeat-title">Expertise</div>
+      <div class="eeat-desc">Ex-Google Ads Partner. Search, PMax & Shopping specialist. Clutch ~4.5</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">✅</div>
+      <div class="eeat-title">Verified Data</div>
+      <div class="eeat-desc">Real case study figures — anonymized actuals. GD data from public sources only</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">👁</div>
+      <div class="eeat-title">Transparent</div>
+      <div class="eeat-desc">ZELDIGITAL published this. Full disclosure at footer. No fabricated competitor data</div>
+    </div>
+  </div>
+
+  <p class="section-label reveal">Quick Overview</p>
+  <h2 class="section-title reveal">Same Goal.<br>Different Engines.</h2>
+  <div class="overview-grid reveal">
+    <div class="overview-card gd">
+      <span class="card-tag gd">Full-Service · Performance Agency</span>
+      <div class="card-name gd">Gravity Digital</div>
+      <div class="card-founder">👤 Casey O'Quinn · 25+ yrs experience</div>
+      <div class="card-location">📍 USA · ADDY Award-Winning Agency</div>
+      <div class="card-stats">
+        <div class="card-stat">
+          <div class="card-stat-num gd">25+</div>
+          <div class="card-stat-label">Years Experience</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-num gd">96%</div>
+          <div class="card-stat-label">YoY Rev Growth (peak)</div>
+        </div>
+      </div>
+      <p class="card-desc">A performance-based full-service agency for <strong>family-owned DTC eCommerce brands</strong>. Covers paid ads, email marketing, creative, web development, SEO, and conversion optimization. Their model is client-aligned — <strong>they only get paid when you grow.</strong> Founded by Casey O'Quinn with 25+ years of direct-response marketing experience.</p>
+    </div>
+    <div class="overview-card zel">
+      <span class="card-tag zel">Solo Expert · Paid Acquisition</span>
+      <div class="card-name zel">ZELDIGITAL</div>
+      <div class="card-founder">👤 Hans Lacida · Ex-Google Ads Partner</div>
+      <div class="card-location">📍 Cebu City, PH · Serving US & Philippines</div>
+      <div class="card-stats">
+        <div class="card-stat">
+          <div class="card-stat-num zel">$10M+</div>
+          <div class="card-stat-label">Ad Spend Managed</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-num zel">70×</div>
+          <div class="card-stat-label">ROAS Peak</div>
+        </div>
+      </div>
+      <p class="card-desc">Solo-operated fractional Google Ads consultancy. Hyper-focused on <strong>Search, PMax, Shopping, and YouTube</strong> with deep emphasis on tracking infrastructure, first-party data, and profit-first campaign architecture. Direct expert access, no account manager layers, <strong>7–10 day launches.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">What They Actually Do</p>
+  <h2 class="section-title reveal">Services &<br>Expertise.</h2>
+  <div class="diff-row reveal">
+    <div class="diff-col gd">
+      <div class="diff-brand gd">Gravity Digital — Full Funnel</div>
+      <ul class="diff-list">
+        <li><strong>Paid ads</strong> — multi-channel paid media including Google, Meta, and more</li>
+        <li><strong>Email marketing</strong> — retention, abandoned cart, lifecycle sequences</li>
+        <li><strong>Creative & design</strong> — ad creative, landing pages, brand assets</li>
+        <li><strong>Web development</strong> — conversion-optimized storefronts and UX</li>
+        <li><strong>SEO</strong> — organic search alongside paid for compounding growth</li>
+        <li><strong>Performance model</strong> — incentives aligned to your revenue growth</li>
+      </ul>
+    </div>
+    <div class="diff-col zel">
+      <div class="diff-brand zel">ZELDIGITAL — Google Ads Deep</div>
+      <ul class="diff-list">
+        <li><strong>Google Ads audits</strong> — identify waste, fix attribution, prioritize wins</li>
+        <li><strong>Campaign builds</strong> — Search, PMax, Shopping, YouTube from scratch</li>
+        <li><strong>Tracking infrastructure</strong> — server-side, GA4, GTM, offline conversions</li>
+        <li><strong>Performance Max</strong> — advanced asset group strategy and budget architecture</li>
+        <li><strong>Profit-first ROAS</strong> — not vanity metrics, real margin-aware optimization</li>
+        <li><strong>Business consulting</strong> — offer, positioning, and conversion alignment</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- GD RESULTS -->
+  <p class="section-label reveal" style="margin-top:3rem">Gravity Digital — Reported Client Results</p>
+  <div class="gd-results-strip reveal">
+    <div class="gd-result-item">
+      <div class="gd-result-num">96%</div>
+      <div class="gd-result-brand">EatFlavorly</div>
+      <div class="gd-result-label">YoY Revenue Growth</div>
+    </div>
+    <div class="gd-result-item">
+      <div class="gd-result-num">33%</div>
+      <div class="gd-result-brand">SPORTea®</div>
+      <div class="gd-result-label">YoY Revenue Growth</div>
+    </div>
+    <div class="gd-result-item">
+      <div class="gd-result-num">ADDY</div>
+      <div class="gd-result-brand">Award Winner</div>
+      <div class="gd-result-label">Industry Recognition</div>
+    </div>
+  </div>
+
+  <!-- ZEL RESULTS -->
+  <p class="section-label reveal">ZELDIGITAL — Verified Case Study Data</p>
+  <div class="results-strip reveal">
+    <div class="results-strip-item">
+      <div class="results-strip-num">53%</div>
+      <div class="results-strip-label">CPA Reduction<br>(Treatment Center)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">70×</div>
+      <div class="results-strip-label">ROAS Peak<br>(AU/NZ eComm)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">20×</div>
+      <div class="results-strip-label">ROAS<br>(US Market)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">$550M</div>
+      <div class="results-strip-label">Client Revenue<br>Influenced</div>
+    </div>
+  </div>
+
+  <div class="cases-grid reveal">
+    <div class="case-card">
+      <div class="case-vertical">Healthcare · California</div>
+      <div class="case-title">Treatment Center</div>
+      <div class="case-meta">Paid Search Rebuild · 90 days</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Before</div>
+          <div class="ba-item">CPL ~$115</div>
+          <div class="ba-item">Budget $0–$1,200</div>
+          <div class="ba-item">No call tracking</div>
+        </div>
+        <div>
+          <div class="ba-label">After</div>
+          <div class="ba-item win">CPL $54</div>
+          <div class="ba-item win">47 leads (month 1)</div>
+          <div class="ba-item win">Budget → $4,000+</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>53% CPA reduction.</strong> Full account rebuild + CallTrackingMetrics from scratch.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">Home Services · Perth, AU</div>
+      <div class="case-title">Plumbing — Google Display</div>
+      <div class="case-meta">Nov 2020 – Nov 2021 · 12 months</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Campaign</div>
+          <div class="ba-item">10M+ impressions</div>
+          <div class="ba-item">5,933 clicks</div>
+          <div class="ba-item">Avg CPC: $3.40</div>
+        </div>
+        <div>
+          <div class="ba-label">Results</div>
+          <div class="ba-item win">1,200 conversions</div>
+          <div class="ba-item win">CPA: $34.24</div>
+          <div class="ba-item win">AOV: A$180–$250</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>1.04% conv. rate.</strong> Hyperlocal targeting. Peak: Jan 2021.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">Healthcare · Orange County</div>
+      <div class="case-title">Behavioral Healthcare</div>
+      <div class="case-meta">Local Paid Search · 60 days</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Before</div>
+          <div class="ba-item">High CPA</div>
+          <div class="ba-item">Low call volume</div>
+          <div class="ba-item">Poor impression share</div>
+        </div>
+        <div>
+          <div class="ba-label">After</div>
+          <div class="ba-item win">CPA ↓ 25–30%</div>
+          <div class="ba-item win">Phone calls +40%</div>
+          <div class="ba-item win">Quality Score improved</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>Competitor search + TCPA strategy.</strong> Hyperlocal bid targeting.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">Agency Partnership · USA</div>
+      <div class="case-title">Multi-Client PPC Lead</div>
+      <div class="case-meta">2024 – May 2025 · 6+ campaigns</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Before</div>
+          <div class="ba-item">Inconsistent tracking</div>
+          <div class="ba-item">High CPA across all</div>
+        </div>
+        <div>
+          <div class="ba-label">After</div>
+          <div class="ba-item win">CPA improved — all accounts</div>
+          <div class="ba-item win">GA4 / GTM integrated</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>Sectors:</strong> addiction recovery, wellness, construction. CTR & Quality Score lifted across the board.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Pricing & Risk Model</p>
+  <h2 class="section-title reveal">How You Pay.<br>How Risk Splits.</h2>
+  <div class="risk-grid reveal">
+    <div class="risk-card gd">
+      <div class="risk-brand gd"><span class="risk-dot gd"></span>Gravity Digital</div>
+      <div class="risk-items">
+        <div class="risk-item">
+          <div class="risk-label">Business Model</div>
+          <div class="risk-val">Performance-Based</div>
+          <div class="risk-note">Paid only when client revenue grows. Highly client-aligned incentives.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-label">Retainer Model</div>
+          <div class="risk-val">No / low upfront retainers</div>
+          <div class="risk-note">Avoids traditional agency retainer model. Skin in the game.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-label">Qualification</div>
+          <div class="risk-val">Selective — may have criteria</div>
+          <div class="risk-note">Performance model likely requires established revenue baseline to qualify.</div>
+        </div>
+      </div>
+    </div>
+    <div class="risk-card zel">
+      <div class="risk-brand zel"><span class="risk-dot zel"></span>ZELDIGITAL</div>
+      <div class="risk-items">
+        <div class="risk-item">
+          <div class="risk-label">Business Model</div>
+          <div class="risk-val">Monthly Retainer</div>
+          <div class="risk-note">Transparent fixed fee. Cancel anytime. No long-term contracts.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-label">Launch Speed</div>
+          <div class="risk-val">7–10 Days</div>
+          <div class="risk-note">Optimized campaigns live fast. Outcome-focused from day one.</div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-label">Barrier to Entry</div>
+          <div class="risk-val">Lower — straightforward fee</div>
+          <div class="risk-note">No revenue threshold required. Works at various budget levels.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TABLE ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Side-by-Side Breakdown</p>
+  <h2 class="section-title reveal">The Full<br>Comparison.</h2>
+  <div class="table-wrap reveal">
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>
+            <span class="th-brand gd">Gravity Digital</span>
+            <span class="th-sub">Casey O'Quinn · Full-Service DTC Agency</span>
+          </th>
+          <th>
+            <span class="th-brand zel">ZELDIGITAL</span>
+            <span class="th-sub">Hans Lacida · Google Ads Specialist</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Core Focus</td>
+          <td><strong>Full-funnel performance marketing</strong> — ads, email, creative, web, SEO for DTC eCommerce</td>
+          <td><strong>Google Ads / paid acquisition</strong> — Search, PMax, Shopping, YouTube. 90%+ Google-focused</td>
+        </tr>
+        <tr>
+          <td>Structure</td>
+          <td><strong>Team-based agency.</strong> Broader support, multiple specialists, founder (Casey) involved</td>
+          <td><strong>Solo operator / fractional.</strong> Direct access to Hans — no account manager layers</td>
+        </tr>
+        <tr>
+          <td>Target Clients</td>
+          <td><strong>Family-owned DTC eCommerce brands</strong> — especially established businesses needing comprehensive growth</td>
+          <td><strong>eCommerce, healthcare/medspa, B2B SaaS</strong>, lead gen — US and Philippines focus</td>
+        </tr>
+        <tr>
+          <td>Pricing Model</td>
+          <td><strong>Performance-based</strong> — paid only when revenue grows. No/low upfront retainers. Stricter qualification</td>
+          <td><strong>Monthly retainer, cancel anytime.</strong> Transparent fee. One-time audit options. 7–10 day launch</td>
+        </tr>
+        <tr>
+          <td>Track Record</td>
+          <td>
+            33–96% YoY revenue growth · SPORTea®, EatFlavorly, Annie's Pooch Pops
+            <div>
+              <span class="stat-pill gd-pill">ADDY Award winner</span>
+              <span class="stat-pill gd-pill">96% YoY peak</span>
+            </div>
+          </td>
+          <td>
+            $550M+ revenue influenced · $10M+ spend managed
+            <div>
+              <span class="stat-pill zel-pill">70× ROAS peak</span>
+              <span class="stat-pill zel-pill">53% CPA cut</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Key Strength</td>
+          <td>Full-funnel integration — ads + email + creative + web. <strong>"Profit-first" multi-channel</strong> without vanity projects</td>
+          <td>Deep Google Ads technical depth — <strong>tracking infrastructure, PMax architecture, ROAS systems</strong></td>
+        </tr>
+        <tr>
+          <td>Limitations</td>
+          <td>Performance model may require revenue baseline to qualify · less specialized in Google Ads technical depth</td>
+          <td>Primarily Google Ads — no email, creative, web dev, or SEO · solo operator bandwidth limits</td>
+        </tr>
+        <tr>
+          <td>Ideal Stage</td>
+          <td>Established DTC brands wanting a <strong>comprehensive full-service growth partner</strong> with performance-aligned risk</td>
+          <td>Businesses with working website/offer needing <strong>Google Ads fixed, optimized, and scaled</strong> profitably</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ WHEN TO CHOOSE ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Decision Framework</p>
+  <h2 class="section-title reveal">Choose Based on<br>Your Bottleneck.</h2>
+  <div class="choose-grid">
+    <div class="choose-card gd reveal">
+      <div class="choose-brand gd">
+        <div class="choose-dot gd"></div>
+        Choose Gravity Digital
+      </div>
+      <ul class="choose-list">
+        <li>You need <strong>end-to-end marketing support</strong> — creative, email, web, ads — not just one channel.</li>
+        <li>You're an <strong>established DTC eCommerce brand</strong> wanting a partner with skin in the game.</li>
+        <li>You want a <strong>performance-based model</strong> where the agency only wins when you win.</li>
+        <li>You need <strong>multi-channel brand building</strong> alongside direct-response sales growth.</li>
+      </ul>
+    </div>
+    <div class="choose-card zel reveal">
+      <div class="choose-brand zel">
+        <div class="choose-dot zel"></div>
+        Choose ZELDIGITAL
+      </div>
+      <ul class="choose-list">
+        <li>Your main bottleneck is <strong>Google Ads performance</strong> — wasted spend, broken tracking, or low ROAS.</li>
+        <li>You want <strong>one accountable expert</strong> — no junior staff, no roulette wheel on who manages your account.</li>
+        <li>You need <strong>technical depth</strong> — PMax restructuring, server-side tracking, first-party data setup.</li>
+        <li>You want <strong>fast, flexible engagement</strong> — 7–10 day launch, cancel anytime, no long-term commitment.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VERDICT ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal" style="text-align:center">The Bottom Line</p>
+  <h2 class="section-title reveal" style="text-align:center; margin-bottom:2.5rem">Our Final Verdict.</h2>
+  <div class="bottom-line reveal">
+    <div class="verdict-grid">
+      <div class="verdict-item">
+        <p class="verdict-need">Need full-funnel DTC growth?<br>Multi-channel + performance model?</p>
+        <p class="verdict-desc">Team-based. Broad service stack. ADDY-winning. Performance-aligned — they grow when you grow. Ideal for established DTC brands.</p>
+        <div class="verdict-arrow">→</div>
+        <span class="verdict-brand gd">Gravity Digital</span>
+        <a href="https://gravitydigital.com" target="_blank" rel="noopener" class="btn btn-gd">Explore Gravity Digital ↗</a>
+      </div>
+      <div class="verdict-divider">
+        <div class="line"></div>
+        <span class="or-pill">OR</span>
+        <div class="line"></div>
+      </div>
+      <div class="verdict-item">
+        <p class="verdict-need">Need Google Ads fixed & scaled?<br>Direct expert, no overhead?</p>
+        <p class="verdict-desc">$550M+ revenue influenced. 70× ROAS peaks. 53% CPA cuts. One operator, full accountability, campaigns live in 7–10 days.</p>
+        <div class="verdict-arrow">→</div>
+        <span class="verdict-brand zel">ZELDIGITAL</span>
+        <a href="https://book.zeldigital.com" target="_blank" rel="noopener" class="btn btn-zel">Book with Hans ↗</a>
+      </div>
+    </div>
+    <div class="combo-tip">
+      <div class="combo-icon">💡</div>
+      <div class="combo-text">
+        <strong>Many DTC brands use both complementarily.</strong> Deploy <strong>Gravity Digital for overall strategy, email, and creative</strong> while ZELDIGITAL handles <strong>Google Ads optimization for immediate, measurable ROAS</strong>. Broader coverage, deeper execution — a legitimate 1-2 punch.
+      </div>
+    </div>
+  </div>
+  <div class="cta-strip reveal">
+    <a href="https://gravitydigital.com" target="_blank" rel="noopener" class="btn btn-gd">Visit Gravity Digital →</a>
+    <a href="https://zeldigital.com" target="_blank" rel="noopener" class="btn btn-zel">Visit ZELDIGITAL →</a>
+    <a href="https://book.zeldigital.com" target="_blank" rel="noopener" class="btn btn-ghost">Book a Fit Call →</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>
+    Comparison updated May 2026 &nbsp;·&nbsp;
+    <a href="https://gravitydigital.com" target="_blank" rel="noopener">gravitydigital.com</a> &nbsp;·&nbsp;
+    <a href="https://zeldigital.com" target="_blank" rel="noopener">zeldigital.com</a> &nbsp;·&nbsp;
+    <a href="https://hanslacida.com" target="_blank" rel="noopener">hanslacida.com</a>
+  </p>
+  <p style="margin-top:0.75rem; font-size:0.55rem; line-height:1.8; max-width:700px; margin-left:auto; margin-right:auto;">
+    Disclosure: This comparison was published by ZELDIGITAL (Hans Lacida). Gravity Digital data sourced from publicly available information as of May 2026 — verify all details directly with them. ZELDIGITAL case study figures are anonymized actuals and are not guarantees of future performance.
+  </p>
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.timeline({ delay: 0.3 })
+    .to('.eyebrow', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+    .to('.hero-title', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+    .to('.hero-sub', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+    .to('.hero-tags', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4');
+
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+    });
+  });
+
+  document.querySelectorAll('tbody tr').forEach(row => {
+    row.addEventListener('mouseenter', () => gsap.to(row, { backgroundColor: 'rgba(255,255,255,0.03)', duration: 0.2 }));
+    row.addEventListener('mouseleave', () => gsap.to(row, { backgroundColor: 'transparent', duration: 0.2 }));
+  });
+</script>
+</body>
+</html>
