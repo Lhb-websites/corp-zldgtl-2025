@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Release — ZelDigital 2027 Expansion | FOR IMMEDIATE RELEASE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --paper: #f5f2ec;
+      --rule: #c8bfad;
+      --accent: #1a3a5c;
+      --accent-light: #2a5a8c;
+      --gold: #b8962e;
+      --gold-light: #d4b24a;
+      --muted: #6b6560;
+      --stamp-red: #c0392b;
+      --ad-bg: #edebe6;
+      --ad-border: #cec9be;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Subtle paper noise */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.018;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .playfair { font-family: 'Playfair Display', serif; }
+    .mono     { font-family: 'IBM Plex Mono', monospace; }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      background: var(--accent);
+      color: #fff;
+      border-bottom: 3px solid var(--gold);
+    }
+    .wire-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 7px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .wire-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
+    .logo-bar {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 28px 16px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    @media (min-width: 600px)  { .wire-bar { padding: 7px 28px; } .logo-bar { padding: 30px 28px; } }
+    @media (min-width: 900px)  { .logo-bar { flex-direction: row; align-items: flex-end; justify-content: space-between; } }
+    @media (min-width: 1100px) { .wire-bar { padding: 7px 48px; } .logo-bar { padding: 30px 48px; } }
+
+    .stamp {
+      display: inline-block;
+      border: 2px solid var(--stamp-red);
+      color: #e74c3c;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      position: relative;
+      white-space: nowrap;
+    }
+    .stamp::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid var(--stamp-red);
+      opacity: 0.22;
+    }
+    .dateline {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── PAGE SHELL (3-col grid) ── */
+    .page-shell {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+    @media (min-width: 1080px) {
+      .page-shell {
+        display: grid;
+        grid-template-columns: 190px 1fr 190px;
+        grid-template-areas: "adl content adr";
+        align-items: start;
+      }
+    }
+    @media (min-width: 1280px) {
+      .page-shell {
+        grid-template-columns: 230px 1fr 230px;
+      }
+    }
+
+    /* ── AD RAILS ── */
+    .ad-rail { display: none; }
+    @media (min-width: 1080px) {
+      .ad-rail {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 40px 14px;
+        position: sticky;
+        top: 0;
+        align-self: start;
+        max-height: 100vh;
+        overflow: hidden;
+      }
+      .ad-rail-left  { grid-area: adl; }
+      .ad-rail-right { grid-area: adr; }
+    }
+
+    .ad-slot {
+      width: 100%;
+      background: var(--ad-bg);
+      border: 1px dashed var(--ad-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 7px;
+      position: relative;
+      transition: border-color 0.2s, background 0.2s;
+      overflow: hidden;
+    }
+    .ad-slot:hover { border-color: var(--gold); background: #e7e4de; }
+    .ad-slot-xl  { height: 380px; }
+    .ad-slot-lg  { height: 260px; }
+    .ad-slot-sm  { height: 150px; }
+
+    .ad-slot::before,
+    .ad-slot::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-color: var(--gold);
+      border-style: solid;
+      opacity: 0.28;
+    }
+    .ad-slot::before { top: 6px; left: 6px; border-width: 1px 0 0 1px; }
+    .ad-slot::after  { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
+
+    .ad-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #b5b0a6;
+    }
+    .ad-size {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.52rem;
+      color: #c5c0b8;
+      letter-spacing: 0.06em;
+    }
+    .ad-icon { font-size: 1.3rem; opacity: 0.2; line-height: 1; }
+
+    /* ── CONTENT AREA ── */
+    .content-area {
+      padding: 36px 16px;
+      min-width: 0;
+    }
+    @media (min-width: 480px)  { .content-area { padding: 40px 24px; } }
+    @media (min-width: 600px)  { .content-area { padding: 44px 32px; } }
+    @media (min-width: 1080px) {
+      .content-area {
+        grid-area: content;
+        padding: 48px 44px;
+        border-left: 1px solid var(--rule);
+        border-right: 1px solid var(--rule);
+      }
+    }
+
+    /* ── ORNAMENT RULE ── */
+    .ornament-rule {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .ornament-rule::before,
+    .ornament-rule::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+    .ornament-rule .diamond {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+    .ornament-rule span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1.release-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.45rem, 3.8vw, 2.3rem);
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .subhead {
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: var(--accent);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .body-text {
+      font-size: 0.93rem;
+      line-height: 1.82;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    /* Two-column body copy on wider viewports */
+    .body-2col { margin-bottom: 24px; }
+    @media (min-width: 680px) {
+      .body-2col {
+        column-count: 2;
+        column-gap: 2rem;
+        column-rule: 1px solid var(--rule);
+      }
+      .body-2col .body-text { break-inside: avoid; }
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      background: rgba(184,150,46,0.04);
+      padding: 22px 18px 18px 26px;
+      margin: 28px 0;
+      position: relative;
+    }
+    .pull-quote::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.13;
+      position: absolute;
+      top: -6px;
+      left: 12px;
+      pointer-events: none;
+    }
+    .pull-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+      color: var(--accent);
+      line-height: 1.62;
+      margin-bottom: 14px;
+    }
+    .pq-cite {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pq-rule { width: 26px; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .pq-name  { font-size: 0.8rem; font-weight: 600; color: var(--ink); }
+    .pq-title { font-size: 0.7rem; color: var(--muted); }
+    .pq-followup { font-size: 0.82rem; font-style: italic; color: var(--muted); margin-top: 8px; }
+
+    /* ── SERVICE CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    @media (min-width: 520px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
+
+    .service-card {
+      border: 1px solid var(--rule);
+      background: #fff;
+      padding: 18px;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .service-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 6px 22px rgba(184,150,46,0.1);
+      transform: translateY(-2px);
+    }
+    .svc-num   { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 400; color: var(--gold); opacity: 0.42; line-height: 1; margin-bottom: 5px; }
+    .svc-tag   { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .svc-title { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 600; color: var(--accent); line-height: 1.3; margin-bottom: 8px; }
+    .svc-desc  { font-size: 0.8rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── MARKET TAGS ── */
+    .market-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .market-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--rule);
+      background: #fff;
+      padding: 9px 15px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .market-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 16px 0;
+      margin-bottom: 8px;
+    }
+    .disc-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+    .disc-text  { font-size: 0.74rem; color: var(--muted); line-height: 1.72; }
+
+    /* ── SECTION SPACING ── */
+    .section { margin-bottom: 40px; }
+
+    /* ── BOILERPLATE ── */
+    .boilerplate { background: var(--accent); border-top: 3px solid var(--gold); }
+    .boilerplate-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 36px 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 480px)  { .boilerplate-inner { padding: 40px 24px; } }
+    @media (min-width: 600px)  { .boilerplate-inner { padding: 44px 32px; } }
+    @media (min-width: 768px)  { .boilerplate-inner { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1100px) { .boilerplate-inner { padding: 48px 48px; } }
+
+    .bp-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px; }
+    .bp-text  { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.78; }
+
+    .contact-card { border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); padding: 18px; }
+    .ct-name  { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .ct-role  { font-size: 0.7rem; color: rgba(255,255,255,0.42); margin-bottom: 14px; }
+    .ct-row   { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+    .ct-key   { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); flex-shrink: 0; min-width: 38px; padding-top: 1px; }
+    .ct-val   { font-size: 0.8rem; color: rgba(255,255,255,0.72); word-break: break-all; }
+    .ct-val a { color: inherit; text-decoration: none; }
+    .ct-val a:hover { color: #fff; }
+
+    /* ── FOOTER BAR ── */
+    .footer-bar { background: var(--ink); padding: 12px 16px; }
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media (min-width: 560px) {
+      .footer-bar { padding: 12px 28px; }
+      .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+    @media (min-width: 1100px) { .footer-bar { padding: 12px 48px; } }
+    .footer-text { font-family: 'IBM Plex Mono', monospace; font-size: 0.56rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.26); text-transform: uppercase; }
+    .footer-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border: 1px solid;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .btn-gold    { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .btn-ghost   { background: transparent; color: rgba(255,255,255,0.44); border-color: rgba(255,255,255,0.18); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.75); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fu  { animation: fadeUp 0.55s ease both; }
+    .d1  { animation-delay: 0.08s; }
+    .d2  { animation-delay: 0.18s; }
+    .d3  { animation-delay: 0.3s; }
+    .d4  { animation-delay: 0.44s; }
+    .d5  { animation-delay: 0.58s; }
+
+    /* ── PRINT ── */
+    @media print {
+      .no-print, .ad-rail { display: none !important; }
+      body { background: #fff; }
+      .content-area { padding: 20px 0 !important; border: none !important; }
+      .page-shell { display: block !important; }
+      .masthead, .boilerplate { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <div class="wire-bar no-print">
+    <span class="wire-label">PRESS RELEASE — Asia Pacific Distribution</span>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <span class="wire-label">May 24, 2026 — 09:00 PHT</span>
+      <button class="btn btn-gold" onclick="window.print()">⎙ Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="logo-bar fu d1">
+    <div>
+      <div class="mono" style="font-size:0.58rem;letter-spacing:0.2em;color:var(--gold-light);text-transform:uppercase;margin-bottom:7px;">Zel Digital Marketing Services OPC</div>
+      <div class="playfair" style="font-size:clamp(1.9rem,5.5vw,3rem);font-weight:700;color:#fff;line-height:1.05;letter-spacing:-0.01em;">ZelDigital</div>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.48);font-weight:300;letter-spacing:0.05em;margin-top:7px;">Performance-Driven Digital Marketing</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="stamp">For Immediate Release</div>
+      <div class="dateline" style="color:rgba(255,255,255,0.48);">Philippines · United States · Global</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ PAGE SHELL ═══ -->
+<div class="page-shell">
+
+  <!-- LEFT AD RAIL -->
+  <aside class="ad-rail ad-rail-left" aria-label="Advertisement">
+    <div class="ad-slot ad-slot-xl">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 380</div>
+    </div>
+    <div class="ad-slot ad-slot-lg">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 260</div>
+    </div>
+    <div class="ad-slot ad-slot-sm">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 150</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-area">
+
+    <!-- Headline -->
+    <div class="section fu d2">
+      <div class="ornament-rule">
+        <div class="diamond"></div>
+        <span>Press Release — Expansion Announcement</span>
+        <div class="diamond"></div>
+      </div>
+
+      <h1 class="release-title">
+        ZelDigital Eyes 2027 Expansion Into AI Automation, Corporate Training, and Global Markets
+      </h1>
+      <p class="subhead">
+        Pending Business Financing Approval — Company positions for next growth phase across the Philippines, the United States, and international markets
+      </p>
+      <div class="dateline">Philippines / May 24, 2026</div>
+    </div>
+
+    <!-- Lead Copy -->
+    <div class="section fu d3">
+      <div class="body-2col">
+        <p class="body-text">
+          <strong style="font-weight:600;color:var(--ink);">Zel Digital Marketing Services OPC</strong> (doing business as ZelDigital), a performance-driven digital marketing company specializing in demand capture and sales growth, today announced its 2027 expansion plans contingent upon the approval of a business financing application filed with the <strong style="font-weight:600;">Small Business Corporation (SB Corp)</strong>. If approved, the funding will accelerate the company's growth into four new service areas and multiple international markets.
+        </p>
+        <p class="body-text">
+          The planned expansion would transition ZelDigital from a focused digital marketing operation into a full-spectrum business growth platform — extending its core demand capture capabilities into AI automation, corporate training, enterprise paid advertising systems, and IT infrastructure solutions for corporate clients.
+        </p>
+      </div>
+
+      <!-- Pull Quote -->
+      <div class="pull-quote">
+        <blockquote>
+          "We have spent years helping businesses turn the right traffic into real sales. The next phase is building the systems and teams that let us do that at a much bigger scale — across more markets, more industries, and more channels."
+        </blockquote>
+        <div class="pq-cite">
+          <div class="pq-rule"></div>
+          <div>
+            <div class="pq-name">Hanzel Lacida</div>
+            <div class="pq-title">Chief Executive Officer, ZelDigital</div>
+          </div>
+        </div>
+        <p class="pq-followup">"Financing approval is the trigger. The plan is already built."</p>
+      </div>
+    </div>
+
+    <!-- Service Lines -->
+    <div class="section fu d4">
+      <div class="ornament-rule">
+        <div class="diamond"></div>
+        <span>What the Expansion Covers</span>
+        <div class="diamond"></div>
+      </div>
+
+      <p style="font-size:0.83rem;color:var(--muted);margin-bottom:18px;">
+        Should financing be approved, ZelDigital intends to deploy capital across four integrated service lines:
+      </p>
+
+      <div class="cards-grid">
+        <div class="service-card">
+          <div class="svc-num">01</div>
+          <div class="svc-tag">Service Line</div>
+          <div class="svc-title">AI Business Automation</div>
+          <p class="svc-desc">AI-driven systems that streamline client operations, reduce manual processes, and sharpen decision-making across corporate functions.</p>
+        </div>
+        <div class="service-card">
+          <div class="svc-num">02</div>
+          <div class="svc-tag">Service Line</div>
+          <div class="svc-title">Corporate Training Programs</div>
+          <p class="svc-desc">Structured learning solutions that build digital marketing capability, performance marketing knowledge, and operational readiness within client organizations.</p>
+        </div>
+        <div class="service-card">
+          <div class="svc-num">03</div>
+          <div class="svc-tag">Service Line</div>
+          <div class="svc-title">Corporate Paid Advertising Operations</div>
+          <p class="svc-desc">Enterprise-grade paid media systems covering strategy, full-cycle execution, and real-time optimization across major digital platforms.</p>
+        </div>
+        <div class="service-card">
+          <div class="svc-num">04</div>
+          <div class="svc-tag">Service Line</div>
+          <div class="svc-title">IT and System Infrastructure</div>
+          <p class="svc-desc">Technology infrastructure consulting and deployment for corporate clients building the operational backbone needed for commercial scale.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Entry -->
+    <div class="section fu d5">
+      <div class="ornament-rule">
+        <div class="diamond"></div>
+        <span>Market Entry Strategy</span>
+        <div class="diamond"></div>
+      </div>
+
+      <p class="body-text">
+        The Philippines remains ZelDigital's primary market and the anchor for its 2027 growth push, where demand for digital transformation among small and medium enterprises continues to rise. The company also intends to establish a foothold in the United States and pursue partnerships across global markets — positioning ZelDigital as an internationally operating business growth and technology firm.
+      </p>
+
+      <div class="market-tags">
+        <div class="market-tag"><div class="market-dot"></div>Philippines — Primary Market</div>
+        <div class="market-tag"><div class="market-dot"></div>United States — Market Entry</div>
+        <div class="market-tag"><div class="market-dot"></div>Global — Strategic Partnerships</div>
+      </div>
+    </div>
+
+    <!-- Forward-Looking Disclaimer -->
+    <div class="disclaimer fu d5">
+      <div class="disc-label">Forward-Looking Statements</div>
+      <p class="disc-text">This press release contains forward-looking statements regarding ZelDigital's planned 2027 expansion, financing application, service development, market entry, and growth objectives. These statements are based on current plans and expectations as of May 24, 2026, and are subject to financing approval and other risks and uncertainties that could cause actual outcomes to differ materially. No assurance can be given that financing will be approved or that expansion plans will be executed as described.</p>
+    </div>
+
+  </main>
+
+  <!-- RIGHT AD RAIL -->
+  <aside class="ad-rail ad-rail-right" aria-label="Advertisement">
+    <div class="ad-slot ad-slot-xl">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 380</div>
+    </div>
+    <div class="ad-slot ad-slot-lg">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 260</div>
+    </div>
+    <div class="ad-slot ad-slot-sm">
+      <div class="ad-icon">◻</div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-size">160 × 150</div>
+    </div>
+  </aside>
+
+</div><!-- /.page-shell -->
+
+<!-- ═══ BOILERPLATE ═══ -->
+<footer class="boilerplate">
+  <div class="boilerplate-inner">
+    <div>
+      <div class="bp-label">About ZelDigital</div>
+      <p class="bp-text">Zel Digital Marketing Services OPC, operating as ZelDigital, is a performance-driven digital marketing company headquartered in the Philippines. The company helps businesses turn traffic into transactions through demand capture strategies, paid media execution, and data-driven marketing systems. Its 2027 growth vision expands that platform to serve corporate clients across the Philippines, the United States, and global markets.</p>
+    </div>
+    <div>
+      <div class="bp-label">Media Contact</div>
+      <div class="contact-card">
+        <div class="ct-name">Hanzel Lacida</div>
+        <div class="ct-role">Chief Executive Officer</div>
+        <div class="ct-row">
+          <span class="ct-key">Tel</span>
+          <span class="ct-val">+63 976 105 3409</span>
+        </div>
+        <div class="ct-row">
+          <span class="ct-key">Email</span>
+          <span class="ct-val"><a href="mailto:hlacida@zeldigital.com">hlacida@zeldigital.com</a></span>
+        </div>
+        <div class="ct-row">
+          <span class="ct-key">Web</span>
+          <span class="ct-val"><a href="https://zeldigital.com" target="_blank" rel="noopener">zeldigital.com</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ FOOTER BAR ═══ -->
+<div class="footer-bar">
+  <div class="footer-inner">
+    <span class="footer-text">Source: Zel Digital Marketing Services OPC</span>
+    <div class="footer-actions">
+      <span class="footer-text">© 2026 ZelDigital. All rights reserved.</span>
+      <button class="btn btn-ghost no-print" onclick="window.print()">↓ Save PDF</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
