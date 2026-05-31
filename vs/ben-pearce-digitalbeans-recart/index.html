@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>digitalbeans (Ben Pearce) vs. ZELDIGITAL (Hans Lacida) — Shopify Growth vs. Google Ads</title>
+<meta name="description" content="Side-by-side comparison of digitalbeans (Ben Pearce, UK Shopify agency) and ZELDIGITAL (Hans Lacida, Google Ads specialist). Two complementary experts for DTC eCommerce brands.">
+<meta name="geo.region" content="GB, US, PH">
+<link rel="canonical" href="https://zeldigital.com/vs/digitalbeans-ben-pearce">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "digitalbeans (Ben Pearce) vs ZELDIGITAL (Hans Lacida): Shopify Growth Agency vs. Google Ads Specialist",
+  "description": "Platform-first Shopify agency vs. traffic-first Google Ads operator. A transparent comparison for DTC eCommerce brands.",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-13",
+  "author": {
+    "@type": "Person",
+    "name": "Hans Lacida",
+    "url": "https://zeldigital.com/about",
+    "jobTitle": "Paid Acquisition Systems Operator",
+    "knowsAbout": ["Google Ads","Performance Max","Shopify","eCommerce","ROAS Optimization","Tracking Infrastructure","Paid Acquisition"]
+  },
+  "publisher": { "@type": "Organization", "name": "ZELDIGITAL", "url": "https://zeldigital.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://zeldigital.com/vs/digitalbeans-ben-pearce" },
+  "about": [
+    { "@type": "Organization", "name": "digitalbeans", "url": "https://digitalbeans.co.uk", "description": "UK-based Shopify growth and development agency in Kent" },
+    { "@type": "Person", "name": "Hans Lacida", "url": "https://zeldigital.com", "jobTitle": "Paid Acquisition Systems Operator" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --db: #6366F1;
+    --zel: #00C6A7;
+    --bg: #0A0A0A;
+    --surface: #111111;
+    --border: rgba(255,255,255,0.07);
+    --text: #F0EDE8;
+    --muted: #7A7774;
+    --gold: #F5C842;
+    --shopify: #96BF48;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; line-height: 1.6; overflow-x: hidden;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.03; pointer-events: none; z-index: 9999;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; padding: 6rem 1.5rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg::before {
+    content: ''; position: absolute;
+    top: -20%; left: -10%; width: 55%; height: 80%;
+    background: radial-gradient(ellipse, rgba(99,102,241,0.16) 0%, transparent 70%);
+  }
+  .hero-bg::after {
+    content: ''; position: absolute;
+    top: -10%; right: -10%; width: 55%; height: 80%;
+    background: radial-gradient(ellipse, rgba(0,198,167,0.14) 0%, transparent 70%);
+  }
+  .hero-divider {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.12) 70%, transparent);
+    z-index: 1;
+  }
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 2rem; position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 8.5vw, 8rem);
+    line-height: 0.88; letter-spacing: 0.02em;
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-title .db { color: var(--db); }
+  .hero-title .vs {
+    font-size: 0.38em; color: var(--muted);
+    display: block; letter-spacing: 0.15em; padding: 0.3em 0;
+  }
+  .hero-title .zel { color: var(--zel); }
+  .hero-sub {
+    max-width: 620px; margin: 2.5rem auto 0;
+    font-size: 1.05rem; font-weight: 300; color: var(--muted);
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .hero-tags {
+    margin-top: 1.8rem; display: flex; gap: 0.75rem;
+    flex-wrap: wrap; justify-content: center;
+    position: relative; z-index: 2; opacity: 0;
+  }
+  .hero-tag {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.35em 0.9em; border-radius: 100px; border: 1px solid var(--border); color: var(--muted);
+  }
+  .hero-tag.db { border-color: rgba(99,102,241,0.3); color: var(--db); background: rgba(99,102,241,0.07); }
+  .hero-tag.zel { border-color: rgba(0,198,167,0.3); color: var(--zel); background: rgba(0,198,167,0.07); }
+  .hero-tag.shared { border-color: rgba(150,191,72,0.3); color: var(--shopify); background: rgba(150,191,72,0.07); }
+  .scroll-cue {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; z-index: 2;
+  }
+  .scroll-line {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--muted), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%,100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.15); }
+  }
+
+  /* ─── LAYOUT ─── */
+  .section { padding: 6rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 0.95; margin-bottom: 3rem;
+  }
+  .full-divider { height: 1px; background: var(--border); margin: 0 1.5rem; }
+
+  /* ─── EEAT ─── */
+  .eeat-bar {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem;
+  }
+  .eeat-item { background: var(--surface); padding: 1.5rem 1.2rem; text-align: center; transition: background 0.3s; }
+  .eeat-item:hover { background: #161616; }
+  .eeat-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .eeat-title { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); margin-bottom: 0.4rem; }
+  .eeat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+  /* ─── OVERVIEW CARDS ─── */
+  .overview-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
+  }
+  .overview-card { background: var(--surface); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background 0.3s; }
+  .overview-card:hover { background: #161616; }
+  .overview-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .overview-card.db::before { background: var(--db); }
+  .overview-card.zel::before { background: var(--zel); }
+  .card-tag { display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.18em; padding: 0.3em 0.8em; border-radius: 100px; margin-bottom: 1.2rem; font-weight: 700; text-transform: uppercase; }
+  .card-tag.db { background: rgba(99,102,241,0.12); color: var(--db); }
+  .card-tag.zel { background: rgba(0,198,167,0.12); color: var(--zel); }
+  .card-name { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1; }
+  .card-name.db { color: var(--db); }
+  .card-name.zel { color: var(--zel); }
+  .card-sub { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--text); letter-spacing: 0.08em; margin-bottom: 0.35rem; }
+  .card-location { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 1rem; }
+  .card-stats { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+  .card-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; line-height: 1; }
+  .card-stat-num.db { color: var(--db); }
+  .card-stat-num.zel { color: var(--zel); }
+  .card-stat-label { font-family: 'Space Mono', monospace; font-size: 0.56rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; }
+  .card-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+  .card-desc strong { color: var(--text); }
+
+  /* ─── LANE VISUAL ─── */
+  .lane-row {
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 0;
+    background: var(--border); border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .lane-col { background: var(--surface); padding: 2rem 1.75rem; transition: background 0.3s; }
+  .lane-col:hover { background: #161616; }
+  .lane-divider { background: var(--border); width: 1.5px; }
+  .lane-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.04em; margin-bottom: 0.75rem; }
+  .lane-brand.db { color: var(--db); }
+  .lane-brand.zel { color: var(--zel); }
+  .lane-headline { font-size: 0.82rem; color: var(--text); font-weight: 600; margin-bottom: 0.75rem; line-height: 1.4; }
+  .lane-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+  .lane-list li { font-size: 0.85rem; color: var(--muted); padding-left: 1.2rem; position: relative; line-height: 1.5; }
+  .lane-list li::before { content: '—'; position: absolute; left: 0; font-size: 0.8rem; }
+  .lane-col.db .lane-list li::before { color: var(--db); }
+  .lane-col.zel .lane-list li::before { color: var(--zel); }
+  .lane-list li strong { color: var(--text); }
+
+  /* ─── CONTENT / PODCAST STRIP ─── */
+  .content-strip {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem;
+  }
+  .content-col { background: var(--surface); padding: 1.75rem 1.75rem; transition: background 0.3s; }
+  .content-col:hover { background: #161616; }
+  .content-col::before { content: ''; display: block; height: 2px; margin-bottom: 1.1rem; border-radius: 2px; }
+  .content-col.db::before { background: var(--db); }
+  .content-col.zel::before { background: var(--zel); }
+  .content-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+  .content-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; margin-bottom: 0.6rem; }
+  .content-title.db { color: var(--db); }
+  .content-title.zel { color: var(--zel); }
+  .content-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+  .content-desc strong { color: var(--text); }
+
+  /* ─── RESULTS STRIP ─── */
+  .results-strip {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 3rem;
+  }
+  .results-strip-item { background: var(--surface); padding: 1.8rem 1.2rem; text-align: center; }
+  .results-strip-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; line-height: 1; color: var(--zel); margin-bottom: 0.3rem; }
+  .results-strip-label { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.5; }
+
+  /* ─── CASE CARDS ─── */
+  .cases-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; background: var(--border);
+    border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem;
+  }
+  .case-card { background: var(--surface); padding: 2rem 1.75rem; transition: background 0.3s; }
+  .case-card:hover { background: #161616; }
+  .case-card.full { grid-column: 1/-1; }
+  .case-vertical { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .case-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
+  .case-meta { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .ba-label { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .ba-item { font-size: 0.82rem; color: var(--muted); padding: 0.2rem 0; line-height: 1.4; }
+  .ba-item.win { color: var(--zel); font-weight: 600; }
+  .case-impact { font-size: 0.82rem; color: var(--muted); padding-top: 0.8rem; border-top: 1px solid var(--border); line-height: 1.5; }
+  .case-impact strong { color: var(--gold); }
+
+  /* ─── COMPLEMENTARY CALLOUT ─── */
+  .shopify-callout {
+    border-radius: 12px; padding: 1.5rem 1.75rem;
+    background: rgba(150,191,72,0.05); border: 1.5px solid rgba(150,191,72,0.2);
+    display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 3rem;
+  }
+  .callout-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .callout-text { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+  .callout-text strong { color: var(--shopify); }
+
+  /* ─── TABLE ─── */
+  .table-wrap { overflow-x: auto; border-radius: 16px; border: 1.5px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; min-width: 700px; }
+  thead tr { background: #111; border-bottom: 1.5px solid var(--border); }
+  thead th { padding: 1.5rem 1.4rem; text-align: left; font-weight: 400; }
+  thead th:first-child { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; width: 20%; }
+  .th-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.04em; }
+  .th-brand.db { color: var(--db); }
+  .th-brand.zel { color: var(--zel); }
+  .th-sub { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 300; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.1rem; }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.025); }
+  tbody td { padding: 1.3rem 1.4rem; vertical-align: top; font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  tbody td:first-child { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--text); font-weight: 700; letter-spacing: 0.03em; }
+  tbody td strong { color: var(--text); }
+  .stat-pill { display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.65rem; padding: 0.2em 0.7em; border-radius: 100px; margin-top: 0.4rem; font-weight: 700; margin-right: 0.3rem; background: rgba(245,200,66,0.1); color: var(--gold); }
+  .stat-pill.db-pill { background: rgba(99,102,241,0.1); color: var(--db); }
+  .stat-pill.zel-pill { background: rgba(0,198,167,0.1); color: var(--zel); }
+  .stat-pill.shopify-pill { background: rgba(150,191,72,0.1); color: var(--shopify); }
+
+  /* ─── CHOOSE ─── */
+  .choose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .choose-card { border-radius: 16px; padding: 2.5rem 2rem; position: relative; overflow: hidden; }
+  .choose-card.db { background: rgba(99,102,241,0.05); border: 1.5px solid rgba(99,102,241,0.2); }
+  .choose-card.zel { background: rgba(0,198,167,0.05); border: 1.5px solid rgba(0,198,167,0.2); }
+  .choose-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem; }
+  .choose-brand.db { color: var(--db); }
+  .choose-brand.zel { color: var(--zel); }
+  .choose-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .choose-dot.db { background: var(--db); box-shadow: 0 0 10px var(--db); }
+  .choose-dot.zel { background: var(--zel); box-shadow: 0 0 10px var(--zel); }
+  .choose-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+  .choose-list li { font-size: 0.92rem; color: var(--muted); padding-left: 1.4rem; position: relative; line-height: 1.55; }
+  .choose-list li::before { content: '→'; position: absolute; left: 0; font-size: 0.8rem; }
+  .choose-card.db .choose-list li::before { color: var(--db); }
+  .choose-card.zel .choose-list li::before { color: var(--zel); }
+  .choose-list li strong { color: var(--text); }
+
+  /* ─── VERDICT ─── */
+  .bottom-line {
+    background: var(--surface); border: 1.5px solid var(--border);
+    border-radius: 16px; padding: 3rem 2.5rem; text-align: center; position: relative; overflow: hidden;
+  }
+  .bottom-line::before {
+    content: 'VERDICT'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem,16vw,14rem);
+    color: rgba(255,255,255,0.02); white-space: nowrap; pointer-events: none; letter-spacing: 0.05em;
+  }
+  .verdict-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: start; position: relative; z-index: 1; }
+  .verdict-item { text-align: center; }
+  .verdict-need { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.8rem; }
+  .verdict-desc { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.2rem; line-height: 1.55; }
+  .verdict-arrow { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--muted); }
+  .verdict-brand { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; display: block; margin-bottom: 1rem; }
+  .verdict-brand.db { color: var(--db); }
+  .verdict-brand.zel { color: var(--zel); }
+  .verdict-divider { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding-top: 1rem; }
+  .verdict-divider .line { width: 1px; height: 80px; background: var(--border); }
+  .or-pill { background: var(--gold); color: #0A0A0A; font-family: 'Space Mono', monospace; font-size: 0.7rem; font-weight: 700; padding: 0.35em 0.9em; border-radius: 100px; letter-spacing: 0.1em; }
+  .cta-strip { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+  .btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; font-weight: 700; text-transform: uppercase; text-decoration: none; transition: all 0.25s; cursor: pointer; border: none; }
+  .btn-db { background: var(--db); color: #fff; }
+  .btn-db:hover { background: #818cf8; box-shadow: 0 0 30px rgba(99,102,241,0.4); transform: translateY(-2px); }
+  .btn-zel { background: var(--zel); color: #0A0A0A; }
+  .btn-zel:hover { background: #00E0BC; box-shadow: 0 0 30px rgba(0,198,167,0.4); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1.5px solid var(--border); }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--text); transform: translateY(-2px); }
+  .combo-tip { margin-top: 3rem; padding: 1.5rem 2rem; border-radius: 12px; background: rgba(150,191,72,0.05); border: 1.5px solid rgba(150,191,72,0.18); display: flex; gap: 1rem; align-items: flex-start; text-align: left; position: relative; z-index: 1; }
+  .combo-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .combo-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .combo-text strong { color: var(--shopify); }
+
+  /* ─── FOOTER ─── */
+  footer { padding: 3rem 1.5rem; text-align: center; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+  .reveal { opacity: 0; transform: translateY(24px); }
+
+  @media (max-width: 768px) {
+    .overview-grid,.choose-grid,.content-strip,.cases-grid,.lane-row { grid-template-columns: 1fr; }
+    .lane-divider { display: none; }
+    .case-card.full { grid-column: 1; }
+    .eeat-bar { grid-template-columns: 1fr 1fr; }
+    .results-strip { grid-template-columns: 1fr 1fr; }
+    .verdict-grid { grid-template-columns: 1fr; }
+    .verdict-divider { flex-direction: row; }
+    .verdict-divider .line { width: 60px; height: 1px; }
+    tbody td { font-size: 0.82rem; padding: 1rem; }
+  }
+  @media (max-width: 480px) {
+    .section { padding: 4rem 1rem; }
+    thead th { padding: 1rem; }
+    .eeat-bar,.results-strip { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-divider"></div>
+  <p class="eyebrow">Shopify eCommerce Comparison · UK Agency vs. US Operator · 2026</p>
+  <h1 class="hero-title">
+    <span class="db">digitalbeans<br>Ben Pearce</span>
+    <span class="vs">vs</span>
+    <span class="zel">ZELDIGITAL</span>
+  </h1>
+  <p class="hero-sub">
+    Platform-first Shopify agency vs. traffic-first Google Ads operator.<br>
+    <strong>Not competitors — they're complementary. Here's how to use each.</strong>
+  </p>
+  <div class="hero-tags">
+    <span class="hero-tag db">Shopify Development</span>
+    <span class="hero-tag db">CRO & UX</span>
+    <span class="hero-tag db">UK Agency</span>
+    <span class="hero-tag shared">Shopify Brands</span>
+    <span class="hero-tag zel">Google Ads</span>
+    <span class="hero-tag zel">ROAS Optimization</span>
+  </div>
+  <div class="scroll-cue">
+    <div class="scroll-line"></div>
+    Scroll to compare
+  </div>
+</section>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section class="section">
+  <p class="section-label reveal">Author Credentials</p>
+  <h2 class="section-title reveal">Why Trust<br>This Comparison?</h2>
+  <div class="eeat-bar reveal">
+    <div class="eeat-item">
+      <div class="eeat-icon">🎯</div>
+      <div class="eeat-title">Experience</div>
+      <div class="eeat-desc">$10M+ Google Ads managed. $550M+ client revenue influenced. 10+ years PPC</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">🛒</div>
+      <div class="eeat-title">Shopify Context</div>
+      <div class="eeat-desc">Served Shopify & WooCommerce brands. Tracking, PMax, Shopping for DTC eComm</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">✅</div>
+      <div class="eeat-title">Verified Data</div>
+      <div class="eeat-desc">ZELDIGITAL figures are anonymized actuals. digitalbeans data from public sources</div>
+    </div>
+    <div class="eeat-item">
+      <div class="eeat-icon">👁</div>
+      <div class="eeat-title">Transparent</div>
+      <div class="eeat-desc">ZELDIGITAL published this page. Full disclosure at footer. No fabricated data</div>
+    </div>
+  </div>
+
+  <p class="section-label reveal">Quick Overview</p>
+  <h2 class="section-title reveal">Platform First.<br>Traffic First.</h2>
+  <div class="overview-grid reveal">
+    <div class="overview-card db">
+      <span class="card-tag db">UK Agency · Shopify Partner</span>
+      <div class="card-name db">digitalbeans</div>
+      <div class="card-sub">Ben Pearce — Founder & Managing Director</div>
+      <div class="card-location">📍 Kent, UK · Shopify Growth & Development Agency</div>
+      <div class="card-stats">
+        <div class="card-stat">
+          <div class="card-stat-num db">Shopify</div>
+          <div class="card-stat-label">Platform Specialist</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-num db">DTC</div>
+          <div class="card-stat-label">eComm Focus</div>
+        </div>
+      </div>
+      <p class="card-desc">A UK-based Shopify growth and development agency. Ben Pearce specializes in <strong>custom Shopify builds, migrations, theme development, CRO, and UX optimization</strong>. Hosts the <em>'Appy Hour</em> podcast interviewing Shopify app founders. Speaker on TikTok Shop and social commerce. Full-service Shopify partner for DTC brands — <strong>platform-first thinking.</strong></p>
+    </div>
+    <div class="overview-card zel">
+      <span class="card-tag zel">Solo Expert · Paid Acquisition</span>
+      <div class="card-name zel">ZELDIGITAL</div>
+      <div class="card-sub">Hans Lacida — Paid Acquisition Systems Operator</div>
+      <div class="card-location">📍 Cebu City, PH · Serving US, AU/NZ & Global Shopify Brands</div>
+      <div class="card-stats">
+        <div class="card-stat">
+          <div class="card-stat-num zel">$10M+</div>
+          <div class="card-stat-label">Ad Spend Managed</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-num zel">70×</div>
+          <div class="card-stat-label">ROAS Peak</div>
+        </div>
+      </div>
+      <p class="card-desc">Fractional Google Ads operator focused on <strong>Search, Performance Max, Shopping, and YouTube</strong>. Deep expertise in tracking infrastructure — server-side, GA4, GTM, first-party data — for Shopify and WooCommerce brands. Former Google Ads Partner. <strong>Traffic-first thinking</strong> that feeds directly into Shopify storefronts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TWO LANES ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">The Core Distinction</p>
+  <h2 class="section-title reveal">Two Lanes.<br>One Store.</h2>
+  <div class="lane-row reveal">
+    <div class="lane-col db">
+      <div class="lane-brand db">digitalbeans — The Store</div>
+      <div class="lane-headline">Ben builds and optimizes the destination your customers land on.</div>
+      <ul class="lane-list">
+        <li><strong>Shopify builds & migrations</strong> — custom themes, platform moves, new stores</li>
+        <li><strong>UX & conversion rate optimization</strong> — turning visitors into buyers</li>
+        <li><strong>App ecosystem</strong> — subscriptions, retention, loyalty, reviews</li>
+        <li><strong>Social commerce</strong> — TikTok Shop integration, social storefronts</li>
+        <li><strong>Retention infrastructure</strong> — post-purchase flows, repeat revenue</li>
+        <li>Builds the <strong>engine room</strong> that Google Ads traffic flows into</li>
+      </ul>
+    </div>
+    <div class="lane-divider"></div>
+    <div class="lane-col zel">
+      <div class="lane-brand zel">ZELDIGITAL — The Traffic</div>
+      <div class="lane-headline">Hans drives high-intent, profitable traffic to that store.</div>
+      <ul class="lane-list">
+        <li><strong>Google Shopping & PMax</strong> — Shopify product feed optimization and campaign architecture</li>
+        <li><strong>Search campaigns</strong> — capturing high-intent buyers at moment of purchase</li>
+        <li><strong>Tracking infrastructure</strong> — GA4 + GTM + server-side for Shopify accuracy</li>
+        <li><strong>First-party data</strong> — offline conversions, enhanced conversions</li>
+        <li><strong>ROAS & CPA optimization</strong> — margin-aware bidding and budget systems</li>
+        <li>Sends <strong>qualified buyers</strong> to the store Ben has optimized</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shopify-callout reveal">
+    <div class="callout-icon">🛍️</div>
+    <div class="callout-text">
+      <strong>The Shopify stack play:</strong> A well-optimized Shopify store (digitalbeans) with well-targeted Google Ads traffic (ZELDIGITAL) is one of the most reliable growth combinations in DTC eCommerce. Ben handles conversion. Hans handles acquisition. Both are data-driven. Together they compound.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTENT AUTHORITY ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Content & Thought Leadership</p>
+  <h2 class="section-title reveal">How Each One<br>Builds Authority.</h2>
+  <div class="content-strip reveal">
+    <div class="content-col db">
+      <div class="content-label">digitalbeans / Ben Pearce</div>
+      <div class="content-title db">'Appy Hour Podcast</div>
+      <p class="content-desc">Ben hosts a podcast interviewing <strong>Shopify app founders</strong> — a smart way to build authority inside the Shopify ecosystem. He's also a speaker on <strong>TikTok Shop and social commerce</strong>, and participates in webinars and panels. His content positions him deep inside the Shopify app and partner community.</p>
+    </div>
+    <div class="content-col zel">
+      <div class="content-label">ZELDIGITAL / Hans Lacida</div>
+      <div class="content-title zel">US Paid Acquisition Daily</div>
+      <p class="content-desc">Hans runs the <strong>US Paid Acquisition Daily newsletter</strong> covering Google Ads trends, PMax updates, and tracking shifts. He also publishes on <strong>YouTube and other platforms</strong> — case studies, audits, and PPC strategy walkthroughs. His content targets founders and operators dealing with Google Ads problems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ZELDIGITAL RESULTS ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">ZELDIGITAL — Verified Results</p>
+  <h2 class="section-title reveal">Real Numbers.<br>Real Shopify Brands.</h2>
+  <div class="results-strip reveal">
+    <div class="results-strip-item">
+      <div class="results-strip-num">70×</div>
+      <div class="results-strip-label">ROAS Peak<br>(AU/NZ eComm)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">20×</div>
+      <div class="results-strip-label">ROAS<br>(US Market)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">53%</div>
+      <div class="results-strip-label">CPA Reduction<br>(Lead Gen)</div>
+    </div>
+    <div class="results-strip-item">
+      <div class="results-strip-num">$550M</div>
+      <div class="results-strip-label">Client Revenue<br>Influenced</div>
+    </div>
+  </div>
+
+  <div class="cases-grid reveal">
+    <div class="case-card">
+      <div class="case-vertical">eCommerce · Perth, AU · Shopify-adjacent</div>
+      <div class="case-title">Plumbing Services — Google Display</div>
+      <div class="case-meta">Nov 2020 – Nov 2021 · 12 months</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Campaign</div>
+          <div class="ba-item">10M+ impressions</div>
+          <div class="ba-item">5,933 clicks</div>
+          <div class="ba-item">Avg CPC: $3.40</div>
+        </div>
+        <div>
+          <div class="ba-label">Results</div>
+          <div class="ba-item win">1,200 conversions</div>
+          <div class="ba-item win">CPA: $34.24</div>
+          <div class="ba-item win">AOV: A$180–$250</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>1.04% conv. rate.</strong> Hyperlocal targeting. Same tracking discipline applied to eComm PMax campaigns.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">Healthcare · California, US</div>
+      <div class="case-title">Treatment Center — Search Rebuild</div>
+      <div class="case-meta">Paid Search Manager · 90 days</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Before</div>
+          <div class="ba-item">CPL ~$115</div>
+          <div class="ba-item">Budget $0–$1,200</div>
+          <div class="ba-item">No call tracking</div>
+        </div>
+        <div>
+          <div class="ba-label">After</div>
+          <div class="ba-item win">CPL $54</div>
+          <div class="ba-item win">47 leads (month 1)</div>
+          <div class="ba-item win">Budget → $4,000+</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>53% CPA reduction.</strong> Full rebuild + CallTrackingMetrics. Same methodology scales to eComm.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">eCommerce · Sydney & Brisbane, AU</div>
+      <div class="case-title">Clothesline Company — Shopping</div>
+      <div class="case-meta">Dec 2022 – Feb 2023 · Mobile-optimized</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Campaign</div>
+          <div class="ba-item">423K impressions</div>
+          <div class="ba-item">3,189 clicks</div>
+          <div class="ba-item">Avg CPC: $1.20</div>
+        </div>
+        <div>
+          <div class="ba-label">Results</div>
+          <div class="ba-item win">4,400 conversions</div>
+          <div class="ba-item win">41 phone calls</div>
+          <div class="ba-item win">Efficient CPC</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>eCommerce Google Ads.</strong> Product-based campaign. Same skill set applied to Shopify Shopping feeds.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-vertical">Agency Partnership · USA · Multi-client</div>
+      <div class="case-title">SEO Agency — PPC Lead</div>
+      <div class="case-meta">2024 – May 2025 · 6+ campaigns</div>
+      <div class="ba-grid">
+        <div>
+          <div class="ba-label">Before</div>
+          <div class="ba-item">Inconsistent tracking</div>
+          <div class="ba-item">High CPA across all</div>
+        </div>
+        <div>
+          <div class="ba-label">After</div>
+          <div class="ba-item win">CPA improved — all</div>
+          <div class="ba-item win">GA4 / GTM integrated</div>
+        </div>
+      </div>
+      <div class="case-impact"><strong>Sectors:</strong> addiction recovery, wellness, construction. White-label overflow available for agency partners.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TABLE ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Side-by-Side Breakdown</p>
+  <h2 class="section-title reveal">The Full<br>Comparison.</h2>
+  <div class="table-wrap reveal">
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>
+            <span class="th-brand db">digitalbeans</span>
+            <span class="th-sub">Ben Pearce · UK Shopify Agency</span>
+          </th>
+          <th>
+            <span class="th-brand zel">ZELDIGITAL</span>
+            <span class="th-sub">Hans Lacida · Google Ads Specialist</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Core Focus</td>
+          <td><strong>Shopify store development, migrations, custom themes</strong>, UX, CRO, retention, eCommerce growth. Platform-first.</td>
+          <td><strong>Google Ads / paid acquisition</strong> — Search, PMax, Shopping, YouTube. 90%+ Google-focused. Traffic-first.</td>
+        </tr>
+        <tr>
+          <td>Business Model</td>
+          <td><strong>Full-service agency with a team.</strong> Shopify Partner. Broader project support and specialist roles.</td>
+          <td><strong>Solopreneur / fractional operator.</strong> Direct-to-founder. Also available white-label for other agencies.</td>
+        </tr>
+        <tr>
+          <td>Target Clients</td>
+          <td>DTC eCommerce brands needing <strong>Shopify storefronts, migrations, and growth optimization.</strong> UK/EU focus.</td>
+          <td>US (and AU/NZ) <strong>eCommerce, healthcare/medspa, B2B SaaS, lead gen.</strong> Shopify and WooCommerce stores.</td>
+        </tr>
+        <tr>
+          <td>Content & Authority</td>
+          <td>
+            'Appy Hour podcast · Shopify app founder interviews · TikTok Shop speaker
+            <div><span class="stat-pill db-pill">Podcast host</span><span class="stat-pill db-pill">Speaker</span></div>
+          </td>
+          <td>
+            US Paid Acquisition Daily · YouTube PPC walkthroughs · case study content
+            <div><span class="stat-pill zel-pill">Newsletter</span><span class="stat-pill zel-pill">YouTube</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Track Record</td>
+          <td>Shopify builds and growth projects for DTC brands. Team-delivered. UK/EU market depth.</td>
+          <td>
+            $10M+ ad spend managed · $550M+ revenue influenced
+            <div><span class="stat-pill zel-pill">70× ROAS</span><span class="stat-pill zel-pill">53% CPA cut</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Shopify Angle</td>
+          <td><strong>Builds and optimizes the store itself</strong> — theme, UX, app stack, conversion infrastructure.</td>
+          <td><strong>Drives traffic into the store</strong> — Shopping feed optimization, PMax for Shopify, GA4/GTM tracking.</td>
+        </tr>
+        <tr>
+          <td>Geographic Focus</td>
+          <td><strong>UK / EU market.</strong> Kent-based agency. Professional agency delivery model.</td>
+          <td><strong>US primary, AU/NZ strong.</strong> Philippines-based, remote-first, no-fluff operator style.</td>
+        </tr>
+        <tr>
+          <td>White-Label</td>
+          <td>Standard agency model — direct client relationships.</td>
+          <td><strong>White-label / overflow available</strong> for agencies that need Google Ads depth for their Shopify clients.</td>
+        </tr>
+        <tr>
+          <td>Ideal Pairing</td>
+          <td>Use digitalbeans to <strong>build and optimize the store.</strong> Then feed it with Hans's Google Ads traffic.</td>
+          <td>Use ZELDIGITAL to <strong>drive profitable Google Ads traffic.</strong> Land it on a store Ben has CRO-optimized.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ CHOOSE ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal">Decision Framework</p>
+  <h2 class="section-title reveal">Choose Based on<br>What's Broken.</h2>
+  <div class="choose-grid">
+    <div class="choose-card db reveal">
+      <div class="choose-brand db">
+        <div class="choose-dot db"></div>
+        Choose digitalbeans
+      </div>
+      <ul class="choose-list">
+        <li>Your <strong>Shopify store needs building, migrating, or rebuilding</strong> from the ground up.</li>
+        <li>Your <strong>conversion rate is low</strong> — visitors arrive but don't buy. UX and CRO work needed.</li>
+        <li>You need a <strong>Shopify app ecosystem</strong> properly set up — subscriptions, loyalty, retention.</li>
+        <li>You're expanding into <strong>TikTok Shop or social commerce</strong> and want a specialist partner.</li>
+      </ul>
+    </div>
+    <div class="choose-card zel reveal">
+      <div class="choose-brand zel">
+        <div class="choose-dot zel"></div>
+        Choose ZELDIGITAL
+      </div>
+      <ul class="choose-list">
+        <li>Your Shopify store is solid but <strong>Google Ads is wasting budget</strong> or producing poor ROAS.</li>
+        <li>Your <strong>GA4 / Shopify tracking is broken</strong> — misattributed conversions, gaps in data.</li>
+        <li>You want <strong>Performance Max</strong> properly architected for your Shopify product catalog.</li>
+        <li>You need a <strong>direct expert operator</strong>, not an agency layer — fast launch, flexible engagement.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VERDICT ═══ -->
+<div class="full-divider"></div>
+<section class="section">
+  <p class="section-label reveal" style="text-align:center">The Bottom Line</p>
+  <h2 class="section-title reveal" style="text-align:center; margin-bottom:2.5rem">Our Final Verdict.</h2>
+  <div class="bottom-line reveal">
+    <div class="verdict-grid">
+      <div class="verdict-item">
+        <p class="verdict-need">Need a Shopify store built,<br>optimized, and scaled for conversion?</p>
+        <p class="verdict-desc">Platform-first thinking. Custom themes, migrations, CRO, retention. UK agency with deep Shopify ecosystem knowledge and a voice in the community.</p>
+        <div class="verdict-arrow">→</div>
+        <span class="verdict-brand db">digitalbeans</span>
+        <a href="https://digitalbeans.co.uk" target="_blank" rel="noopener" class="btn btn-db">Explore digitalbeans ↗</a>
+      </div>
+      <div class="verdict-divider">
+        <div class="line"></div>
+        <span class="or-pill">OR</span>
+        <div class="line"></div>
+      </div>
+      <div class="verdict-item">
+        <p class="verdict-need">Need Google Ads traffic that actually<br>converts on your Shopify store?</p>
+        <p class="verdict-desc">$550M+ revenue influenced. 70× ROAS. PMax, Shopping, and GA4 Shopify tracking — done properly. Direct access, no layers.</p>
+        <div class="verdict-arrow">→</div>
+        <span class="verdict-brand zel">ZELDIGITAL</span>
+        <a href="https://book.zeldigital.com" target="_blank" rel="noopener" class="btn btn-zel">Book with Hans ↗</a>
+      </div>
+    </div>
+    <div class="combo-tip">
+      <div class="combo-icon">🛍️</div>
+      <div class="combo-text">
+        <strong>The Shopify 1-2 punch — used by serious DTC brands.</strong> Let <strong>Ben Pearce / digitalbeans build a conversion-optimized Shopify store</strong> that your customers love. Then let <strong>ZELDIGITAL drive high-ROAS Google Ads traffic</strong> into it. Platform strength + acquisition strength = compounding growth. These two are genuinely complementary — not competing.
+      </div>
+    </div>
+  </div>
+  <div class="cta-strip reveal">
+    <a href="https://digitalbeans.co.uk" target="_blank" rel="noopener" class="btn btn-db">Visit digitalbeans →</a>
+    <a href="https://zeldigital.com" target="_blank" rel="noopener" class="btn btn-zel">Visit ZELDIGITAL →</a>
+    <a href="https://book.zeldigital.com" target="_blank" rel="noopener" class="btn btn-ghost">Book a Fit Call →</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>
+    Comparison updated May 2026 &nbsp;·&nbsp;
+    <a href="https://digitalbeans.co.uk" target="_blank" rel="noopener">digitalbeans.co.uk</a> &nbsp;·&nbsp;
+    <a href="https://zeldigital.com" target="_blank" rel="noopener">zeldigital.com</a> &nbsp;·&nbsp;
+    <a href="https://hanslacida.com" target="_blank" rel="noopener">hanslacida.com</a>
+  </p>
+  <p style="margin-top:0.75rem; font-size:0.55rem; line-height:1.8; max-width:700px; margin-left:auto; margin-right:auto;">
+    Disclosure: This comparison was published by ZELDIGITAL (Hans Lacida). digitalbeans / Ben Pearce data sourced from publicly available information as of May 2026 — verify current offerings directly. ZELDIGITAL case study figures are anonymized actuals and are not guarantees of future performance.
+  </p>
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.timeline({ delay: 0.3 })
+    .to('.eyebrow', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+    .to('.hero-title', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.4')
+    .to('.hero-sub', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+    .to('.hero-tags', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4');
+
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.to(el, {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+    });
+  });
+
+  document.querySelectorAll('tbody tr').forEach(row => {
+    row.addEventListener('mouseenter', () => gsap.to(row, { backgroundColor: 'rgba(255,255,255,0.03)', duration: 0.2 }));
+    row.addEventListener('mouseleave', () => gsap.to(row, { backgroundColor: 'transparent', duration: 0.2 }));
+  });
+</script>
+</body>
+</html>
