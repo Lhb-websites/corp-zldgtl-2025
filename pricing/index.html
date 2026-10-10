@@ -45,7 +45,6 @@
       --accent-soft: #eff4ff;
     }
 
-    /* Reveal animation */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
@@ -57,7 +56,6 @@
     .reveal-d3 { transition-delay: 0.24s; }
     .reveal-d4 { transition-delay: 0.32s; }
 
-    /* Nav */
     .nav-link {
       font-size: 14px;
       color: var(--ink-3);
@@ -67,7 +65,6 @@
     .nav-link:hover { color: var(--ink); }
     .nav-link.active { color: var(--accent); font-weight: 500; }
 
-    /* Pricing card */
     .pricing-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -192,7 +189,6 @@
     }
     .btn-outline:hover { border-color: var(--ink-3); background: var(--surface-2); }
 
-    /* Trust bar */
     .trust-pill {
       display: inline-flex;
       align-items: center;
@@ -205,21 +201,72 @@
       border-radius: 100px;
     }
 
-    /* Bottom CTA section */
     .cta-section {
       background: var(--ink);
       color: #fff;
       border-radius: 20px;
     }
 
-    /* Rule */
     .rule { border: none; border-top: 1px solid var(--border); }
 
-    /* Mobile nav toggle */
+    /* Annual plan banner */
+    .annual-banner {
+      background: linear-gradient(135deg, #0d1f5c 0%, #1a56db 100%);
+      border-radius: 16px;
+      padding: 36px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .annual-banner::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .annual-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: 120px;
+      width: 160px;
+      height: 160px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 50%;
+    }
+    .annual-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #0d1f5c;
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s, transform 0.15s;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .annual-banner-btn:hover { background: #eff4ff; transform: translateY(-1px); }
+
     .mobile-menu { display: none; }
     @media (max-width: 768px) {
       .mobile-menu.open { display: block; }
       .pricing-grid { grid-template-columns: 1fr !important; }
+      .annual-banner { padding: 28px 24px; }
     }
   </style>
 </head>
@@ -262,7 +309,6 @@
     <a href="https://book.zeldigital.com/" class="btn-outline">Book 10-Min Discovery Call</a>
   </div>
 
-  <!-- Trust bar -->
   <div class="reveal reveal-d4" style="display:flex;flex-wrap:wrap;gap:8px;">
     <span class="trust-pill">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="stroke:var(--accent)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -286,7 +332,7 @@
 <hr class="rule" style="max-width:1080px;margin:0 auto 0;">
 
 <!-- PRICING CARDS -->
-<section id="services" style="max-width:1080px;margin:0 auto;padding:64px 24px;">
+<section id="services" style="max-width:1080px;margin:0 auto;padding:64px 24px 40px;">
   <div class="reveal" style="margin-bottom:40px;">
     <p style="font-family:'Syne',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4);margin-bottom:8px;">What's included</p>
     <h2 style="font-family:'Syne',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--ink);letter-spacing:-0.01em;">One-time services</h2>
@@ -311,27 +357,12 @@
       </div>
       <p style="font-size:13px;color:var(--ink-3);margin-bottom:20px;line-height:1.6;">Your account got flagged for misrepresentation. This fix gets you reinstated — fast and clean.</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Compliance audit
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Legal page rewrite
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Product feed cleanup
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Reinstatement support
-        </div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Compliance audit</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Legal page rewrite</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Product feed cleanup</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Reinstatement support</div>
       </div>
-      <a href="https://book.stripe.com/eVq5kD71udcOeTAaKL4Rq00" class="cta-link">
-        Get Misrepresentation Fix
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <a href="https://book.stripe.com/eVq5kD71udcOeTAaKL4Rq00" class="cta-link">Get Misrepresentation Fix <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
     <!-- Card 2: Mini Audit -->
@@ -351,23 +382,11 @@
       </div>
       <p style="font-size:13px;color:var(--ink-3);margin-bottom:20px;line-height:1.6;">A sharp-eyed review of your account with a prioritized 30-day action plan — no fluff, just what to fix first.</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Account health check
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Basic competitor analysis (2–3)
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Prioritized 30-day action plan
-        </div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Account health check</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Basic competitor analysis (2–3)</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Prioritized 30-day action plan</div>
       </div>
-      <a href="https://buy.stripe.com/bJefZhclO3CecLsdWX4Rq0q" class="cta-link">
-        Get Mini Audit
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <a href="https://buy.stripe.com/bJefZhclO3CecLsdWX4Rq0q" class="cta-link">Get Mini Audit <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
     <!-- Card 3: GA4 + GTM -->
@@ -387,27 +406,12 @@
       </div>
       <p style="font-size:13px;color:var(--ink-3);margin-bottom:20px;line-height:1.6;">Get your tracking infrastructure right from the ground up — GA4, GTM, conversions, and full validation.</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          GA4 property setup
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          GTM container + event config
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Conversion tracking
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Event testing &amp; validation
-        </div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>GA4 property setup</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>GTM container + event config</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Conversion tracking</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Event testing &amp; validation</div>
       </div>
-      <a href="https://buy.stripe.com/cNibJ1etWa0CeTA1ab4Rq03" class="cta-link">
-        Get Tracking Setup
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <a href="https://buy.stripe.com/cNibJ1etWa0CeTA1ab4Rq03" class="cta-link">Get Tracking Setup <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
     <!-- Card 4: Looker Studio -->
@@ -427,29 +431,29 @@
       </div>
       <p style="font-size:13px;color:var(--ink-3);margin-bottom:20px;line-height:1.6;">Replace bloated agency reports with a clean, real-time Looker Studio dashboard you actually understand.</p>
       <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Automated reports
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Real-time KPIs
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Clean visual layout
-        </div>
-        <div class="check-item">
-          <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Shareable dashboard link
-        </div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Automated reports</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Real-time KPIs</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Clean visual layout</div>
+        <div class="check-item"><div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Shareable dashboard link</div>
       </div>
-      <a href="https://buy.stripe.com/cNibJ1etWa0CeTA1ab4Rq03" class="cta-link">
-        Get Dashboard
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <a href="https://buy.stripe.com/cNibJ1etWa0CeTA1ab4Rq03" class="cta-link">Get Dashboard <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
+  </div>
+</section>
+
+<!-- ANNUAL PLAN BANNER -->
+<section style="max-width:1080px;margin:0 auto;padding:0 24px 64px;">
+  <div class="annual-banner reveal">
+    <div style="position:relative;z-index:1;">
+      <p style="font-family:'Syne',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:10px;">Looking for ongoing management?</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:700;color:#fff;line-height:1.25;margin-bottom:8px;">12-Month Growth Engagement</h3>
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.65;max-width:440px;margin:0;">Full paid-acquisition infrastructure — strategy, tracking, campaign build, monthly optimization, and quarterly planning. Starting at $2,500/mo or $30,000 annually.</p>
+    </div>
+    <a href="https://claude.ai/artifact/R2DjJCjvPuU4XXMjXfhrra" target="_blank" class="annual-banner-btn">
+      See Annual Plans
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 </section>
 
