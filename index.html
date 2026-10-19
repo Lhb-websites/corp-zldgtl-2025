@@ -13,8 +13,8 @@
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZELDIGITAL — Google Ads Strategy & Business Consulting (PH/USA)</title>
-  <meta name="description" content="ZELDIGITAL is a one-person LLC providing premium Google Ads strategy and business consulting for growth-minded brands in the Philippines and USA." />
+  <title>ZELDIGITAL — Google Ads Strategy & Business Consulting</title>
+  <meta name="description" content="ZELDIGITAL is a one-person LLC providing premium Google Ads strategy and business consulting for growth-minded brands globally." />
   <meta name="theme-color" content="#040810" />
   <link rel="icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" type="image/jpeg" />
   <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg">
@@ -249,33 +249,6 @@
     }
     .dropdown-panel a:hover { background: rgba(255,255,255,0.05); color: var(--text); }
 
-    /* Region Toggle */
-    .region-toggle {
-      display: flex;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      padding: 3px;
-      gap: 2px;
-    }
-    .region-btn {
-      padding: 5px 11px;
-      border-radius: 6px;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      cursor: pointer; border: none;
-      background: transparent;
-      color: var(--text-3);
-      transition: all 0.2s;
-      font-family: var(--sans);
-    }
-    .region-btn.active {
-      background: var(--gold);
-      color: #040810;
-      box-shadow: 0 2px 8px rgba(201,168,76,0.35);
-    }
-
     .btn-book {
       display: inline-flex;
       align-items: center;
@@ -321,8 +294,6 @@
       border-bottom: 1px solid var(--border);
     }
     .mobile-menu nav a:hover { color: var(--text); }
-    .mobile-region { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
-    .mobile-region span { font-size: 12px; color: var(--text-3); }
 
     /* ── HERO ── */
     .hero {
@@ -348,7 +319,6 @@
       background: radial-gradient(ellipse at center, rgba(46,207,160,0.05) 0%, transparent 65%);
       pointer-events: none;
     }
-    /* Vertical rule accent */
     .hero-rule {
       position: absolute;
       left: 28px; top: 0; bottom: 0;
@@ -365,7 +335,6 @@
       width: 100%;
     }
 
-    /* Coordinates badge */
     .hero-coords {
       display: inline-flex;
       align-items: center;
@@ -386,7 +355,6 @@
     }
     .hero-coords .sep { color: var(--text-3); }
 
-    /* Founder trust strip */
     .founder-strip {
       display: inline-flex;
       align-items: center;
@@ -1075,11 +1043,10 @@
     }
     .footer-brand-logo { margin-bottom: 16px; }
     .footer-brand p { font-size: 13px; color: var(--text-3); line-height: 1.7; max-width: 270px; font-weight: 300; }
-    .footer-brand .addr { font-size: 12px; color: var(--text-3); margin-top: 14px; }
 
     .footer-cols {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .footer-col h4 {
@@ -1125,7 +1092,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 980px) {
-      .nav-links, .region-toggle, .btn-book { display: none !important; }
+      .nav-links, .btn-book { display: none !important; }
       .menu-btn { display: block; }
       .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
       .edge-inner { grid-template-columns: 1fr; gap: 44px; }
@@ -1151,19 +1118,15 @@
   <!-- Global meridian SVG background -->
   <div class="meridian-bg" aria-hidden="true">
     <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white">
-      <!-- Globe ellipses -->
       <ellipse cx="720" cy="450" rx="340" ry="340" stroke-width="0.6"/>
       <ellipse cx="720" cy="450" rx="340" ry="140" stroke-width="0.6"/>
       <ellipse cx="720" cy="450" rx="340" ry="240" stroke-width="0.6"/>
       <ellipse cx="720" cy="450" rx="200" ry="340" stroke-width="0.6"/>
       <ellipse cx="720" cy="450" rx="80" ry="340" stroke-width="0.6"/>
-      <!-- Horizontal lines -->
       <line x1="380" y1="450" x2="1060" y2="450" stroke-width="0.5"/>
       <line x1="400" y1="340" x2="1040" y2="340" stroke-width="0.4"/>
       <line x1="400" y1="560" x2="1040" y2="560" stroke-width="0.4"/>
-      <!-- Vertical meridian -->
       <line x1="720" y1="110" x2="720" y2="790" stroke-width="0.5"/>
-      <!-- Corner coordinates lines -->
       <line x1="0" y1="0" x2="200" y2="0" stroke-width="0.4"/>
       <line x1="0" y1="0" x2="0" y2="120" stroke-width="0.4"/>
       <line x1="1440" y1="900" x2="1240" y2="900" stroke-width="0.4"/>
@@ -1174,7 +1137,7 @@
   <!-- Announcement -->
   <div class="ann-bar">
     <span class="ann-dot"></span>
-    <strong>Now accepting clients</strong> — Philippines &amp; USA &nbsp;·&nbsp; Solo operator, not an agency &nbsp;·&nbsp; One expert → accountable results
+    <strong>Now accepting clients</strong> &nbsp;·&nbsp; Solo operator, not an agency &nbsp;·&nbsp; One expert → accountable results
   </div>
 
   <!-- Header -->
@@ -1215,10 +1178,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
-        <div class="region-toggle" style="display:flex;">
-          <button class="region-btn active" id="btnPH">PH</button>
-          <button class="region-btn" id="btnUSA">USA</button>
-        </div>
         <a href="https://book.zeldigital.com/" class="btn-book">
           Book a Call
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1241,13 +1200,6 @@
       <a href="#trust" onclick="closeMobile()">Trusted By</a>
       <a href="#contact" onclick="closeMobile()">Contact</a>
     </nav>
-    <div class="mobile-region">
-      <span>Region:</span>
-      <div class="region-toggle">
-        <button class="region-btn active" id="btnPHm">PH</button>
-        <button class="region-btn" id="btnUSAm">USA</button>
-      </div>
-    </div>
     <div style="margin-top:18px;">
       <a href="https://book.zeldigital.com/" class="btn-primary" style="font-size:14px;padding:12px 22px;">Book a Discovery Call</a>
     </div>
@@ -1261,7 +1213,7 @@
     <div class="hero-inner">
 
       <div class="hero-coords fade-up">
-        Cebu City, PH <span class="sep">·</span> Serving US &amp; PH <span class="sep">·</span> 10+ Years
+        Serving US &amp; Global <span class="sep">·</span> 10+ Years
       </div>
 
       <!-- Founder strip -->
@@ -1407,14 +1359,13 @@
       </div>
       <div class="pricing-intro fade-up">
         <h3>Simple monthly retainers.</h3>
-        <p>Cancel any time. Pricing reflects your selected region.</p>
+        <p>Cancel any time.</p>
       </div>
       <div class="pricing-grid">
         <div class="plan-card fade-up">
           <div class="plan-tier">Starter</div>
           <div class="plan-price">
-            <span class="price" data-ph="₱35,000" data-usa="$900">₱35,000</span>
-            <span class="per">/mo</span>
+            <span class="curr">$</span>900<span class="per">/mo</span>
           </div>
           <p class="plan-desc">Ideal for local brands testing structured search + basic PMax.</p>
           <div class="plan-hr"></div>
@@ -1428,8 +1379,7 @@
         <div class="plan-card featured fade-up d1">
           <div class="plan-tier">Growth</div>
           <div class="plan-price">
-            <span class="price" data-ph="₱75,000" data-usa="$1,900">₱75,000</span>
-            <span class="per">/mo</span>
+            <span class="curr">$</span>1,900<span class="per">/mo</span>
           </div>
           <p class="plan-desc">Built for ecommerce or lead gen with scale ambitions.</p>
           <div class="plan-hr"></div>
@@ -1443,8 +1393,7 @@
         <div class="plan-card fade-up d2">
           <div class="plan-tier">Fractional CMO</div>
           <div class="plan-price">
-            <span class="price" data-ph="₱120,000" data-usa="$3,500">₱120,000</span>
-            <span class="per">/mo</span>
+            <span class="curr">$</span>3,500<span class="per">/mo</span>
           </div>
           <p class="plan-desc">Executive-level strategy, forecasting, and cross-channel direction.</p>
           <div class="plan-hr"></div>
@@ -1481,12 +1430,12 @@
           <span class="ff-badge">ZELDIGITAL®</span>
         </div>
         <dl class="ff-grid">
-          <div class="ff-item"><dt>Engagements</dt><dd>PH &amp; USA</dd></div>
+          <div class="ff-item"><dt>Engagements</dt><dd>US &amp; Global</dd></div>
           <div class="ff-item"><dt>Model</dt><dd>One-person, no agency</dd></div>
           <div class="ff-item"><dt>Focus</dt><dd>Google Ads Strategy</dd></div>
           <div class="ff-item"><dt>Lead Time</dt><dd>7–10 days to launch</dd></div>
-          <div class="ff-item"><dt>Legal Entity</dt><dd id="entityType">One Person Corporation (OPC)</dd></div>
-          <div class="ff-item"><dt>Location</dt><dd>Cebu City, PH</dd></div>
+          <div class="ff-item"><dt>Legal Entity</dt><dd>Limited Liability Company</dd></div>
+          <div class="ff-item"><dt>10+ Years</dt><dd>Paid Acquisition</dd></div>
         </dl>
         <div class="ff-quote">
           <p>"Growth before launch. Testing over hacks. Strategy over shortcuts."</p>
@@ -1504,7 +1453,7 @@
         <div class="cs-card fade-up">
           <span class="cs-tag">Coming Soon</span>
           <h3>Health Initiatives</h3>
-          <p>Evidence-informed wellness programs piloted in the Philippines, expanding to the USA. Built to actually move the needle on preventive health outcomes.</p>
+          <p>Evidence-informed wellness programs built to move the needle on preventive health outcomes—launching in the US and expanding globally.</p>
         </div>
         <div id="courses" class="cs-card fade-up d1">
           <span class="cs-tag">Coming Soon</span>
@@ -1542,7 +1491,7 @@
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
               </span>
-              <span>Country sites: <a id="subLink" href="https://ph.zeldigital.com">ph.zeldigital.com</a> &nbsp;·&nbsp; <a href="https://usa.zeldigital.com">usa.zeldigital.com</a></span>
+              <span>Country sites: <a href="https://usa.zeldigital.com">usa.zeldigital.com</a></span>
             </div>
           </div>
         </div>
@@ -1566,10 +1515,10 @@
             <div class="form-group">
               <label for="ad_spend">Monthly Ad Spend</label>
               <select id="ad_spend" name="ad_spend">
-                <option value="under_250k">Under ₱250k / $5k</option>
-                <option value="250k_600k">₱250k–₱600k / $5k–$12k</option>
-                <option value="600k_1_5m">₱600k–₱1.5M / $12k–$30k</option>
-                <option value="over_1_5m">₱1.5M+ / $30k+</option>
+                <option value="under_5k">Under $5k</option>
+                <option value="5k_12k">$5k–$12k</option>
+                <option value="12k_30k">$12k–$30k</option>
+                <option value="over_30k">$30k+</option>
               </select>
             </div>
           </div>
@@ -1600,8 +1549,7 @@
               </div>
             </a>
           </div>
-          <p>One-person LLC delivering Google Ads strategy and business consulting across PH &amp; USA. Data-driven performance marketing built for sustainable growth.</p>
-          <p class="addr">Cebu City, Philippines 6000</p>
+          <p>One-person LLC delivering Google Ads strategy and business consulting globally. Data-driven performance marketing built for sustainable growth.</p>
         </div>
         <div class="footer-cols">
           <div class="footer-col">
@@ -1635,23 +1583,6 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Country</h4>
-            <ul>
-              <li>
-                <a href="https://ph.zeldigital.com" class="flag-link">
-                  <img src="https://flagcdn.com/w20/ph.png" srcset="https://flagcdn.com/w40/ph.png 2x" width="18" height="13" alt="Philippines" />
-                  Philippines
-                </a>
-              </li>
-              <li style="margin-top:4px;">
-                <a href="https://usa.zeldigital.com" class="flag-link">
-                  <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="18" height="13" alt="United States" />
-                  United States
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col">
             <h4>Legal</h4>
             <ul>
               <li><a href="privacy.html">Privacy Policy</a></li>
@@ -1676,34 +1607,14 @@
     "name": "ZELDIGITAL",
     "url": "https://zeldigital.com",
     "logo": "https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg",
-    "sameAs": ["https://ph.zeldigital.com","https://usa.zeldigital.com"],
+    "sameAs": ["https://usa.zeldigital.com"],
     "founder": {"@type": "Person", "name": "Hans Lacida"},
-    "areaServed": ["PH", "US"],
-    "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "hello@zeldigital.com", "telephone": "+639761053409"}],
-    "address": {"@type": "PostalAddress", "addressLocality": "Cebu City", "addressRegion": "Cebu", "postalCode": "6000", "addressCountry": "PH"}
+    "areaServed": ["US", "Worldwide"],
+    "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "hello@zeldigital.com"}]
   }
   </script>
 
   <script>
-    // Region Logic
-    const allPH = [document.getElementById('btnPH'), document.getElementById('btnPHm')].filter(Boolean);
-    const allUSA = [document.getElementById('btnUSA'), document.getElementById('btnUSAm')].filter(Boolean);
-    function setRegion(r) {
-      const isPH = r === 'PH';
-      allPH.forEach(el => el.classList.toggle('active', isPH));
-      allUSA.forEach(el => el.classList.toggle('active', !isPH));
-      document.querySelectorAll('.price').forEach(el => {
-        el.textContent = isPH ? el.dataset.ph : el.dataset.usa;
-      });
-      const entityType = document.getElementById('entityType');
-      if (entityType) entityType.textContent = isPH ? 'One Person Corporation (OPC)' : 'Limited Liability Company';
-      document.title = `ZELDIGITAL — Google Ads Strategy (${r})`;
-    }
-    allPH.forEach(el => el && el.addEventListener('click', () => setRegion('PH')));
-    allUSA.forEach(el => el && el.addEventListener('click', () => setRegion('USA')));
-    const host = location.hostname.toLowerCase();
-    if (host.startsWith('usa.')) setRegion('USA'); else setRegion('PH');
-
     // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
