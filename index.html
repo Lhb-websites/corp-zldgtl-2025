@@ -8,13 +8,13 @@
     "@type": "WebSite",
     "name": "ZELDIGITAL",
     "url": "https://zeldigital.com",
-    "keywords": ["Google Ads PPC expert","Google Ads strategist","Google Ads consultant","PPC consultant","PPC expert for ecommerce","Google Ads specialist","Google Ads manager","PPC expert for founders","Google Ads audit expert","Performance marketing strategist","PPC scaling specialist"]
+    "keywords": ["Fractional PPC Growth Director","Fractional PPC Director","Google Ads PPC expert","Google Ads strategist","PPC consultant","PPC expert for ecommerce","Google Ads specialist","Google Ads manager","Performance marketing strategist","PPC scaling specialist","ecommerce PPC director"]
   }
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZELDIGITAL — Google Ads Strategy & Business Consulting</title>
-  <meta name="description" content="ZELDIGITAL is a one-person LLC providing premium Google Ads strategy and business consulting for growth-minded brands globally." />
+  <title>ZELDIGITAL — Fractional PPC Growth Director for US Ecommerce Brands</title>
+  <meta name="description" content="Hanzel Lacida is your Fractional PPC Growth Director — owning your paid acquisition system, tracking infrastructure, and growth trajectory. 20x peak ROAS for US ecommerce brands." />
   <meta name="theme-color" content="#040810" />
   <link rel="icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" type="image/jpeg" />
   <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg">
@@ -89,7 +89,6 @@
       overflow-x: hidden;
     }
 
-    /* ── GLOBAL MERIDIAN BG ── */
     .meridian-bg {
       position: fixed;
       inset: 0;
@@ -104,7 +103,6 @@
       opacity: 0.028;
     }
 
-    /* ── NOISE ── */
     body::after {
       content: '';
       position: fixed;
@@ -115,7 +113,7 @@
       z-index: 0;
     }
 
-    /* ── ANNOUNCEMENT BAR ── */
+    /* ANNOUNCEMENT BAR */
     .ann-bar {
       position: relative;
       z-index: 20;
@@ -143,7 +141,7 @@
       50%{opacity:0.4;transform:scale(0.75)}
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -295,7 +293,7 @@
     }
     .mobile-menu nav a:hover { color: var(--text); }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       position: relative;
       overflow: hidden;
@@ -319,13 +317,6 @@
       background: radial-gradient(ellipse at center, rgba(46,207,160,0.05) 0%, transparent 65%);
       pointer-events: none;
     }
-    .hero-rule {
-      position: absolute;
-      left: 28px; top: 0; bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent 0%, var(--gold-bdr) 30%, var(--gold-bdr) 70%, transparent 100%);
-      display: none;
-    }
 
     .hero-inner {
       max-width: 1240px;
@@ -335,25 +326,33 @@
       width: 100%;
     }
 
-    .hero-coords {
+    /* Fractional Director badge — replaces coords */
+    .hero-role-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
+      background: rgba(201,168,76,0.07);
+      border: 1px solid var(--gold-bdr);
+      border-radius: 6px;
+      padding: 7px 16px;
       margin-bottom: 32px;
       font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-l);
     }
-    .hero-coords::before {
-      content: '';
-      display: inline-block;
-      width: 28px; height: 1px;
-      background: var(--gold);
+    .hero-role-badge .role-sep {
+      width: 1px; height: 14px;
+      background: var(--gold-bdr);
     }
-    .hero-coords .sep { color: var(--text-3); }
+    .hero-role-badge .role-flag {
+      color: var(--text-3);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
 
     .founder-strip {
       display: inline-flex;
@@ -427,18 +426,49 @@
     .hero-sub {
       font-size: clamp(16px, 1.8vw, 19px);
       color: var(--text-2);
-      max-width: 560px;
+      max-width: 580px;
       line-height: 1.7;
       margin-bottom: 40px;
       font-weight: 300;
     }
 
-    .hero-ctas {
+    /* ROAS proof strip */
+    .roas-strip {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 40px;
+    }
+    .roas-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .roas-stat .rn {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--gold-l);
+      line-height: 1;
+    }
+    .roas-stat .rl {
+      font-size: 11px;
+      color: var(--text-3);
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    /* Single CTA */
+    .hero-cta-wrap {
+      display: flex;
       align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
     }
     .btn-primary {
       display: inline-flex;
@@ -448,7 +478,7 @@
       color: #040810;
       font-size: 15px;
       font-weight: 700;
-      padding: 14px 28px;
+      padding: 15px 30px;
       border-radius: 11px;
       text-decoration: none;
       transition: all 0.2s;
@@ -460,25 +490,11 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 36px rgba(201,168,76,0.28);
     }
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      border: 1px solid var(--border-h);
-      color: var(--text);
-      font-size: 15px;
-      font-weight: 500;
-      padding: 14px 24px;
-      border-radius: 11px;
-      text-decoration: none;
-      transition: all 0.2s;
-      font-family: var(--sans);
+    .cta-note {
+      font-size: 12.5px;
+      color: var(--text-3);
     }
-    .btn-ghost:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.18);
-    }
+    .cta-note strong { color: var(--text-2); }
 
     .hero-micro {
       display: flex;
@@ -501,7 +517,7 @@
     }
     .micro-check svg { width: 8px; height: 8px; color: var(--teal); }
 
-    /* ── TRUST BAR ── */
+    /* TRUST BAR */
     .trust-bar {
       position: relative; z-index: 1;
       background: var(--bg-2);
@@ -547,7 +563,7 @@
     .trust-chip span { color: var(--text-3); font-size: 12px; }
     .trust-chip .flag { font-size: 14px; }
 
-    /* ── LAYOUT UTILS ── */
+    /* LAYOUT */
     section { position: relative; z-index: 1; }
     .section-inner {
       max-width: 1240px;
@@ -591,7 +607,54 @@
       font-weight: 300;
     }
 
-    /* ── SERVICES ── */
+    /* WHAT CHANGES section */
+    .change-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 72px;
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+    .change-card {
+      background: var(--bg-card);
+      padding: 32px 28px;
+      position: relative;
+    }
+    .change-card + .change-card {
+      border-left: 1px solid var(--border);
+    }
+    .change-from {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 8px;
+      font-family: var(--sans);
+    }
+    .change-old {
+      font-size: 14px;
+      color: var(--text-3);
+      text-decoration: line-through;
+      margin-bottom: 18px;
+    }
+    .change-arrow {
+      font-size: 18px;
+      color: var(--gold-bdr);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .change-to {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--gold-l);
+      line-height: 1.3;
+    }
+
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -683,10 +746,95 @@
       flex-shrink: 0;
     }
 
-    /* ── PRICING ── */
-    .pricing-eyebrow {
-      margin-bottom: 14px;
+    /* VIDEO PROOF SECTION */
+    .proof-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
     }
+    .proof-video {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .video-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-bdr);
+      border-radius: 6px;
+      padding: 5px 12px;
+      width: fit-content;
+      font-family: var(--sans);
+    }
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-h);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    /* PAIN RECOGNITION SECTION */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px 26px;
+    }
+    .pain-q {
+      font-family: var(--serif);
+      font-size: 16.5px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .pain-why {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .pain-foot {
+      background: rgba(201,168,76,0.04);
+      border: 1px solid var(--gold-bdr);
+      border-radius: var(--r-lg);
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .pain-foot p {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    /* PRICING */
+    .pricing-eyebrow { margin-bottom: 14px; }
     .pricing-intro { margin-bottom: 36px; }
     .pricing-intro h3 {
       font-family: var(--serif);
@@ -814,7 +962,7 @@
       transform: translateY(-1px);
     }
 
-    /* ── EDGE SECTION ── */
+    /* EDGE */
     .edge-section {
       background: var(--bg-2);
       border-top: 1px solid var(--border);
@@ -910,7 +1058,7 @@
       font-family: var(--serif);
     }
 
-    /* ── COMING SOON ── */
+    /* COMING SOON */
     .coming-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -941,7 +1089,7 @@
     }
     .cs-card p { font-size: 14px; color: var(--text-2); line-height: 1.65; font-weight: 300; }
 
-    /* ── CONTACT ── */
+    /* CONTACT */
     .contact-bg { background: var(--bg-2); border-top: 1px solid var(--border); }
     .contact-grid {
       display: grid;
@@ -1028,7 +1176,7 @@
       box-shadow: 0 8px 28px rgba(201,168,76,0.25);
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { border-top: 1px solid var(--border); position: relative; z-index: 1; }
     .footer-inner {
       max-width: 1240px;
@@ -1062,13 +1210,6 @@
       transition: color 0.2s;
     }
     .footer-col ul li a:hover { color: var(--text-2); }
-    .flag-link {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--text-3);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .flag-link:hover { color: var(--text-2); }
 
     .footer-bottom {
       border-top: 1px solid var(--border);
@@ -1079,7 +1220,7 @@
     .footer-bottom p { font-size: 12px; color: var(--text-3); }
     .footer-bottom .gold-mark { color: var(--gold); }
 
-    /* ── ANIMATIONS ── */
+    /* ANIMATIONS */
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -1090,11 +1231,13 @@
     .d2 { transition-delay: 0.12s; }
     .d3 { transition-delay: 0.19s; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 980px) {
       .nav-links, .btn-book { display: none !important; }
       .menu-btn { display: block; }
       .services-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .proof-layout { grid-template-columns: 1fr; gap: 40px; }
       .edge-inner { grid-template-columns: 1fr; gap: 44px; }
       .footer-top { grid-template-columns: 1fr; }
       .footer-cols { grid-template-columns: repeat(3, 1fr); }
@@ -1102,20 +1245,20 @@
     @media (max-width: 640px) {
       .hero { padding: 68px 20px 64px; min-height: unset; }
       .section-inner { padding: 64px 20px; }
-      .services-grid, .pricing-grid, .coming-grid { grid-template-columns: 1fr; }
+      .services-grid, .pricing-grid, .coming-grid, .pain-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
       .footer-cols { grid-template-columns: repeat(2, 1fr); }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       h1 { font-size: 38px; }
       .founder-strip { flex-wrap: wrap; }
+      .pain-foot { padding: 22px 20px; }
     }
   </style>
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N25V59G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Global meridian SVG background -->
   <div class="meridian-bg" aria-hidden="true">
     <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white">
       <ellipse cx="720" cy="450" rx="340" ry="340" stroke-width="0.6"/>
@@ -1137,7 +1280,7 @@
   <!-- Announcement -->
   <div class="ann-bar">
     <span class="ann-dot"></span>
-    <strong>Now accepting clients</strong> &nbsp;·&nbsp; Solo operator, not an agency &nbsp;·&nbsp; One expert → accountable results
+    Now accepting US ecommerce clients &nbsp;·&nbsp; <strong>Fractional PPC Growth Director</strong> &nbsp;·&nbsp; One expert, fully accountable
   </div>
 
   <!-- Header -->
@@ -1147,10 +1290,11 @@
         <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" width="30" height="30" />
         <div>
           <span class="logo-wordmark">ZELDIGITAL</span>
-          <span class="logo-sub">Global Performance</span>
+          <span class="logo-sub">Fractional PPC Direction</span>
         </div>
       </a>
       <ul class="nav-links">
+        <li><a href="#what-changes">What Changes</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#services">Pricing</a></li>
         <li class="nav-dropdown">
@@ -1178,8 +1322,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
-        <a href="https://book.zeldigital.com/" class="btn-book">
-          Book a Call
+        <a href="https://tidycal.com/zeldigital/discovery-call" class="btn-book" target="_blank" rel="noopener">
+          Book a Discovery Call
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <button class="menu-btn" id="menuBtn" aria-label="Open menu">
@@ -1192,6 +1336,7 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <nav>
+      <a href="#what-changes" onclick="closeMobile()">What Changes</a>
       <a href="#services" onclick="closeMobile()">Services</a>
       <a href="#ads" onclick="closeMobile()">Google Ads Focus</a>
       <a href="#services" onclick="closeMobile()">Pricing</a>
@@ -1201,7 +1346,7 @@
       <a href="#contact" onclick="closeMobile()">Contact</a>
     </nav>
     <div style="margin-top:18px;">
-      <a href="https://book.zeldigital.com/" class="btn-primary" style="font-size:14px;padding:12px 22px;">Book a Discovery Call</a>
+      <a href="https://tidycal.com/zeldigital/discovery-call" class="btn-primary" style="font-size:14px;padding:12px 22px;" target="_blank" rel="noopener">Book a Discovery Call</a>
     </div>
   </div>
 
@@ -1209,15 +1354,24 @@
   <section id="home" class="hero">
     <div class="hero-aurora"></div>
     <div class="hero-aurora-2"></div>
-    <div class="hero-rule"></div>
     <div class="hero-inner">
 
-      <div class="hero-coords fade-up">
-        Serving US &amp; Global <span class="sep">·</span> 10+ Years
+      <div class="hero-role-badge fade-up">
+        For US ecommerce brands doing $1M–$10M
+        <span class="role-sep"></span>
+        <span class="role-flag">already running Google Ads &nbsp;·&nbsp; not seeing the growth</span>
       </div>
 
+      <h1 class="fade-up d2">
+        Your Google Ads are running.<br>Your <em>growth isn't.</em>
+      </h1>
+
+      <p class="hero-sub fade-up d3">
+        You're spending on ads, getting reports, and still not sure why revenue isn't moving. The problem usually isn't the budget — it's that no one actually owns the outcome. That's the gap a Fractional PPC Growth Director fills.
+      </p>
+
       <!-- Founder strip -->
-      <div class="founder-strip fade-up d1">
+      <div class="founder-strip fade-up d3">
         <div class="founder-avatars">
           <div class="founder-avatar"><img src="https://i.ibb.co/DfSmYBd3/OSPUS100px.png" alt="Client 1"/></div>
           <div class="founder-avatar"><img src="https://i.ibb.co/39Ff91j2/FJ-UK100px.png" alt="Client 2"/></div>
@@ -1243,45 +1397,15 @@
         </div>
       </div>
 
-      <h1 class="fade-up d2">
-        Google Ads strategy for brands that<br><em>prioritize profit</em> over vanity metrics.
-      </h1>
-
-      <p class="hero-sub fade-up d3">
-        One expert. One accountable partner. ZELDIGITAL delivers end‑to‑end Google Ads strategy and business consulting—without the agency bloat or account manager roulette.
-      </p>
-
-      <div class="hero-ctas fade-up d3">
-        <a id="ctaPrimary" href="https://book.zeldigital.com/" class="btn-primary">
-          Book a Discovery Call
+      <!-- Single CTA -->
+      <div class="hero-cta-wrap fade-up d3">
+        <a href="https://tidycal.com/zeldigital/discovery-call" class="btn-primary" target="_blank" rel="noopener">
+          Book a Free Discovery Call
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#services" class="btn-ghost">
-          See Services &amp; Pricing
-        </a>
-        <a href="/testimonials" class="btn-ghost">
-          See Our Testimonials
-        </a>
+        <span class="cta-note">15 minutes. No pitch — just what I find in your account.</span>
       </div>
 
-      <div class="hero-micro fade-up d3">
-        <div class="hero-micro-item">
-          <span class="micro-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>
-          No lock-in contracts
-        </div>
-        <div class="hero-micro-item">
-          <span class="micro-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>
-          Transparent reporting
-        </div>
-        <div class="hero-micro-item">
-          <span class="micro-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>
-          7–10 day launch
-        </div>
-        <div class="hero-micro-item">
-          <span class="micro-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>
-          Built for scale
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1298,12 +1422,87 @@
     </div>
   </div>
 
+  <!-- Pain Recognition Section -->
+  <section id="what-changes">
+    <div class="section-inner">
+      <span class="section-eyebrow fade-up">Sound familiar?</span>
+      <h2 class="fade-up">The situation most $1M–$10M<br>ecommerce brands are in <em>right now.</em></h2>
+      <p class="section-sub fade-up">Not a guess. This is the pattern that shows up in almost every account audit.</p>
+
+      <div class="pain-grid fade-up">
+        <div class="pain-card">
+          <div class="pain-q">"We're spending $X/month on ads and I genuinely can't tell if it's working."</div>
+          <div class="pain-why">Your tracking is broken. GA4 and Google Ads are reporting different numbers and nobody has reconciled them. You're optimizing against data you can't trust.</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-q">"The agency sends a report every month. It looks good. Revenue doesn't move."</div>
+          <div class="pain-why">Reports are written to retain clients, not grow them. CTR and impression share look great. But nobody's accountable to your actual revenue number.</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-q">"We tried PMax and it just spent the budget. We turned it off."</div>
+          <div class="pain-why">PMax without guardrails cannibalizes your best campaigns. Most setups have zero asset group segmentation, no brand exclusions, and no search term visibility.</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-q">"Every time I ask a question, it goes through three people and takes a week."</div>
+          <div class="pain-why">Agency account managers don't build strategy — they relay it. The senior person who sold you the account isn't the one running it. You're paying for access, not expertise.</div>
+        </div>
+      </div>
+
+      <div class="pain-foot fade-up">
+        <p>If two or more of these are true, you don't have a budget problem. You have an ownership problem. One person — accountable to your revenue target — changes this.</p>
+        <a href="https://tidycal.com/zeldigital/discovery-call" class="btn-primary" target="_blank" rel="noopener" style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;">
+          See what's actually going on in your account
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Proof Section -->
+  <section id="proof" class="edge-section">
+    <div class="section-inner">
+      <div class="proof-layout">
+        <div class="proof-text">
+          <span class="section-eyebrow fade-up">Proof, not promises</span>
+          <h2 class="fade-up">20x peak ROAS.<br><em>US data. Real account.</em></h2>
+          <p class="fade-up" style="font-size:16px;color:var(--text-2);line-height:1.7;font-weight:300;margin-top:14px;max-width:460px;">
+            This is a walkthrough of an actual US client account — data redacted — showing what a properly structured Google Ads setup produces. Not a screenshot. Not a claim. The account mechanics, explained.
+          </p>
+          <ul class="edge-points" style="margin-top:24px;">
+            <li class="fade-up"><span class="ep-dot"></span>Tracking fixed before any campaign touched</li>
+            <li class="fade-up d1"><span class="ep-dot"></span>Search + PMax structured to not compete with each other</li>
+            <li class="fade-up d2"><span class="ep-dot"></span>20x peak ROAS reached within the first optimization cycle</li>
+          </ul>
+          <div style="margin-top:32px;" class="fade-up d3">
+            <a href="https://tidycal.com/zeldigital/discovery-call" class="btn-primary" target="_blank" rel="noopener">
+              Get a free look at your account
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="proof-video fade-up">
+          <div class="video-label">Actual US Client Account · Data Redacted</div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/FFxJflJjZns?si=G5SranpID97KD776"
+              title="20x ROAS — US Ecommerce Account Walkthrough"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services -->
   <section id="services">
     <div class="section-inner">
-      <span class="section-eyebrow fade-up">What I offer</span>
-      <h2 class="fade-up">Services built for <em>revenue</em>,<br>not impressions.</h2>
-      <p class="section-sub fade-up">Everything centers on Google Ads—strategy, creative direction, and analytics—delivered by one accountable specialist.</p>
+      <span class="section-eyebrow fade-up">Here's how it works</span>
+      <h2 class="fade-up">What actually happens<br><em>in the first 90 days.</em></h2>
+      <p class="section-sub fade-up">Not a vague retainer. A structured 90-day system with clear milestones — so you know exactly what you're getting and when.</p>
 
       <div class="services-grid">
         <div class="svc-card fade-up">
@@ -1311,10 +1510,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
           </div>
           <div class="svc-head">
-            <h3>Account &amp; Market Audit</h3>
-            <span class="svc-phase">Week 1</span>
+            <h3>Audit &amp; Tracking Baseline</h3>
+            <span class="svc-phase">Day 1–7</span>
           </div>
-          <p>Full audit of structure, queries, assets, GMC, PMax, and tracking—uncovering wasted spend and quick wins.</p>
+          <p>Full account audit — tracking gaps, campaign structure, wasted spend. Fix conversion tracking first. This alone shows immediate value.</p>
           <ul class="svc-list">
             <li>Query mapping &amp; match-type strategy</li>
             <li>Shopping feed &amp; GMC health check</li>
@@ -1326,10 +1525,10 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
           </div>
           <div class="svc-head">
-            <h3>PPC Strategy &amp; Build</h3>
-            <span class="svc-phase">Week 2–3</span>
+            <h3>Launch &amp; Restructure</h3>
+            <span class="svc-phase">Day 8–30</span>
           </div>
-          <p>Profit-first campaigns across Search, PMax, Shopping, and YouTube with staged testing and negative guardrails.</p>
+          <p>Profit-first campaigns across Search, PMax, Shopping, and YouTube. Weekly Loom updates — no calls needed, just clear wins documented.</p>
           <ul class="svc-list">
             <li>Offer &amp; landing alignment</li>
             <li>Audience layering &amp; exclusions</li>
@@ -1341,14 +1540,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
           </div>
           <div class="svc-head">
-            <h3>Ongoing Optimization</h3>
-            <span class="svc-phase">Month 1+</span>
+            <h3>Optimization &amp; Growth</h3>
+            <span class="svc-phase">Day 31–90+</span>
           </div>
-          <p>Rhythmic bids/budget tuning, asset experimentation, query pruning, and forecasting against targets.</p>
+          <p>Full PMAX + Search optimization cycle. A one-page Before/After dashboard. 90-day results review and next quarter targets.</p>
           <ul class="svc-list">
             <li>Weekly reporting with insights</li>
             <li>Creative briefs for assets</li>
-            <li>Quarterly strategy reviews</li>
+            <li>Quarterly strategy &amp; renewal</li>
           </ul>
         </div>
       </div>
@@ -1359,7 +1558,7 @@
       </div>
       <div class="pricing-intro fade-up">
         <h3>Simple monthly retainers.</h3>
-        <p>Cancel any time.</p>
+        <p>Cancel any time. No agency markup. One expert accountable for your results.</p>
       </div>
       <div class="pricing-grid">
         <div class="plan-card fade-up">
@@ -1367,42 +1566,43 @@
           <div class="plan-price">
             <span class="curr">$</span>900<span class="per">/mo</span>
           </div>
-          <p class="plan-desc">Ideal for local brands testing structured search + basic PMax.</p>
+          <p class="plan-desc">For local or early-stage brands testing structured search + basic PMax.</p>
           <div class="plan-hr"></div>
           <ul class="plan-features">
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Up to 2 campaigns</li>
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Monthly reporting</li>
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Email support</li>
           </ul>
-          <a href="/pricing/" class="plan-cta">Get Started — See Pricing</a>
+          <a href="https://tidycal.com/zeldigital/discovery-call" class="plan-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
         </div>
         <div class="plan-card featured fade-up d1">
           <div class="plan-tier">Growth</div>
           <div class="plan-price">
             <span class="curr">$</span>1,900<span class="per">/mo</span>
           </div>
-          <p class="plan-desc">Built for ecommerce or lead gen with scale ambitions.</p>
+          <p class="plan-desc">Built for US ecommerce brands ($1M–$10M) with scale ambitions. The core Fractional PPC engagement.</p>
           <div class="plan-hr"></div>
           <ul class="plan-features">
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Search, PMax, Shopping, YouTube</li>
-            <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Weekly reporting &amp; roadmap</li>
+            <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Weekly Loom updates &amp; roadmap</li>
+            <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>90-day onboarding system</li>
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Slack/DM support</li>
           </ul>
-          <a href="/pricing/" class="plan-cta">Apply for Growth</a>
+          <a href="https://tidycal.com/zeldigital/discovery-call" class="plan-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
         </div>
         <div class="plan-card fade-up d2">
-          <div class="plan-tier">Fractional CMO</div>
+          <div class="plan-tier">Fractional PPC Director</div>
           <div class="plan-price">
             <span class="curr">$</span>3,500<span class="per">/mo</span>
           </div>
-          <p class="plan-desc">Executive-level strategy, forecasting, and cross-channel direction.</p>
+          <p class="plan-desc">Executive-level strategy, forecasting, and full paid acquisition ownership for high-growth brands.</p>
           <div class="plan-hr"></div>
           <ul class="plan-features">
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Full testing program</li>
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Creative direction</li>
             <li><span class="pf-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></span>Bi-weekly exec sync</li>
           </ul>
-          <a href="#contact" class="plan-cta">Discuss Fit</a>
+          <a href="https://tidycal.com/zeldigital/discovery-call" class="plan-cta" target="_blank" rel="noopener">Book a Discovery Call</a>
         </div>
       </div>
     </div>
@@ -1412,16 +1612,16 @@
   <section id="ads" class="edge-section">
     <div class="edge-inner">
       <div>
-        <span class="section-eyebrow fade-up">The edge</span>
-        <h2 class="fade-up">100% Google Ads focus.<br><em>That's the advantage.</em></h2>
+        <span class="section-eyebrow fade-up">Why not just hire an agency?</span>
+        <h2 class="fade-up">Agencies sell accounts.<br><em>I own outcomes.</em></h2>
         <p style="font-size:16px;color:var(--text-2);line-height:1.7;margin-top:14px;font-weight:300;" class="fade-up">
-          I don't offer everything. I offer the <em>one thing</em> that moves revenue: disciplined Google Ads strategy paired with sharp execution and clean data.
+          When you hire an agency, the senior strategist closes the deal — then hands you to a junior account manager. The person accountable to your revenue target is the person who never touches your account. That's the structural problem. As a Fractional PPC Director, I am the strategist and the executor. There's no one to hand you off to.
         </p>
         <ul class="edge-points">
-          <li class="fade-up"><span class="ep-dot"></span>Deep search intent mapping &amp; negative frameworks</li>
-          <li class="fade-up d1"><span class="ep-dot"></span>PMax guardrails, feed optimization &amp; GMC compliance</li>
-          <li class="fade-up d2"><span class="ep-dot"></span>Attribution sanity: GA4 events, offline imports, call tracking</li>
-          <li class="fade-up d3"><span class="ep-dot"></span>Offer–creative–landing congruence for CVR lift</li>
+          <li class="fade-up"><span class="ep-dot"></span>Tracking fixed first — no optimization on broken data</li>
+          <li class="fade-up d1"><span class="ep-dot"></span>PMax guardrails so it doesn't cannibalize your Search campaigns</li>
+          <li class="fade-up d2"><span class="ep-dot"></span>Weekly Loom updates — no calendar tennis, no vanity metrics</li>
+          <li class="fade-up d3"><span class="ep-dot"></span>One person who knows your account inside out, every month</li>
         </ul>
       </div>
       <div class="fast-facts fade-up">
@@ -1430,15 +1630,15 @@
           <span class="ff-badge">ZELDIGITAL®</span>
         </div>
         <dl class="ff-grid">
-          <div class="ff-item"><dt>Engagements</dt><dd>US &amp; Global</dd></div>
-          <div class="ff-item"><dt>Model</dt><dd>One-person, no agency</dd></div>
+          <div class="ff-item"><dt>Role</dt><dd>Fractional PPC Director</dd></div>
+          <div class="ff-item"><dt>Market</dt><dd>US Ecommerce Only</dd></div>
           <div class="ff-item"><dt>Focus</dt><dd>Google Ads Strategy</dd></div>
-          <div class="ff-item"><dt>Lead Time</dt><dd>7–10 days to launch</dd></div>
-          <div class="ff-item"><dt>Legal Entity</dt><dd>Limited Liability Company</dd></div>
-          <div class="ff-item"><dt>10+ Years</dt><dd>Paid Acquisition</dd></div>
+          <div class="ff-item"><dt>Launch</dt><dd>7–10 days</dd></div>
+          <div class="ff-item"><dt>Peak ROAS</dt><dd>20x (US client)</dd></div>
+          <div class="ff-item"><dt>Experience</dt><dd>10+ Years Paid Acquisition</dd></div>
         </dl>
         <div class="ff-quote">
-          <p>"Growth before launch. Testing over hacks. Strategy over shortcuts."</p>
+          <p>"The first thing I fix in every account is tracking. Every single time, the data founders are optimizing against is wrong. That's usually where 20–30% of revenue is hiding."</p>
         </div>
       </div>
     </div>
@@ -1453,7 +1653,7 @@
         <div class="cs-card fade-up">
           <span class="cs-tag">Coming Soon</span>
           <h3>Health Initiatives</h3>
-          <p>Evidence-informed wellness programs built to move the needle on preventive health outcomes—launching in the US and expanding globally.</p>
+          <p>Evidence-informed wellness programs built to move the needle on preventive health outcomes — launching in the US and expanding globally.</p>
         </div>
         <div id="courses" class="cs-card fade-up d1">
           <span class="cs-tag">Coming Soon</span>
@@ -1470,22 +1670,22 @@
       <div class="contact-grid">
         <div>
           <span class="section-eyebrow fade-up">Get in touch</span>
-          <h2 class="fade-up">Let's talk<br><em>targets.</em></h2>
+          <h2 class="fade-up">Not ready to commit?<br><em>Good. Neither am I.</em></h2>
           <p style="font-size:16px;color:var(--text-2);line-height:1.7;margin-top:10px;font-weight:300;" class="fade-up">
-            Tell me your numbers. I'll tell you your plan. If we're a fit, we'll launch within 10 days.
+            The discovery call is 15 minutes. I look at your account before we talk, tell you the three most important things I find — tracking gaps, wasted spend, quick wins — and you decide whether it's worth going further. No proposal. No deck. No follow-up sequence if it's not a fit.
           </p>
           <div class="contact-details">
             <div class="contact-item fade-up">
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9l8 5 8-5"/></svg>
               </span>
-              Email: <a id="emailLink" href="mailto:hello@zeldigital.com">hello@zeldigital.com</a>
+              Email: <a href="mailto:hello@zeldigital.com">hello@zeldigital.com</a>
             </div>
             <div class="contact-item fade-up d1">
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
               </span>
-              Book: <a href="https://book.zeldigital.com/">Discovery Call</a>
+              Book: <a href="https://tidycal.com/zeldigital/discovery-call" target="_blank" rel="noopener">Free Discovery Call (15 min)</a>
             </div>
             <div class="contact-item fade-up d2">
               <span class="contact-icon">
@@ -1545,22 +1745,22 @@
               <img src="https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg" alt="ZELDIGITAL logo" width="28" height="28" />
               <div>
                 <span class="logo-wordmark">ZELDIGITAL</span>
-                <span class="logo-sub">Global Performance</span>
+                <span class="logo-sub">Fractional PPC Direction</span>
               </div>
             </a>
           </div>
-          <p>One-person LLC delivering Google Ads strategy and business consulting globally. Data-driven performance marketing built for sustainable growth.</p>
+          <p>Fractional PPC Growth Director for US ecommerce brands ($1M–$10M). One expert. One accountable partner. No agency bloat.</p>
         </div>
         <div class="footer-cols">
           <div class="footer-col">
             <h4>Company</h4>
             <ul>
+              <li><a href="#what-changes">What Changes</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#ads">Approach</a></li>
               <li><a href="consulting/">Consulting</a></li>
               <li><a href="pricing/">Pricing</a></li>
               <li><a href="who-we-help/">Who We Help</a></li>
-              <li><a href="google-ads-cost-calculator/">Ads Calculator</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -1594,7 +1794,7 @@
       </div>
       <div class="footer-bottom">
         <p>© <span id="year"></span> <span class="gold-mark">ZELDIGITAL®</span>. All rights reserved.</p>
-        <p>Solo-operator · No agency markup · Accountable results</p>
+        <p>Fractional PPC Growth Director &nbsp;·&nbsp; US Ecommerce Brands &nbsp;·&nbsp; No agency markup</p>
       </div>
     </div>
   </footer>
@@ -1608,23 +1808,20 @@
     "url": "https://zeldigital.com",
     "logo": "https://i.ibb.co/h1KBz9kx/zel-digital-2024-brand-logo.jpg",
     "sameAs": ["https://usa.zeldigital.com"],
-    "founder": {"@type": "Person", "name": "Hans Lacida"},
-    "areaServed": ["US", "Worldwide"],
+    "founder": {"@type": "Person", "name": "Hanzel Lacida", "jobTitle": "Fractional PPC Growth Director"},
+    "areaServed": ["US"],
     "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "hello@zeldigital.com"}]
   }
   </script>
 
   <script>
-    // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn && menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
     function closeMobile() { mobileMenu.classList.remove('open'); }
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Scroll fade-up
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
